@@ -1,0 +1,1466 @@
+{
+  "WEEK 1": [
+    {
+      "question_number": 1,
+      "question_text": "Which of the following statements is true regarding the foundational concepts of blockchain and cryptography?",
+      "options": {
+        "a": "Decentralization in blockchain ensures that a single authority controls the network for higher efficiency.",
+        "b": "SHA-256 is a cryptographic hash function widely used in blockchain due to its fixed output size and collision resistance.",
+        "c": "A hash chain is a sequence of cryptographic keys used to decode blockchain data.",
+        "d": "Cryptographic hash ensures that the blockchain data cannot be read by anyone outside the network."
+      },
+      "answer": ["b"],
+      "detailed_solution": "Option (b) is correct because SHA-256 is a cryptographic hash function with features like fixed output, pre-image resistance, and collision resistance, making it ideal for blockchain."
+    },
+    {
+      "question_number": 2,
+      "question_text": "An attacker wants to find a collision in a cryptographic hash function with a 256-bit output. What is the approximate number of hash operations required to succeed?",
+      "options": {
+        "a": "1 × 2^128",
+        "b": "0.75 × 2^128",
+        "c": "1 × 2^256",
+        "d": "0.5 × 2^256"
+      },
+      "answer": ["a"],
+      "detailed_solution": "Option (a) is correct because If a hash function produces N bits of output, an attacker needs to compute only 2^(N/2) hash operations on a random input to find two matching outputs. 2^(256/2) = 2^128 = 1 × 2^128"
+    },
+    {
+      "question_number": 3,
+      "question_text": "A blockchain network uses SHA-256 for its hashing process. If it takes 10^-6 seconds to compute a single SHA-256 hash, how long would it take (approximately) to compute 2^128 hashes for a collision attack?",
+      "options": {
+        "a": "10^10 years",
+        "b": "10^15 years",
+        "c": "10^20 years",
+        "d": "10^25 years"
+      },
+      "answer": ["d"],
+      "detailed_solution": "Total time to compute 2^128 hashes: 2^128 × 10^-6 ≈ 3.4 × 10^32 seconds.\nConvert seconds to years: 1 year = 3.15×10^7 seconds ⇒ (3.4× 10^32) / (3.15× 10^7) ≈ 10^25 years."
+    },
+    {
+      "question_number": 4,
+      "question_text": "In a decentralized distributed system with 100 participants, which of the following statements is true regarding trust and communication?",
+      "options": {
+        "a": "At least 50 participants must trust each other for the system to function.",
+        "b": "A central body governing communication among all 100 participants is mandatory.",
+        "c": "Participants may or may not trust each other, as the system ensures integrity using cryptographic protocols and agreement through consensus protocols.",
+        "d": "All the 100 participants must trust each other."
+      },
+      "answer": ["c"],
+      "detailed_solution": "Option (c) is correct because decentralized systems rely on cryptographic mechanisms and consensus protocols, making trust among participants unnecessary. Option (a) is incorrect, as trust among the participants is not a requirement for decentralized systems. Option (b) is incorrect, as decentralized systems operate without a central governing body."
+    },
+    {
+      "question_number": 5,
+      "question_text": "A blockchain network achieves an average block generation time of 5 minutes under normal conditions. However, due to scheduled maintenance, the network's hash rate is reduced by 50% for 4 hours daily. If the network operates for 12 hours in total (including the maintenance period), how many blocks will be added to the blockchain?",
+      "options": {
+        "a": "120",
+        "b": "200",
+        "c": "216",
+        "d": "240"
+      },
+      "answer": ["a"],
+      "detailed_solution": "For 8 hours at full efficiency: (60 min / 5 min) = 12 blocks/hour, so 12 × 8 = 96 blocks.\nFor 4 hours at 50% efficiency: (12 blocks / 2 ) 6 blocks/hours, so 6 × 4 = 24 blocks.\nTotal blocks = 96 + 24 = 120 blocks."
+    },
+    {
+      "question_number": 6,
+      "question_text": "Where are the transaction logs stored in a blockchain network?",
+      "options": {
+        "a": "In a centralized SQL database.",
+        "b": "On an immutable ledger controlled by a central authority.",
+        "c": "In metadata tables on each peer.",
+        "d": "In the distributed ledger of each peer across the network."
+      },
+      "answer": ["d"],
+      "detailed_solution": "Blockchain transaction logs are stored in a distributed ledger across all peers (nodes) in the network, ensuring decentralization and immutability."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which of the following describes the avalanche effect in a cryptographic hash function?",
+      "options": {
+        "a": "Given the same input, the hash function returns a different hash 99.99% of the time.",
+        "b": "It takes 10^5 attempts to reverse-engineer the original message from the hash.",
+        "c": "A small change in the input causes a drastic change in the hash, flipping nearly all the bits.",
+        "d": "The hash function always returns the same hash for the same input."
+      },
+      "answer": ["c"],
+      "detailed_solution": "The avalanche effect ensures that even a tiny change in the input (like flipping a single bit) results in a significantly different hash, with most of the output bits changing."
+    },
+    {
+      "question_number": 8,
+      "question_text": "Which of the following statements accurately describes a blockchain?",
+      "options": {
+        "a": "A centralized database where data is stored on a single server.",
+        "b": "A distributed ledger where data is stored across multiple nodes and is immutable.",
+        "c": "A system that only stores cryptocurrency transaction data on a single node.",
+        "d": "A network that uses a single user to control access and updates to the data."
+      },
+      "answer": ["b"],
+      "detailed_solution": "A blockchain is a decentralized and distributed ledger system where data is stored across multiple nodes (computers), ensuring that no single entity has control. It is also immutable, meaning once data is recorded in a block, it cannot be altered without the consensus of the network."
+    },
+    {
+      "question_number": 9,
+      "question_text": "Which of the following is/are possible use cases of blockchain technology?",
+      "options": {
+        "a": "Cross-border payments",
+        "b": "Supply chain management",
+        "c": "Centralized Anti-money laundering tracking system",
+        "d": "Maintaining data over a single database server"
+      },
+      "answer": ["a", "b"],
+      "detailed_solution": "Blockchain technology is used in cross-border payments, supply chain management, and decentralized anti-money laundering tracking systems for decentralization, transparency, and security."
+    },
+    {
+      "question_number": 10,
+      "question_text": "In a blockchain using SHA-256, if the hashes of strings A and B are concatenated and then hashed again, what is the length of the final hash?",
+      "options": {
+        "a": "256 bits",
+        "b": "512 bits",
+        "c": "128 bits",
+        "d": "1024 bits"
+      },
+      "answer": ["a"],
+      "detailed_solution": "SHA-256 always produces a fixed 256-bit hash, regardless of input size. Even after concatenating two hashes and rehashing, the output will still be a 256-bit hash."
+    }
+  ],
+  "WEEK 2": [
+    {
+      "question_number": 1,
+      "question_text": "Alice employs the RSA cryptosystem with the prime numbers p=11 and q=19 to derive her public and private keys. Given that her public key is e=11, what is her corresponding private key d?",
+      "options": {
+        "a": "35",
+        "b": "131",
+        "c": "101",
+        "d": "149"
+      },
+      "answer": ["b"],
+      "detailed_solution": "Compute φ(n)=(p−1)(q−1)=180.\nFind d as the modular inverse of e=11 modulo φ(n)=180 using d = e^-1 (mod 180)), giving d=131"
+    },
+    {
+      "question_number": 2,
+      "question_text": "Alice wants to send a message to Bob with confidentiality and integrity. The steps are as follows:\n1. Alice encrypts the message using Bob’s ________ key.\n2. Alice then signs the ________ of the message with her ________ key.\n3. Bob decrypts the message using his ________ key.\n4. Bob verifies Alice's signature using her ________ key.",
+      "options": {
+        "a": "public, hash, private, public, private",
+        "b": "private, message, public, private, public",
+        "c": "public, hash, private, private, public",
+        "d": "public, hash, private, public, public"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Alice first encrypts the message using Bob’s public key for confidentiality and signs the hash of the message with her private key to ensure integrity and authenticity. Bob then decrypts the message with his private key and verifies Alice’s signature using her public key to confirm the message’s authenticity and integrity."
+    },
+    {
+      "question_number": 3,
+      "question_text": "Digitally signing transactions by the sender in Blockchain ensures the resolution of repudiation/verifiability problems. Based on this, which one of the following is correct:",
+      "options": {
+        "a": "It allows the sender to deny the transaction at any point.",
+        "b": "It ensures that the sender cannot deny the transaction and the recipient can verify its authenticity.",
+        "c": "It provides encryption but does not verify the sender’s identity.",
+        "d": "It guarantees the transaction will remain confidential but does not resolve repudiation issues."
+      },
+      "answer": ["b"],
+      "detailed_solution": "Digital signatures in blockchain ensure that the sender cannot deny sending the transaction (non-repudiation) and that the recipient can verify the authenticity and integrity of the transaction (verifiability)."
+    },
+    {
+      "question_number": 4,
+      "question_text": "What is the primary purpose of Alice signing a message with her private key in a blockchain transaction?",
+      "options": {
+        "a": "To encrypt the message",
+        "b": "To prevent others from reading the message",
+        "c": "To prove the message came from Alice",
+        "d": "To hide the contents of the message"
+      },
+      "answer": ["c"],
+      "detailed_solution": "When Alice signs a message with her private key, it serves as proof that the message came from her (authentication) and ensures the integrity of the message (it hasn't been tampered with)."
+    },
+    {
+      "question_number": 5,
+      "question_text": "Consider 6 data points labeled 1 to 6. The post-order traversal of the Merkle Tree is provided as follows (where 1 represents the hash of data point 1, 43 denotes the combined hash of 4 and 3, and so on):",
+      "options": {
+        "a": "{12345656, 1234, 12, 1, 2, 34, 3, 4, 5656, 56, 5, 6}",
+        "b": "{1, 12, 2, 3, 4, 34, 1234, 5, 6, 56, 123456}",
+        "c": "{1, 2, 12, 3, 4, 34, 1234, 5, 6, 56, 56, 5656, 12345656}",
+        "d": "{1, 2, 12, 3, 4, 34, 1234, 5, 6, 56, 5656, 12345656}"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Post-order traversal : {1, 2, 12, 3, 4, 34, 1234, 5, 6, 56, 56, 5656, 12345656}"
+    },
+    {
+      "question_number": 6,
+      "question_text": "Which of the following is used to refer to a block in a blockchain?",
+      "options": {
+        "a": "Future nonce",
+        "b": "Block size",
+        "c": "Previous Block Hash",
+        "d": "Transaction Timestamp"
+      },
+      "answer": ["c"],
+      "detailed_solution": "In a blockchain, each block contains a previous block hash. This hash pointer links the current block to the previous one, ensuring the integrity and immutability of the blockchain."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which of the following does not align with the primary design goals of cryptocurrency development?",
+      "options": {
+        "a": "Decentralization of control and decision-making",
+        "b": "Immutability of transaction records",
+        "c": "Centralized control over transactions",
+        "d": "Transparency and accessibility of transaction data"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Centralized control over transactions: This contradicts the essence of cryptocurrencies, which are designed to operate without central authority or intermediaries."
+    },
+    {
+      "question_number": 8,
+      "question_text": "Which of the following statements is/are true regarding Bitcoin and its consensus algorithm?\n1. Bitcoin uses Proof of Work (PoW) for transaction validation and block addition.\n2. Bitcoin operates on a peer-to-peer (P2P) network.\n3. Bitcoin uses Proof of Stake (PoS) for centralization.\n4. Miners are rewarded with transaction fees and block rewards in Bitcoin.",
+      "options": {
+        "a": "1, 2, 3",
+        "b": "2, 3, 4",
+        "c": "1, 2, 4",
+        "d": "1, 3, 4"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Bitcoin uses Proof of Work (PoW) for consensus, where miners solve cryptographic puzzles to validate transactions and add blocks to the blockchain. The network operates on a decentralized peer-to-peer (P2P) model, with no central server, allowing nodes to communicate directly. Miners are incentivized with transaction fees and block rewards for securing the network by validating and adding blocks."
+    },
+    {
+      "question_number": 9,
+      "question_text": "What is the primary focus of 'safety' in Bitcoin's protocol?",
+      "options": {
+        "a": "Preventing invalid transactions",
+        "b": "Ensuring blocks are mined quickly",
+        "c": "Guaranteeing that only some of the transactions are private",
+        "d": "Maximizing the number of transactions per block"
+      },
+      "answer": ["a"],
+      "detailed_solution": "In Bitcoin, safety ensures the integrity of the blockchain by preventing invalid transactions, such as double-spending."
+    },
+    {
+      "question_number": 10,
+      "question_text": "Which of the following is the primary goal of a consensus algorithm in a distributed system?",
+      "options": {
+        "a": "To ensure that all nodes process transactions at the same speed",
+        "b": "To guarantee that all nodes in the system agree on a single value or state",
+        "c": "To minimize the number of nodes required for network communication",
+        "d": "To prevent malicious attacks by encrypting all data transmitted between nodes"
+      },
+      "answer": ["b"],
+      "detailed_solution": "The primary goal of a consensus algorithm is to ensure that all nodes in a distributed system agree on a single value or state, even if some nodes may fail or act maliciously. This is crucial for maintaining consistency and reliability across the system."
+    }
+  ],
+  "WEEK 3": [
+    {
+      "question_number": 1,
+      "question_text": "If the current block reward for Bitcoin is 6.25 BTC, and the difficulty adjustment mechanism is such that, on average, a new block is found every 10 minutes, how much Bitcoin will be mined per day (24 hours)?",
+      "options": {
+        "a": "75 BTC",
+        "b": "144 BTC",
+        "c": "900 BTC",
+        "d": "1,080 BTC"
+      },
+      "answer": ["c"],
+      "detailed_solution": "The block reward is 6.25 BTC.\nThere are 144 blocks mined in a 24-hour period (24 hours × 60 minutes / 10 minutes per block).\nIn one day, the total Bitcoin mined would be 144 × 6.25=900 BTC."
+    },
+    {
+      "question_number": 2,
+      "question_text": "Which of the following best defines a permissioned blockchain?",
+      "options": {
+        "a": "Anyone can join and validate transactions without approval.",
+        "b": "Only authorized participants can write and validate transactions.",
+        "c": "It always uses proof-of-work (PoW) for consensus.",
+        "d": "A permissioned blockchain does not need cryptographic hash operations"
+      },
+      "answer": ["b"],
+      "detailed_solution": "A permissioned blockchain restricts the ability to write or validate transactions to authorized participants. This controlled access enhances security and privacy within the network."
+    },
+    {
+      "question_number": 3,
+      "question_text": "Which of the following combinations is correctly used to compute Bitcoin's current block hash?",
+      "options": {
+        "a": "Previous block’s hash, Merkle root, block reward, nonce, timestamp, and block size",
+        "b": "Previous block’s hash, timestamp, nonce, Merkle root, difficulty bits, and block version",
+        "c": "Block creator’s public key, Merkle root, timestamp, block reward, nonce, and difficulty level",
+        "d": "Previous block’s hash, nonce, Merkle root, height, timestamp, and difficulty bits"
+      },
+      "answer": ["b"],
+      "detailed_solution": "Please refer to the Week 3 Lecture 13."
+    },
+    {
+      "question_number": 4,
+      "question_text": "Which of the following difficulty targets would make it most difficult for miners to find a valid block?",
+      "options": {
+        "a": "0000000000000000000000000000000000000000000000000000000000056789abcdef123",
+        "b": "000000000000000000000000000000000000000000000000000000002dfe34a1b2c3d555",
+        "c": "00000000000000000000000000000000000000000000000000000000000afc123987abc",
+        "d": "00000000000000000000000000000000000000000000000000000000000000000af46789"
+      },
+      "answer": ["d"],
+      "detailed_solution": "The difficulty target with 52 leading zeros (option d) is the most difficult for miners to find a valid block.\nTherefore,00000000000000000000000000000000000000000000000000000000000000000af46789 is the correct choice."
+    },
+    {
+      "question_number": 5,
+      "question_text": "In the Bitcoin, block identifier refers to",
+      "options": {
+        "a": "SHA1 (128 bits) of the future block header",
+        "b": "Double SHA256 of the current block header",
+        "c": "Double SHA256 of the difficulty bits only",
+        "d": "Triple SHA256 of the future block header"
+      },
+      "answer": ["b"],
+      "detailed_solution": "The Bitcoin block identifier (block hash) contains Double SHA256 on the current block header. This means performing SHA256 twice. Please refer to the Week 3 Lecture 13."
+    },
+    {
+      "question_number": 6,
+      "question_text": "In a Merkle tree with n transactions (n is a power of 2), if one transaction is invalid, how many recalculations are needed to detect and correct the invalid transaction?",
+      "options": {
+        "a": "n/2",
+        "b": "log2 (n) + 1",
+        "c": "n−1",
+        "d": "3log2 (n)"
+      },
+      "answer": ["b"],
+      "detailed_solution": "The Merkle tree recalculates the hashes at each level up to the root for verification. This requires recalculating one hash at each of the log2 (n) levels, plus one final hash for the root."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which of the following Bitcoin script opcode is needed to remove the second-to-top stack item?",
+      "options": {
+        "a": "OP_DELETE",
+        "b": "OP_2POP",
+        "c": "OP_DEQUE",
+        "d": "OP_NIP"
+      },
+      "answer": ["d"],
+      "detailed_solution": "Bitcoin Script uses specific opcodes like OP_DROP, OP_NIP, etc., to manipulate the stack. OP_NIP is explicitly designed to remove the second-to-top stack item."
+    },
+    {
+      "question_number": 8,
+      "question_text": "If a Merkle tree has 8 transactions, how many hashes are required to compute the Merkle root?",
+      "options": {
+        "a": "8",
+        "b": "15",
+        "c": "16",
+        "d": "7"
+      },
+      "answer": ["b"],
+      "detailed_solution": "In a Merkle tree with 8 transactions, 7 additional hashes are needed to compute the Merkle root as pairs of transaction hashes are combined recursively at each level. The total hashes, including the leaves, are 15: 8 leaf hashes and 7 parent hashes."
+    },
+    {
+      "question_number": 9,
+      "question_text": "What is a nonce in the context of Bitcoin mining?",
+      "options": {
+        "a": "The transaction ID number",
+        "b": "A miner's ASIC chip array",
+        "c": "The generator point used in elliptic curve cryptography",
+        "d": "A value miners iterate through to generate a valid hash"
+      },
+      "answer": ["d"],
+      "detailed_solution": "In Bitcoin mining, the nonce is a random or arbitrary number that miners adjust in the block header during mining. This value is modified to change the resulting hash of the block header to meet the required difficulty target."
+    },
+    {
+      "question_number": 10,
+      "question_text": "What happens if the number of transactions in a Merkle tree is odd?",
+      "options": {
+        "a": "The tree cannot be built",
+        "b": "Dummy (duplicate) hashes are added to adjust",
+        "c": "Transactions are left out of the block",
+        "d": "The Merkle root is ignored"
+      },
+      "answer": ["b"],
+      "detailed_solution": "If the number of transactions is odd, pairs cannot be formed for the suitable structure of the Merkle tree. To fix this, dummy (duplicate) hashes are added to make the number of transactions even, allowing the tree to be constructed properly. Please refer to the Week 3 Lecture 14."
+    }
+  ],
+  "WEEK 4": [
+    {
+      "question_number": 1,
+      "question_text": "What is a \"fork\" in the context of Bitcoin?",
+      "options": {
+        "a": "A change in the Bitcoin protocol that leads to the creation of a new version of the blockchain",
+        "b": "A new type of cryptocurrency that does not rely on blockchain technology",
+        "c": "A collaborative process for miners to resolve conflicts in the blockchain",
+        "d": "None of the above"
+      },
+      "answer": ["a"],
+      "detailed_solution": "In the context of Bitcoin, a \"fork\" refers to a change in the protocol or rules of the network, which can result in the creation of a new version of the blockchain.\nPlease refer to the Week 4 Lecture 16."
+    },
+    {
+      "question_number": 2,
+      "question_text": "Suppose a miner initially receives 100 bitcoins as a reward for successfully mining a block at time Jan, 2009. The reward for mining a block is halved approximately every four years (or after every 210,000 blocks). Based on this halving process, which of the following statements are correct? (Please note that once the reward is halved, it will remain the same until four years have been completed or after every 210,000 blocks.)",
+      "options": {
+        "a": "In Jan 2013, the miner will receive 50 bitcoins for adding a new block.",
+        "b": "In Jan 2018, the miner will receive 25 bitcoins for adding a new block.",
+        "c": "In Jan 2021, the miner will receive 12.5 bitcoins for adding a new block.",
+        "d": "In Jan 2024, the miner will receive 6.25 bitcoins for adding a new block."
+      },
+      "answer": ["a", "b", "c"],
+      "detailed_solution": "The Bitcoin block reward halves approximately every 4 years (after 210,000 blocks). From Jan 2009 reward was 100 bitcoins(same for 2010, 2011, and 2012); By Jan 2013, the reward was 50 bitcoins(same for 2014, 2015, and 2016); by Jan 2018 it was 25 bitcoins(same for 2017, 2019, and 2020); and by Jan 2021 it was 12.5 bitcoins(same for 2022, 2023, and 2024). By Jan 2024, the halving to 6.25 bitcoins will not yet have occurred, making the last statement incorrect."
+    },
+    {
+      "question_number": 3,
+      "question_text": "How does the Bitcoin network prevent double spending?",
+      "options": {
+        "a": "A centralized authority will be used to verify each transaction before it is added to the blockchain.",
+        "b": "Relying on a proof-of-work consensus mechanism ensures that only one valid transaction is accepted.",
+        "c": "All transactions are stored in a centralized database that tracks each Bitcoin's status.",
+        "d": "By limiting Bitcoin transactions to one per user per day."
+      },
+      "answer": ["b"],
+      "detailed_solution": "The proof-of-work consensus mechanism in Bitcoin prevents double-spending by requiring miners to solve cryptographic puzzles to add new blocks. This ensures transactions are verified by multiple miners and nodes, making it nearly impossible for double spending to occur."
+    },
+    {
+      "question_number": 4,
+      "question_text": "Which of the following is a challenge of the permissionless model in blockchain?",
+      "options": {
+        "a": "Ensuring that all participants trust a central authority",
+        "b": "Reaching agreement (consensus) across a decentralized network of participants without a trusted third-party",
+        "c": "Limiting the number of participants to improve scalability",
+        "d": "Preventing participants from accessing the blockchain"
+      },
+      "answer": ["b"],
+      "detailed_solution": "Please refer to the Week 4 Lecture 18."
+    },
+    {
+      "question_number": 5,
+      "question_text": "Which of the following is not included in a block of a blockchain?",
+      "options": {
+        "a": "Transaction data",
+        "b": "Hash",
+        "c": "Timestamp",
+        "d": "IP address of the miner"
+      },
+      "answer": ["d"],
+      "detailed_solution": "The miner's IP address is not included in a blockchain block. The other options—transaction data, cryptographic hash, and timestamp—are standard components of a blockchain block."
+    },
+    {
+      "question_number": 6,
+      "question_text": "Which of the following is not a failure that blockchain tries to handle , as rather an attack that a blockchain can try to defend to ensure prevention?",
+      "options": {
+        "a": "Crash Fault",
+        "b": "Double Spending",
+        "c": "Byzantine Fault",
+        "d": "Link Fault"
+      },
+      "answer": ["b"],
+      "detailed_solution": "Please refer to the Week 4 Lecture 18."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which of the following best describes Safety and Liveness in Bitcoin?",
+      "options": {
+        "a": "Safety ensures transactions are irreversible, while Liveness ensures transactions are eventually added.",
+        "b": "Safety guarantees quick transaction confirmation, while Liveness prevents forks.",
+        "c": "Safety prevents double-spending, while Liveness speeds up block creation.",
+        "d": "Safety ensures blocks are always valid, while Liveness ensures no transaction delays."
+      },
+      "answer": ["a"],
+      "detailed_solution": "Safety ensures that once a transaction is confirmed, it cannot be reversed, preventing issues like double-spending. Liveness ensures that transactions will eventually be added to the blockchain, even if there are delays or forks.\nPlease refer to the Week 4 Lecture 19."
+    },
+    {
+      "question_number": 8,
+      "question_text": "What is the main purpose of the Proof of Work (PoW) mechanism in Bitcoin?",
+      "options": {
+        "a": "To validate transactions with the need for a central authority.",
+        "b": "To speed up transaction processing times by reducing the time needed to add new blocks.",
+        "c": "To make it easier for miners to add new blocks without computational work.",
+        "d": "To secure the network and prevent fraudulent transactions through computational difficulty."
+      },
+      "answer": ["d"],
+      "detailed_solution": "Please refer to the Week 4 Lecture 19."
+    },
+    {
+      "question_number": 9,
+      "question_text": "What is the correct order of events when adding a new block to the Bitcoin blockchain?",
+      "options": {
+        "a": "Block Mining → Block Propagation → Block Flooding → Transaction Flooding",
+        "b": "Transaction Flooding → Block Mining → Block Propagation → Block Flooding",
+        "c": "Transaction Flooding → Block Flooding → Block Propagation → Block Mining",
+        "d": "Block Propagation → Block Mining → Block Flooding → Transaction Flooding"
+      },
+      "answer": ["b"],
+      "detailed_solution": "Please refer to the Week 4 Lecture 19."
+    },
+    {
+      "question_number": 10,
+      "question_text": "Which of the following statements is incorrect regarding Proof of Work (PoW) in the context of forks, attacks, and the monopoly problem?",
+      "options": {
+        "a": "PoW forks can occur when two miners independently solve the puzzle at the same time, leading to a brief divergence in the blockchain.",
+        "b": "While PoW encourages miners to follow the longest chain, it does not prevent attacks like 51% attacks, where malicious miners can control the blockchain.",
+        "c": "The Monopoly Problem refers to a situation where a single miner or group controls a majority of the network’s hashing power, undermining decentralization.",
+        "d": "Proof of Work ensures complete decentralization by preventing any miner from controlling the majority of the hashing power."
+      },
+      "answer": ["d"],
+      "detailed_solution": "Please refer to the Week 4 Lecture 20."
+    }
+  ],
+  "WEEK 5": [
+    {
+      "question_number": 1,
+      "question_text": "What is/are the limitations of using the consensus algorithm Proof of Work (PoW)?",
+      "options": {
+        "a": "A lot of mining power is wasted as only one gets success in mining at a time",
+        "b": "PoW is typically used for permissioned blockchain",
+        "c": "It is used for blockchain mining",
+        "d": "High costs and difficulty in supporting large-scale adoption"
+      },
+      "answer": ["a", "d"],
+      "detailed_solution": "Please refer to the slide Week 5 slide. The PoW has limitations of wastage of power, high costs, and large-scale adoption."
+    },
+    {
+      "question_number": 2,
+      "question_text": "Which of the following is/are not applicable for PoET(Proof of Elapsed Time) consensus",
+      "options": {
+        "a": "Each participant in the blockchain network waits a random amount of time",
+        "b": "The first participant to finish becomes the follower for the new block",
+        "c": "Trusted execution platform and attestation are used to verify that the proposer has really waited",
+        "d": "The first participant to finish becomes the leader for the new block."
+      },
+      "answer": ["b"],
+      "detailed_solution": "POET uses a trusted execution platform, say as Intel SGX and H/W attestation. Please refer to the slide for details."
+    },
+    {
+      "question_number": 3,
+      "question_text": "How an attacker could manipulate the transaction history of an existing blockchain whose ledger cannot be modified, only it is possible to append?",
+      "options": {
+        "a": "The attacker hard-forked the network and created a new blockchain network.",
+        "b": "The attacker modified the smart contract and recovered the investor's cryptocurrency.",
+        "c": "The attacker gained control of more than 51% of the network’s computing power.",
+        "d": "The attacker gained control of less than 49% of the network’s computing power."
+      },
+      "answer": ["c"],
+      "detailed_solution": "Refer to the Week 5 Lecture slide for 51% attack."
+    },
+    {
+      "question_number": 4,
+      "question_text": "What is the role of the Ethereum Virtual Machine (EVM)?",
+      "options": {
+        "a": "To directly connect the Ethereum nodes",
+        "b": "To execute smart contracts in a decentralized manner",
+        "c": "To directly mine blocks",
+        "d": "To disrupt the Ethereum network and cause failures"
+      },
+      "answer": ["b"],
+      "detailed_solution": "The EVM executes smart contracts and ensures decentralized agreement on computations."
+    },
+    {
+      "question_number": 5,
+      "question_text": "Which of the following syntax is correct to write data in a smart contract using solidity",
+      "options": {
+        "a": "myContract.methods.store(\"10\").set()",
+        "b": "myContract.methods.write(\"10\").send()",
+        "c": "myContract.methods.store(\"10\").send()",
+        "d": "myContract.methods.write(\"10\").set()"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Please refer to the Week 5 Lecture slides on how to execute a smart contract."
+    },
+    {
+      "question_number": 6,
+      "question_text": "2.5 ether equals",
+      "options": {
+        "a": "25 × 10^8 Gwei",
+        "b": "25 × 10^10 Gwei",
+        "c": "25 × 10^7 Gwei",
+        "d": "25 × 10^9 Gwei"
+      },
+      "answer": ["a"],
+      "detailed_solution": "Ether to Wei converter: https://eth-converter.com/."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which JSON-RPC method is used to query the balance of an Ethereum account?",
+      "options": {
+        "a": "eth_sendTransaction",
+        "b": "eth_getBalance",
+        "c": "eth_getBlockByNumber",
+        "d": "eth_getTransactionByHash"
+      },
+      "answer": ["b"],
+      "detailed_solution": "The eth_getBalance method retrieves the current balance of a specified Ethereum account."
+    },
+    {
+      "question_number": 8,
+      "question_text": "What parameter in an Ethereum transaction specifies the fee for computational resources required?",
+      "options": {
+        "a": "Gas",
+        "b": "Nonce",
+        "c": "Data",
+        "d": "Value"
+      },
+      "answer": ["a"],
+      "detailed_solution": "Gas defines the fee required for computational operations in a transaction"
+    },
+    {
+      "question_number": 9,
+      "question_text": "Which of the consensus algorithms requires miners to show a proof of sending coins to a verifiably un‐spendable address?",
+      "options": {
+        "a": "Proof of Work (PoW)",
+        "b": "Proof of Stake (PoS)",
+        "c": "Proof of Burn (PoB)",
+        "d": "Proof of Elapsed Time (PoET)"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Proof of Burn consensus algorithm requires miners to show a proof of burning coins i.e sending coins to a verifiably un‐spendable address"
+    },
+    {
+      "question_number": 10,
+      "question_text": "What is the main difference between PoS (Proof of Stake) and PoW (Proof of Work)?",
+      "options": {
+        "a": "PoS requires computational work; PoW requires a stake.",
+        "b": "PoS relies on the stake held by miners; PoW relies on computational power.",
+        "c": "PoS consumes external resources; PoW consumes virtual resources.",
+        "d": "PoS eliminates the need for block validation."
+      },
+      "answer": ["b"],
+      "detailed_solution": "In PoS, block mining probability depends on the amount of stake held, unlike PoW, which depends on computational effort."
+    }
+  ],
+  "WEEK 6": [
+    {
+      "question_number": 1,
+      "question_text": "What is/are the primary distinction between crash faults and Byzantine faults?",
+      "options": {
+        "a": "Crash faults involve deliberate malicious behavior",
+        "b": "Byzantine faults involve deliberate malicious behavior",
+        "c": "Crash faults require at least 3F + 1 node for consensus (here, F is the number of crash faults)",
+        "d": "Byzantine faults can never partition the network"
+      },
+      "answer": ["b"],
+      "detailed_solution": "Byzantine faults involve nodes behaving maliciously, whereas crash faults occur when nodes fail passively."
+    },
+    {
+      "question_number": 2,
+      "question_text": "Suppose you execute your tasks distributedly from four different systems at four different locations. To maintain the consensus among the systems, you are using the BFT model. You found that one system is permanently failed due to a hardware fault and another system is compromised by an attacker. Does your system correctly work at all?",
+      "options": {
+        "a": "No",
+        "b": "Yes, with the remaining nodes",
+        "c": "Yes, with all the nodes",
+        "d": "Yes, but with reduced efficiency"
+      },
+      "answer": ["a"],
+      "detailed_solution": "We need at least 3F+1=3(1)+1=3F + 1 = 3(1) + 1 = 4 systems to tolerate 1 Byzantine fault. Since one system has permanently failed (crash fault), the remaining systems cannot maintain consensus."
+    },
+    {
+      "question_number": 3,
+      "question_text": "In Paxos, what will a proposer do if it receives a promise containing an already accepted value?",
+      "options": {
+        "a": "Use the previously accepted value with the highest ID",
+        "b": "Propose a completely new value",
+        "c": "Abort the consensus",
+        "d": "Ignore the promise and continue"
+      },
+      "answer": ["a"],
+      "detailed_solution": "The proposer will use the value with the highest ID. Refer to week 6 lecture notes."
+    },
+    {
+      "question_number": 4,
+      "question_text": "Which of the following is/are true regarding the permissioned blockchain model?",
+      "options": {
+        "a": "Users are anonymous",
+        "b": "Transactions are publicly visible to everyone",
+        "c": "Users are authenticated through a Membership Service Provider (MSP)",
+        "d": "Security and consensus are required"
+      },
+      "answer": ["c", "d"],
+      "detailed_solution": "In the permissioned blockchain model, users are authenticated through MSP and users know each other. But security and consensus are still required. The transactions are only visible to authorized participants."
+    },
+    {
+      "question_number": 5,
+      "question_text": "In the Paxos algorithm, a majority of promises ensure:",
+      "options": {
+        "a": "Agreement on the ID, value",
+        "b": "Liveness of the system",
+        "c": "Safety against conflicting proposals",
+        "d": "Disagreement on the ID, value"
+      },
+      "answer": ["c"],
+      "detailed_solution": "A majority of promises in Paxos ensure safety by preventing conflicting proposals from proceeding"
+    },
+    {
+      "question_number": 6,
+      "question_text": "If there are 3 faulty nodes, at least how many nodes are needed to reach consensus in the Byzantine Fault Tolerance (BFT) system?",
+      "options": {
+        "a": "4",
+        "b": "8",
+        "c": "7",
+        "d": "10"
+      },
+      "answer": ["d"],
+      "detailed_solution": "f = 3 Total nodes required = 3f + 1 = 9 + 1 = 10"
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which of the following is/are true regarding a consensus when there is one good commander, one good lieutenant, and one faulty lieutenant in a Byzantine Generals Problem.",
+      "options": {
+        "a": "Consensus is always possible",
+        "b": "Consensus is not possible because the faulty lieutenant can mislead",
+        "c": "Consensus is not possible because the commander can mislead",
+        "d": "Consensus will be possible if there are additional good lieutenants"
+      },
+      "answer": ["b", "d"],
+      "detailed_solution": "One fault. Total nodes required = 3f + 1 = 3 + 1 = 4. But we have 3 nodes. In this case, the faulty lieutenant can mislead. The consensus is possible if we have additional good lieutenants."
+    },
+    {
+      "question_number": 8,
+      "question_text": "What is/are the purpose of Multi-Paxos?",
+      "options": {
+        "a": "To have a termination guarantee",
+        "b": "To execute smart contracts on multiple blockchains",
+        "c": "To reach a consensus for a series of values",
+        "d": "To prioritize liveness over safety"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Multi-Paxos extends Paxos to achieve consensus over a series of values. There is no termination guarantee."
+    },
+    {
+      "question_number": 9,
+      "question_text": "Which of the following is/are false regarding classic Paxos?",
+      "options": {
+        "a": "It requires a majority of acceptors to proceed",
+        "b": "It achieves consensus on ID and not the value",
+        "c": "It achieves consensus on the value and not ID",
+        "d": "It can work with Byzantine faults"
+      },
+      "answer": ["b", "d"],
+      "detailed_solution": "Paxos is designed to handle only crash faults. Also, the consensus is reached on the value, not on ID."
+    },
+    {
+      "question_number": 10,
+      "question_text": "In Paxos, which of the following is/are true about the roles of nodes?",
+      "options": {
+        "a": "A node cannot play more than one role",
+        "b": "A proposer node cannot become a learner",
+        "c": "A node can play one or more than one role",
+        "d": "An acceptor node cannot become a learner"
+      },
+      "answer": ["c"],
+      "detailed_solution": "In Paxos, a node can play more than one role at the same time."
+    }
+  ],
+  "WEEK 7": [
+    {
+      "question_number": 1,
+      "question_text": "Which statement(s) are not true about Byzantine Dissemination Quorum:",
+      "options": {
+        "a": "Any two quorums have at least one correct replica in common",
+        "b": "There is always a quorum available with no faulty replicas",
+        "c": "Any two quorums have at most one correct replica in common",
+        "d": "There is always a quorum available with some faulty replicas"
+      },
+      "answer": ["c", "d"],
+      "detailed_solution": "Refer to Lecture 31: Byzantine Dissemination Quorum: Intersection: Any two quorums have at least one correct replica in common. Availability: There is always a quorum available with no faulty replicas"
+    },
+    {
+      "question_number": 2,
+      "question_text": "If you have f number of total faulty nodes, then you need at least how many replicas to reach consensus considering the possibility of both crash fault or byzantine fault.",
+      "options": {
+        "a": "2f + 1",
+        "b": "3f + 1",
+        "c": "f +1",
+        "d": "3f"
+      },
+      "answer": ["b"],
+      "detailed_solution": "Considering the byzantine fault, 3f + 1 replicas are required to reach a consensus. This is greater than 2f + 1 replicas, which is enough to handle crash faults, too."
+    },
+    {
+      "question_number": 3,
+      "question_text": "Which cryptographic technique is primarily used in PBFT to validate message integrity?",
+      "options": {
+        "a": "Hashing",
+        "b": "Symmetric encryption",
+        "c": "Digital signatures",
+        "d": "Sharding"
+      },
+      "answer": ["c"],
+      "detailed_solution": "PBFT utilizes digital signatures to ensure the authenticity and integrity of messages"
+    },
+    {
+      "question_number": 4,
+      "question_text": "Which mechanism ensures PBFT liveness when the primary fails?",
+      "options": {
+        "a": "Cryptographic signatures",
+        "b": "View change protocol",
+        "c": "Pre-prepare and Prepare phases",
+        "d": "Timeout mechanism"
+      },
+      "answer": ["b"],
+      "detailed_solution": "The view change protocol allows the system to elect a new primary when the current primary fails."
+    },
+    {
+      "question_number": 5,
+      "question_text": "Which of the following statement(s) are not true regarding Hyperledger frameworks?",
+      "options": {
+        "a": "Hyperledger frameworks are primarily used for building permissioned blockchains for organizations.",
+        "b": "Hyperledger frameworks are developed for mainly building public blockchains.",
+        "c": "Hyperledger frameworks can not use CouchDB.",
+        "d": "Hyperledger frameworks are only used for building smart contracts for public blockchains"
+      },
+      "answer": ["b", "c", "d"],
+      "detailed_solution": "Fabric is primarily used for building permissioned blockchains for organizations. It is an open source project so anyone can use it to build a permissioned blockchain and deploy smart contracts on it. The states can be maintained using light weight databases such as Level DB, CouchDB etc."
+    },
+    {
+      "question_number": 6,
+      "question_text": "Which of the following(s) is/are benefits of Blockchain for Business?",
+      "options": {
+        "a": "Reduced transaction time in general, from days to near instantaneous for legacy based cross-border interactions",
+        "b": "The sole centralized authority has been able to remove overheads and cost",
+        "c": "Supports transparency and traceability in transactions",
+        "d": "Always increases transaction costs due to complexity"
+      },
+      "answer": ["a", "c"],
+      "detailed_solution": "Refer to Lecture 33. The benefits of Blockchain for business include reduced transaction time by enabling near-instantaneous cross-border transactions and supporting transparency and traceability through immutable ledger. Blockchain does not involve a centralized authority to remove overheads, and while complexity may increase costs, the goal is to ultimately reduce transaction costs."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which of the following are characteristics of permissioned blockchains (in comparison with permissionless blockchains)?",
+      "options": {
+        "a": "Closed membership consensus protocol in permissioned blockchains",
+        "b": "The identities of nodes are not pre-known in permissioned blockchains",
+        "c": "Always lower transaction throughput in permissioned blockchains",
+        "d": "Permissioned blockchains are highly scalable for a large number of nodes"
+      },
+      "answer": ["a"],
+      "detailed_solution": "Permissioned blockchains use closed membership consensus algorithms and have a high transaction throughput. However, they are less scalable in accommodating a large number of nodes compared to permissionless blockchains. Refer to Lecture 33."
+    },
+    {
+      "question_number": 8,
+      "question_text": "Which of the following abstractions in Hyperledger Fabric primarily provides confidentiality to individual ledgers ?",
+      "options": {
+        "a": "Ordering Services",
+        "b": "Peers",
+        "c": "Channels",
+        "d": "Consensus"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Refer to Lecture 35: Fabric channels refer to different separate ledgers such that only organizations belonging to a particular channel can read/write to that ledger."
+    },
+    {
+      "question_number": 9,
+      "question_text": "What is the role of Membership Service Provider (MSP) in Hyperledger Fabric?",
+      "options": {
+        "a": "Assigning sequence numbers to transactions",
+        "b": "Identity management for network participants",
+        "c": "Storing ledger data securely",
+        "d": "Defining consensus mechanism for network"
+      },
+      "answer": ["b"],
+      "detailed_solution": "MSP handles the identity management for network participants. It ensures that only authorized participants are allowed to interact with the network."
+    },
+    {
+      "question_number": 10,
+      "question_text": "Which of the following are key features of Hyperledger Fabric?",
+      "options": {
+        "a": "Modular architecture with pluggable components",
+        "b": "Permissionless blockchain framework",
+        "c": "Support for smart contracts (chain codes) in general-purpose languages",
+        "d": "Use of native cryptocurrencies for transactions"
+      },
+      "answer": ["a", "c"],
+      "detailed_solution": "Hyperledger Fabric is a permissioned blockchain framework with a modular design and support for smart contracts (chain codes) written in languages like Go, Java, and Node.js. It does not have native cryptocurrencies."
+    }
+  ],
+  "WEEK 8": [
+    {
+      "question_number": 1,
+      "question_text": "Which of the following is/are correct?",
+      "options": {
+        "a": "PoW always ensures consensus finality",
+        "b": "PoW does not ensure consensus finality",
+        "c": "PBFT protocol always ensures consensus finality",
+        "d": "PBFT protocol does not ensure consensus finality"
+      },
+      "answer": ["b", "c"],
+      "detailed_solution": "PBFT protocol ensures total ordering of transactions, thus ensuring consensus finality. Whereas PoW does not ensure consensus finality."
+    },
+    {
+      "question_number": 2,
+      "question_text": "Which of the following is/are true regarding the CoSi protocol?",
+      "options": {
+        "a": "Witnesses are organized in a tree structure",
+        "b": "Three rounds of PBFT can be emulated using one round of CoSi protocol",
+        "c": "It can be used to sign a message by multiple authorities collectively",
+        "d": "Three rounds of PBFT can be emulated using two rounds of CoSi protocol"
+      },
+      "answer": ["a", "c", "d"],
+      "detailed_solution": "Refer to Week 8 Lecture Notes"
+    },
+    {
+      "question_number": 3,
+      "question_text": "Which of the following factor(s) distinguish Bitcoin-NG from Bitcoin?",
+      "options": {
+        "a": "Decoupling the leader election and transaction serialization",
+        "b": "Use of key blocks and macroblocks",
+        "c": "Bitcoin-NG has lower transaction throughput as compared to Bitcoin",
+        "d": "Leader election using PBFT"
+      },
+      "answer": ["a", "b"],
+      "detailed_solution": "Bitcoin-NG has a higher transaction throughput than Bitcoin. It decouples the leader election from transaction serialization using key blocks and microblocks."
+    },
+    {
+      "question_number": 4,
+      "question_text": "Which of the following is/are true regarding Bitcoin-NG?",
+      "options": {
+        "a": "Microblock generation rate is lower than the key block generation rate",
+        "b": "Microblock generation rate is higher than the key block generation rate",
+        "c": "The interval between the generation of two key blocks is exponentially distributed",
+        "d": "The key block contains the ledger entries"
+      },
+      "answer": ["b", "c"],
+      "detailed_solution": "Microblocks contain the ledger entries and microblocks have a higher generation rate as compared to key blocks. Refer to Week 8 Lecture Notes"
+    },
+    {
+      "question_number": 5,
+      "question_text": "Which of the following is/are correct?",
+      "options": {
+        "a": "PBFT protocol ensures total ordering of transactions",
+        "b": "Bitcoin has lower node scalability as compared to Standard BFT protocols",
+        "c": "Standard BFT protocols never produces lower transaction throughput as compared to Bitcoin",
+        "d": "Bitcoin-NG has higher node scalability as compared to Standard bitcoin protocols in general"
+      },
+      "answer": ["a", "d"],
+      "detailed_solution": "BFT is faster for small networks. Bitcoin NG decouples transaction serialization from leader election. Refer to ‘Performance vs Scalability’ in Week 8 Lecture Notes."
+    },
+    {
+      "question_number": 6,
+      "question_text": "What is the primary function of a Fabric smart contract (Chaincode)?",
+      "options": {
+        "a": "Performing cryptocurrency mining",
+        "b": "Defining the business rules and logic in the ledger",
+        "c": "Defining consensus algorithms",
+        "d": "Monitoring the transaction throughput"
+      },
+      "answer": ["b"],
+      "detailed_solution": "Fabric smart contracts define common data, rules and processes for businesses to transact through the ledger."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which API is used for implementing Fabric chaincodes?",
+      "options": {
+        "a": "hyperledger-client-api",
+        "b": "smart-contract-builder",
+        "c": "fabric-contract-api",
+        "d": "fabric-identity-manager"
+      },
+      "answer": ["c"],
+      "detailed_solution": "fabric-contract-api is used for implementing chaincode in Hyperledger Fabric."
+    },
+    {
+      "question_number": 8,
+      "question_text": "Which of the following is/are true regarding fabric transactions?",
+      "options": {
+        "a": "The transactions should be endorsed by peers",
+        "b": "The transactions are committed without validation",
+        "c": "A transaction does not change the world state",
+        "d": "World state holds current updated consensus view"
+      },
+      "answer": ["a", "d"],
+      "detailed_solution": "In Hyperledger Fabric, transactions are endorsed by peers and are committed only after validation. Also, a transaction can update the world state."
+    },
+    {
+      "question_number": 9,
+      "question_text": "Which of the following factor(s) limits Bitcoin’s scalability?",
+      "options": {
+        "a": "Low transaction fees",
+        "b": "Fixed block size",
+        "c": "Wallet address complexity",
+        "d": "Fixed block frequency"
+      },
+      "answer": ["b", "d"],
+      "detailed_solution": "Bitcoin’s scalability is limited due to its fixed block size and block frequency. Refer to Week 8 lecture notes."
+    },
+    {
+      "question_number": 10,
+      "question_text": "Which of the following is/are correct regarding Schnorr Multisignature in CoSi protocol?",
+      "options": {
+        "a": "It is difficult to verify the signature",
+        "b": "Signature can be verified using a single collective public key",
+        "c": "It is easy to verify the signature",
+        "d": "It relies on group G of any composite order"
+      },
+      "answer": ["b", "c"],
+      "detailed_solution": "In the Cosi protocol, Schnorr Multisignature is easy to verify by using a single collective public key. Also, it relies on a group of prime order."
+    }
+  ],
+  "WEEK 9": [
+    {
+      "question_number": 1,
+      "question_text": "Which of the following is true about Single Sign-on?",
+      "options": {
+        "a": "The same identity can be used to access multiple services",
+        "b": "Decentralized providers always maintain the identity of individuals participating in single sign-on for each service",
+        "c": "All individuals always use a fixed same identity for every one of them together",
+        "d": "All identity holders are also always identity providers"
+      },
+      "answer": ["a"],
+      "detailed_solution": "A single sign-on can be used to log in to multiple services."
+    },
+    {
+      "question_number": 2,
+      "question_text": "Which of the following statements regarding Solidity is true?",
+      "options": {
+        "a": "Solidity compiler compiles a solidity program to bytecode which is executed by Ethereum Virtual Machine.",
+        "b": "Solidity interpreter always executes the program with Ethereum Virtual Device.",
+        "c": "Solidity interpreter is responsible for executing smart contracts in Ethereum nodes.",
+        "d": "Solidity program is compiled to high level ascii code which is executed by Ethereum node’s interpreter."
+      },
+      "answer": ["a"],
+      "detailed_solution": "Solidity program is compiled to bytecode, which is executed by Ethereum Virtual Machine"
+    },
+    {
+      "question_number": 3,
+      "question_text": "Which of the following statements related to Algorand is invalid?",
+      "options": {
+        "a": "A block is prepared",
+        "b": "The block is propagated through gossiping, Algorand runs Byzantine agreement on the block",
+        "c": "Prepare the digital signature and propagate",
+        "d": "A committed block is purged"
+      },
+      "answer": ["d"],
+      "detailed_solution": "A random user prepares a block using sortition, and the protocol propagates the block through gossiping. To validate the block created by the random user (can be a valid or adversarial user), a byzantine agreement is required. Once it is found that the block is valid, then it is digitally signed and propagates the digital signature in the network."
+    },
+    {
+      "question_number": 4,
+      "question_text": "Which of the following is true about selecting the random committee in the Algorand network?",
+      "options": {
+        "a": "There is a dedicated node that chooses the nodes to form the committee",
+        "b": "A distributed algorithm decides the list of nodes participating in the committee, and the committee members are always pre-decided and fixed",
+        "c": "A specific pool of nodes chosen are given the responsibility of forming the committee",
+        "d": "The nodes can take part as committee members by winning a local computation"
+      },
+      "answer": ["d"],
+      "detailed_solution": "Algorand is an open model, which means anyone can join the network. Also, it is a permissionless model. It can not have a single node who will select the committee. Cryptographic sortition is used to elect the user to be part of the committee. Every user can elect to be part of the committee. The individual committee members run certain local computations on their machines to determine whether they won the lottery. If they win, they can participate."
+    },
+    {
+      "question_number": 5,
+      "question_text": "Which of the following comes with Verifiable Credentials as a native inbuilt feature?",
+      "options": {
+        "a": "Ethereum",
+        "b": "Litecoin",
+        "c": "Hyperledger Aries",
+        "d": "Solidity"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Aries supports natively verifiable credentials and presentations."
+    },
+    {
+      "question_number": 6,
+      "question_text": "Consider the following statement - “Say Alice has generated two Distributed Identifiers (DID), DID1 and DID2, for her pairwise relationships maintained in Hyperledger Indy and used in Hyperledger Aries”. Which part of the above statement is false with respect to the concepts of Hyperledger Indy and Aries?",
+      "options": {
+        "a": "Generation of DID by Alice",
+        "b": "Assignment of SEED to Steward",
+        "c": "Acceptance of incoming invitation by Alice",
+        "d": "Saving DID metadata always in a centralized Identity ledger"
+      },
+      "answer": ["d"],
+      "detailed_solution": "a,b,c are valid for the situation. Please refer to Week 9 Lecture Notes"
+    },
+    {
+      "question_number": 7,
+      "question_text": "In Verifiable Credential (VC) scheme",
+      "options": {
+        "a": "The verifiable credentials can be verified by the issuer only.",
+        "b": "The verifiable credentials can be verified by the holder only.",
+        "c": "The verifiable credentials can be verified by the verifier ( who requests for verifiable presentations) only.",
+        "d": "Verifiable credentials can be verified by issue, holder, and verifier."
+      },
+      "answer": ["d"],
+      "detailed_solution": "VC is a claim about a subject that can be verified by the issuer, holder, and verifier"
+    },
+    {
+      "question_number": 8,
+      "question_text": "Data transfer is an important aspect of interoperability in which of the following permissioned blockchains?",
+      "options": {
+        "a": "Hyperledger Indy",
+        "b": "Ethereum",
+        "c": "Hyperledger Fabric",
+        "d": "Hyperledger Ursa"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Hyperledger Fabric supports interoperability by extending to the Cacti framework."
+    },
+    {
+      "question_number": 9,
+      "question_text": "Which of the following is/are true for Hyperledger Indy and related Decentralized Identifier (DID) context. Please choose all possible correct answers.",
+      "options": {
+        "a": "Digital representation of physical identity and Individuals can control the usage of their own identity",
+        "b": "Facilitates Verifiable presentation (VP) of the ID",
+        "c": "Indy credential schema defines the structure for Verifiable Credential templates",
+        "d": "Self-Sovereign Identity (SSI) uses DID as the backbone of its identity handling."
+      },
+      "answer": ["a", "b", "c", "d"],
+      "detailed_solution": "a,b,c, and d are correct. DID provides a decentralized identity that can be based on open standards and can perform a verifiable presentation of the ID when required, maintains trust, and is used in SSI . For details please refer to slides."
+    },
+    {
+      "question_number": 10,
+      "question_text": "Which of the following statements is false in context to Byzantine Fault Tolerant (BFT) protocol in general?",
+      "options": {
+        "a": "The system can operate correctly as long as the number of faulty nodes does not exceed the allowable threshold proportion of faulty nodes.",
+        "b": "Classic BFT Protocol is used in a permissioned system.",
+        "c": "RAFT is a type of BFT protocol",
+        "d": "The system assumes all the nodes are honest"
+      },
+      "answer": ["d"],
+      "detailed_solution": "d is the correct option. BFT can perform in the system with malicious nodes within specified limits, and RAFT is Crash Fault Tolerant. For details please refer to slides."
+    }
+  ],
+  "WEEK 10": [
+    {
+      "question_number": 1,
+      "question_text": "What is the purpose of zero-knowledge proofs in Hyperledger Indy?",
+      "options": {
+        "a": "Anonymous cryptocurrency transactions",
+        "b": "Reduced smart contract execution time",
+        "c": "Verification of credentials without revealing all details",
+        "d": "Public visibility of all credential details"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Zero-knowledge proofs allow claims to be verified without disclosing unnecessary information."
+    },
+    {
+      "question_number": 2,
+      "question_text": "Which of the following is/are true regarding timelocks and hashlocks in blockchain contracts?",
+      "options": {
+        "a": "Hashlocks allow spending only when a specific secret is revealed",
+        "b": "Timelocks prevent spending until a predefined time or block height",
+        "c": "Hashlocks rely on timestamps for cryptographic verification",
+        "d": "Hashlocks allow spending even if the specific secret is not revealed"
+      },
+      "answer": ["a", "b"],
+      "detailed_solution": "Refer to Week 10 Lecture Notes"
+    },
+    {
+      "question_number": 3,
+      "question_text": "Which of the following is/are true regarding cross-chain Hashed Timelock Contracts?",
+      "options": {
+        "a": "They enable cross-chain transactions without trust",
+        "b": "They require central authorities to enforce conditions",
+        "c": "They ensure atomicity in swaps between networks",
+        "d": "The funds go to the intended recipient instead of returning to the original sender if the secret is not revealed before the timeout occurs"
+      },
+      "answer": ["a", "c"],
+      "detailed_solution": "HTLCs ensure trustless cross-chain atomic swaps using hashlock and timelock mechanisms."
+    },
+    {
+      "question_number": 4,
+      "question_text": "Which of the following statements is/are correct regarding trusted third-party (TTP) based asset transfer?",
+      "options": {
+        "a": "Slow transaction speed in comparison to decentralized asset transfer framework",
+        "b": "Improved transaction transparency",
+        "c": "Centralized exchanges can act as TTP for asset transfer",
+        "d": "Security bias can be caused due to third party in general"
+      },
+      "answer": ["c", "d"],
+      "detailed_solution": "TTP-based transfers rely on centralized control and intermediaries. It also has a possibility of security bias on third party. There have been several cases of theft from centralized exchanges."
+    },
+    {
+      "question_number": 5,
+      "question_text": "Which of the following statements is/are true about public blockchains operating as isolated silos?",
+      "options": {
+        "a": "They use the same protocols across networks.",
+        "b": "They operate independently without interoperability.",
+        "c": "They inherently allow seamless cross-chain communication.",
+        "d": "They often have different standards and protocols."
+      },
+      "answer": ["b", "d"],
+      "detailed_solution": "Public blockchains operate with different protocols and standards and lack built-in interoperability."
+    },
+    {
+      "question_number": 6,
+      "question_text": "What is an escrow? Select the best possible and concrete answer",
+      "options": {
+        "a": "Escrow is an agreement in which assets are held and distributed when conditions are met",
+        "b": "Escrow is payment for smart contracts",
+        "c": "Escrow is a permissioned blockchain",
+        "d": "Escrow is the cost of execution of smart contracts"
+      },
+      "answer": ["a"],
+      "detailed_solution": "Without the presence of any Escrow, the funds are in control of the sender and receiver parties."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which of the following are guaranteed in the ideal atomic swap protocol ?",
+      "options": {
+        "a": "All swaps will take place only when all parties conform to the protocol",
+        "b": "If some parties deviate from the protocol, then all conforming party ends up worse off",
+        "c": "No coalition has an incentive to deviate from the protocol",
+        "d": "Swaps can take place partially"
+      },
+      "answer": ["a", "c"],
+      "detailed_solution": "Refer to Week 10 Lecture Notes"
+    },
+    {
+      "question_number": 8,
+      "question_text": "Which of the following steps are involved in the verifiable data transfer protocol in permissioned blockchain?",
+      "options": {
+        "a": "Generate a proof request with verification policies",
+        "b": "Validate proofs against verification policies",
+        "c": "Send responses with attestations and proofs",
+        "d": "Access control policies are not checked"
+      },
+      "answer": ["a", "b", "c"],
+      "detailed_solution": "Verifiable data transfer involves generating proof requests, validating attestations and checking access control policies. Refer to Week 10 Lecture Notes."
+    },
+    {
+      "question_number": 9,
+      "question_text": "Suppose Alice has a time-locked contract with a target account as:\nFunding Contract - 1 BTC\nHash: ...Fa4509\nTimeout: 2Δ\nWhat will happen if Alice refuses to reveal the key and a timeout occurs?",
+      "options": {
+        "a": "1 BTC is refunded to Alice",
+        "b": "1 BTC is transferred to a target account",
+        "c": "BTC less than 1 is refunded to Alice as Some BTC deducted as penalty.",
+        "d": "BTC less than 1 is transferred to target account"
+      },
+      "answer": ["a"],
+      "detailed_solution": "Refer to Week 10 Lecture Notes."
+    },
+    {
+      "question_number": 10,
+      "question_text": "What is a verifiable credential in Hyperledger Indy?",
+      "options": {
+        "a": "A digital certificate stored on-chain",
+        "b": "A cryptographic token for mining",
+        "c": "A smart contract validation key",
+        "d": "A permissioned blockchain token"
+      },
+      "answer": ["a"],
+      "detailed_solution": "Verifiable credentials are digital certificates stored on a blockchain that provide authenticity."
+    }
+  ],
+  "WEEK 11": [
+    {
+      "question_number": 1,
+      "question_text": "What is Hyperledger Aries primarily used for?",
+      "options": {
+        "a": "Facilitating decentralized identity management",
+        "b": "Managing cryptocurrency transactions",
+        "c": "Building supply chain solutions",
+        "d": "Developing blockchain consensus algorithms"
+      },
+      "answer": ["a"],
+      "detailed_solution": "Please refer to the Week 11 Lecture 51."
+    },
+    {
+      "question_number": 2,
+      "question_text": "Which of the following is/are key jobs(s) that/those Hyperledger Aries mainly perform(s)?",
+      "options": {
+        "a": "Proof-of-Stake consensus",
+        "b": "Aries can work as IIN (Interoperable Identity Network) agent",
+        "c": "Verifiable credentials exchange",
+        "d": "Cryptographic currency generation"
+      },
+      "answer": ["b", "c"],
+      "detailed_solution": "Hyperledger Aries plays a key role as an Interoperable Identity Agent. It supports DID communication and Verifiable Credential exchange."
+    },
+    {
+      "question_number": 3,
+      "question_text": "Which of the following does NOT pose a direct risk to the security and reliability of blockchain operations?",
+      "options": {
+        "a": "Vulnerability to 51% attacks",
+        "b": "Compromise of private key security",
+        "c": "Exploitation of double-spending vulnerabilities",
+        "d": "High transaction fees"
+      },
+      "answer": ["d"],
+      "detailed_solution": "Blockchain inherently relies on distributed ledger technology, ensuring redundancy by design. The other options—51% attacks, private key compromises, and double spending—are well-recognized risks that can directly undermine blockchain security and integrity. High transaction fees do not pose any direct risk."
+    },
+    {
+      "question_number": 4,
+      "question_text": "In what ways can high computing power/stake be misused in blockchain systems?",
+      "options": {
+        "a": "Taking control of consensus to manipulate transactions and enable double-spending",
+        "b": "Temporarily accelerating block generation to disproportionately increase mining rewards",
+        "c": "Compromising transaction privacy by analyzing cryptographic hashes",
+        "d": "Manipulating the blockchain to censor or exclude competitors' transactions"
+      },
+      "answer": ["a", "b", "d"],
+      "detailed_solution": "a) Taking control of consensus to reverse transactions and enable double-spending:\nWith over 50% of the network’s hashing power, an attacker can reverse transactions, enabling double-spending, and disrupt the blockchain's integrity.\nb) Temporarily accelerating block generation to disproportionately increase mining rewards:\nHigh hashing power allows miners to generate blocks faster, collecting more rewards until the network adjusts difficulty, giving them an unfair advantage.\nd) Manipulating the blockchain to censor or exclude competitors' transactions:\nMiners with significant hashing power can choose to exclude specific transactions from blocks, blocking competitors or others from being able to transact."
+    },
+    {
+      "question_number": 5,
+      "question_text": "What is the main objective of a Selfish Mining Attack in a blockchain network?",
+      "options": {
+        "a": "To increase the transaction fees by monopolizing block creation.",
+        "b": "To disrupt the blockchain's consensus by manipulating the chain's length to gain mining rewards unfairly.",
+        "c": "To control over 50% of the network’s hashing power and reverse transactions.",
+        "d": "To expose private transactions by decrypting the block headers."
+      },
+      "answer": ["b"],
+      "detailed_solution": "The goal of a Selfish Mining Attack is for miners to withhold their mined blocks, thus secretly building a longer chain. Once they have a longer chain, they release it, causing the network to adopt it, and unfairly gaining more mining rewards."
+    },
+    {
+      "question_number": 6,
+      "question_text": "A blockchain network has a 10-minute block interval. A miner, \"Miner X,\" controls 40% of the network's hashing power. Miner X mines a block and does not broadcast it immediately. Instead, Miner X continues mining a second block in secret.\nWhat is the most likely result of Miner X's actions in this scenario?",
+      "options": {
+        "a": "Miner X's second block will automatically become part of the blockchain, and the first block will be always discarded.",
+        "b": "Miner X's second block will possibly create a fork in the blockchain, which will later be resolved through a chain reorganization",
+        "c": "Miner X will always successfully steal the rewards of other miners on the network.",
+        "d": "Miner X's actions must cause the network to collapse due to a 51% attack."
+      },
+      "answer": ["b"],
+      "detailed_solution": "Miner X's secret mining creates a temporary fork in the blockchain, where two competing chains exist. The network will eventually adopt the longer chain, causing the shorter chain to be abandoned and reorganized.\nPlease also refer to the Week 11 Lecture 53."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which of the following plays the most crucial role in establishing trust in a blockchain network?",
+      "options": {
+        "a": "Encryption",
+        "b": "Consensus Mechanism",
+        "c": "Smart Contracts",
+        "d": "Distributed Ledger"
+      },
+      "answer": ["b"],
+      "detailed_solution": "A consensus mechanism ensures that all network participants agree on the validity of transactions before they are recorded on the blockchain. This decentralized verification process is fundamental to maintaining trust. Encryption secures data but does not establish consensus. Smart Contracts execute automated agreements but rely on consensus for validation. Distributed Ledger provides transparency but needs consensus to maintain integrity and trust."
+    },
+    {
+      "question_number": 8,
+      "question_text": "Which of the following is/are primarily responsible for validating transactions in the Ethereum 2.0 blockchain (Proof of Stake)?",
+      "options": {
+        "a": "Miner",
+        "b": "Validator",
+        "c": "Peer-to-peer network",
+        "d": "Core consensus protocol"
+      },
+      "answer": ["b"],
+      "detailed_solution": "In Ethereum 2.0, which operates on a Proof of Stake (PoS) consensus mechanism, validators are responsible for validating transactions and creating new blocks, replacing the role of miners from Ethereum's original Proof of Work (PoW) mechanism in older versions."
+    },
+    {
+      "question_number": 9,
+      "question_text": "Which of the following is a potential consequence of an Eclipse Attack on a blockchain node?",
+      "options": {
+        "a": "The targeted node may mine blocks more efficiently due to controlled connections.",
+        "b": "The targeted node may accept fraudulent transactions or blocks, leading to potential double-spending.",
+        "c": "The targeted node will immediately disconnect from the blockchain network to prevent further damage.",
+        "d": "The targeted node will become immune to any form of attack after the Eclipse Attack"
+      },
+      "answer": ["b"],
+      "detailed_solution": "In an Eclipse Attack, the attacker isolates a node by controlling all its inbound and outbound connections. This manipulation can cause the targeted node to accept fraudulent or incorrect information, such as invalid transactions or blocks, leading to issues like double-spending. It does not enhance mining efficiency or make the node immune to other attacks.\nPlease also refer to the Week 11 Lecture 54."
+    },
+    {
+      "question_number": 10,
+      "question_text": "Which of the following is a common technique used by attackers in a front-running attack on decentralized exchanges (DEXs)?",
+      "options": {
+        "a": "Manipulating the gas price to prioritize their transaction over others.",
+        "b": "Encrypting transactions to hide them from miners.",
+        "c": "Using a 51% attack to gain control over the network.",
+        "d": "Altering the smart contract code to change transaction outcomes."
+      },
+      "answer": ["a"],
+      "detailed_solution": "In a front-running attack on a decentralized exchange (DEX), attackers often manipulate the gas price (transaction fees) to ensure that their transaction is processed first, ahead of other pending transactions. By offering a higher gas price, the attacker increases the likelihood of their transaction being included in the block before the targeted transaction. This allows the attacker to profit from any price movement caused by the original transaction."
+    }
+  ],
+  "WEEK 12": [
+    {
+      "question_number": 1,
+      "question_text": "How does the use of blockchain technology enhance the management of Land Registry records?",
+      "options": {
+        "a": "Blockchain eliminates the need for physical land titles by storing them in a centralized digital ledger.",
+        "b": "Blockchain ensures that land records can be accessed by any government entity at any time without restrictions.",
+        "c": "Blockchain prevents fraud in land transactions by providing a secure, transparent, and immutable record of ownership.",
+        "d": "Blockchain allows land records to be altered instantly without the need for a verification process by authorities"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Blockchain technology improves the security and transparency of land registries by creating a decentralized ledger that is immutable, meaning once a record is entered, it cannot be altered. This reduces the risk of fraud, ensures a clear ownership history, and makes the system more trustworthy and efficient."
+    },
+    {
+      "question_number": 2,
+      "question_text": "Which of the following is/are advantages of blockchain?",
+      "options": {
+        "a": "Provides decentralized platforms and marketplace",
+        "b": "Requires intermediaries for verification",
+        "c": "Limited scalability",
+        "d": "Better transparency"
+      },
+      "answer": ["a", "d"],
+      "detailed_solution": "Please refer to the Week 12 Lecture 56."
+    },
+    {
+      "question_number": 3,
+      "question_text": "Which of the following is an essential feature of federated voting?",
+      "options": {
+        "a": "It requires a central authority to validate votes",
+        "b": "Nodes vote independently without needing majority approval to win",
+        "c": "A majority of nodes' votes determine the outcome",
+        "d": "All nodes must agree unanimously for a decision to be accepted"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Please refer to the Week 12 Lecture 57."
+    },
+    {
+      "question_number": 4,
+      "question_text": "Which of the following was/were NOT utilized in Singapore’s Project Ubin to enhance interbank settlements?",
+      "options": {
+        "a": "Distributed Ledger Technology",
+        "b": "Tokenization of the Singapore Dollar (SGD) for digital representation.",
+        "c": "cross-border payments",
+        "d": "Proof-of-work (PoW) consensus mechanism to validate transactions"
+      },
+      "answer": ["d"],
+      "detailed_solution": "Singapore's Project Ubin explored blockchain technology to enhance interbank settlements, focusing on smart contracts for automating transactions and tokenization of the Singapore Dollar (SGD) for digital representation. The project did not integrate public blockchains for cross-border payments but rather used private, permissioned blockchains for enhanced security and control. Additionally, Proof-of-Work (PoW) was not employed, as it is resource-intensive and was not suited for the project's goals. Instead, the project tested more efficient consensus mechanisms, such as Practical Byzantine Fault Tolerance (PBFT). The project aimed to improve financial systems' efficiency, privacy, and scalability."
+    },
+    {
+      "question_number": 5,
+      "question_text": "Which type of attack allows an attacker to create multiple fake identities to gain unauthorized access to consortium services?",
+      "options": {
+        "a": "Byzantine faults",
+        "b": "Sybil attacks",
+        "c": "DDoS attacks",
+        "d": "Sensitive information leakage"
+      },
+      "answer": ["b"],
+      "detailed_solution": "A Sybil attack occurs when an attacker creates multiple fake identities to gain control or influence over a system, often to disrupt consensus or access services. This is a specific threat in decentralized networks, where trust and identity verification are essential."
+    },
+    {
+      "question_number": 6,
+      "question_text": "To allocate consumer requests among Service Providers, which of the following scheduling algorithms is implemented?",
+      "options": {
+        "a": "Fair Scheduling Algorithm",
+        "b": "Capacity Scheduling Algorithm",
+        "c": "Dynamic Round Robin",
+        "d": "A* Algorithm"
+      },
+      "answer": ["a"],
+      "detailed_solution": "In Cloud Federation, to allocate consumer requests among Service Providers, Fair scheduling algorithm is implemented. Each SP will be allocated the number of consumer requests proportional to its infrastructure contribution to the federation."
+    },
+    {
+      "question_number": 7,
+      "question_text": "Which of the following are key advantages of Hyperledger?",
+      "options": {
+        "a": "It is open-source",
+        "b": "The identities of the participants can be accessed by any outsider",
+        "c": "It supports private channels",
+        "d": "It is exclusively designed for public blockchain"
+      },
+      "answer": ["a", "c"],
+      "detailed_solution": "Hyperledger's key advantages include being open-source, allowing for widespread collaboration, and supporting private channels that ensure confidentiality for participants in a network."
+    },
+    {
+      "question_number": 8,
+      "question_text": "Quorum, an enterprise-focused blockchain platform based on Ethereum, supports transaction management with privacy enhancements. Which type of state can Quorum handle during a transaction?",
+      "options": {
+        "a": "Only private state",
+        "b": "Only public state",
+        "c": "Both private and public state at the same time",
+        "d": "Either private or public state for a transaction"
+      },
+      "answer": ["c"],
+      "detailed_solution": "Quorum allows both private and public transactions, providing the flexibility to handle sensitive data privately while also enabling transparent public interactions when required. Therefore, it can handle either private or public state depending on the needs of the transaction."
+    },
+    {
+      "question_number": 9,
+      "question_text": "What feature of blockchain helps prevent fraud in decentralized marketplaces?",
+      "options": {
+        "a": "Central authority",
+        "b": "Smart contracts",
+        "c": "Manual validation",
+        "d": "Third-party monitoring"
+      },
+      "answer": ["b"],
+      "detailed_solution": "Smart contracts automatically execute predefined rules and agreements without intermediaries, ensuring transactions are tamper-proof and fraud-resistant in decentralized marketplaces. This eliminates the risk of manual errors or malicious interference."
+    },
+    {
+      "question_number": 10,
+      "question_text": "What does a \"man-in-the-middle\" attack do in a decentralized marketplace?",
+      "options": {
+        "a": "Changes in the price of goods in the marketplace",
+        "b": "Intercepts and alters messages between users",
+        "c": "Steals cryptocurrency directly from wallets",
+        "d": "Prevents users from accessing the marketplace"
+      },
+      "answer": ["b"],
+      "detailed_solution": "A man-in-the-middle (MITM) attack in a decentralized marketplace primarily intercepts and alters messages between users. In this type of attack, the attacker secretly intercepts and potentially manipulates the communication between two parties (e.g., buyers and sellers) without either party being aware. This could involve changing transaction details, redirecting payments, or modifying the data being exchanged. MITM doesn't change the marketplace's prices."
+    }
+  ]
+}
