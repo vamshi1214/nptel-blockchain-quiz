@@ -1,1393 +1,1774 @@
 [
   {
-    "week": 1,
-    "title": "Week 1: Blockchain & Cryptography Foundations",
+    "week": 0,
+    "title": "Week 0: Introduction to Responsible AI",
     "questions": [
       {
-        "question": "Which of the following statements is true regarding the foundational concepts of blockchain and cryptography?",
+        "question": "What is the definition of Artificial Intelligence?",
         "options": {
-          "a": "Decentralization in blockchain ensures that a single authority controls the network for higher efficiency.",
-          "b": "SHA-256 is a cryptographic hash function widely used in blockchain due to its fixed output size and collision resistance.",
-          "c": "A hash chain is a sequence of cryptographic keys used to decode blockchain data.",
-          "d": "Cryptographic hash ensures that the blockchain data cannot be read by anyone outside the network."
-        },
-        "answer": ["b"],
-        "explanation": "Option (b) is correct because SHA-256 is a cryptographic hash function with features like fixed output, pre-image resistance, and collision resistance, making it ideal for blockchain."
-      },
-      {
-        "question": "An attacker wants to find a collision in a cryptographic hash function with a 256-bit output. What is the approximate number of hash operations required to succeed?",
-        "options": {
-          "a": "1 × 2^128",
-          "b": "0.75 × 2^128",
-          "c": "1 × 2^256",
-          "d": "0.5 × 2^256"
-        },
-        "answer": ["a"],
-        "explanation": "Option (a) is correct because If a hash function produces N bits of output, an attacker needs to compute only 2^(N/2) hash operations on a random input to find two matching outputs. 2^(256/2) = 2^128 = 1 × 2^128"
-      },
-      {
-        "question": "A blockchain network uses SHA-256 for its hashing process. If it takes 10^-6 seconds to compute a single SHA-256 hash, how long would it take (approximately) to compute 2^128 hashes for a collision attack?",
-        "options": {
-          "a": "10^10 years",
-          "b": "10^15 years",
-          "c": "10^20 years",
-          "d": "10^25 years"
+          "a": "a programming language used in data analysis",
+          "b": "a type of hardware designed for computing",
+          "c": "a software used to generate text/media",
+          "d": "the ability for a computer to imitate human behavior"
         },
         "answer": ["d"],
-        "explanation": "Total time to compute 2^128 hashes: 2^128 × 10^-6 ≈ 3.4 × 10^32 seconds.\nConvert seconds to years: 1 year = 3.15×10^7 seconds ⇒ (3.4× 10^32) / (3.15× 10^7) ≈ 10^25 years."
+        "explanation": "Artificial Intelligence is defined as the ability for a computer to imitate human behavior and cognitive functions."
       },
       {
-        "question": "In a decentralized distributed system with 100 participants, which of the following statements is true regarding trust and communication?",
+        "question": "Which type of machine learning uses a combination of a small amount of labeled data and a large amount of unlabeled data to improve learning accuracy?",
         "options": {
-          "a": "At least 50 participants must trust each other for the system to function.",
-          "b": "A central body governing communication among all 100 participants is mandatory.",
-          "c": "Participants may or may not trust each other, as the system ensures integrity using cryptographic protocols and agreement through consensus protocols.",
-          "d": "All the 100 participants must trust each other."
-        },
-        "answer": ["c"],
-        "explanation": "Option (c) is correct because decentralized systems rely on cryptographic mechanisms and consensus protocols, making trust among participants unnecessary. Option (a) is incorrect, as trust among the participants is not a requirement for decentralized systems. Option (b) is incorrect, as decentralized systems operate without a central governing body."
-      },
-      {
-        "question": "A blockchain network achieves an average block generation time of 5 minutes under normal conditions. However, due to scheduled maintenance, the network's hash rate is reduced by 50% for 4 hours daily. If the network operates for 12 hours in total (including the maintenance period), how many blocks will be added to the blockchain?",
-        "options": {
-          "a": "120",
-          "b": "200",
-          "c": "216",
-          "d": "240"
-        },
-        "answer": ["a"],
-        "explanation": "For 8 hours at full efficiency: (60 min / 5 min) = 12 blocks/hour, so 12 × 8 = 96 blocks.\nFor 4 hours at 50% efficiency: (12 blocks / 2 ) 6 blocks/hours, so 6 × 4 = 24 blocks.\nTotal blocks = 96 + 24 = 120 blocks."
-      },
-      {
-        "question": "Where are the transaction logs stored in a blockchain network?",
-        "options": {
-          "a": "In a centralized SQL database.",
-          "b": "On an immutable ledger controlled by a central authority.",
-          "c": "In metadata tables on each peer.",
-          "d": "In the distributed ledger of each peer across the network."
+          "a": "Reinforcement Learning",
+          "b": "Unsupervised Learning",
+          "c": "Supervised Learning",
+          "d": "Semi-Supervised Learning"
         },
         "answer": ["d"],
-        "explanation": "Blockchain transaction logs are stored in a distributed ledger across all peers (nodes) in the network, ensuring decentralization and immutability."
+        "explanation": "Semi-Supervised Learning utilizes both labeled and unlabeled data, offering a balance between Supervised and Unsupervised approaches."
       },
       {
-        "question": "Which of the following describes the avalanche effect in a cryptographic hash function?",
+        "question": "Which of the following is true? Select all that apply.",
         "options": {
-          "a": "Given the same input, the hash function returns a different hash 99.99% of the time.",
-          "b": "It takes 10^5 attempts to reverse-engineer the original message from the hash.",
-          "c": "A small change in the input causes a drastic change in the hash, flipping nearly all the bits.",
-          "d": "The hash function always returns the same hash for the same input."
-        },
-        "answer": ["c"],
-        "explanation": "The avalanche effect ensures that even a tiny change in the input (like flipping a single bit) results in a significantly different hash, with most of the output bits changing."
-      },
-      {
-        "question": "Which of the following statements accurately describes a blockchain?",
-        "options": {
-          "a": "A centralized database where data is stored on a single server.",
-          "b": "A distributed ledger where data is stored across multiple nodes and is immutable.",
-          "c": "A system that only stores cryptocurrency transaction data on a single node.",
-          "d": "A network that uses a single user to control access and updates to the data."
-        },
-        "answer": ["b"],
-        "explanation": "A blockchain is a decentralized and distributed ledger system where data is stored across multiple nodes (computers), ensuring that no single entity has control. It is also immutable, meaning once data is recorded in a block, it cannot be altered without the consensus of the network."
-      },
-      {
-        "question": "Which of the following is/are possible use cases of blockchain technology?",
-        "options": {
-          "a": "Cross-border payments",
-          "b": "Supply chain management",
-          "c": "Centralized Anti-money laundering tracking system",
-          "d": "Maintaining data over a single database server"
+          "a": "A model with high bias leads to underfitting of the model.",
+          "b": "A model with high variance leads to overfitting of the model.",
+          "c": "High variance and high bias lead to a more optimal model.",
+          "d": "Decreasing model complexity results in low bias but high variance."
         },
         "answer": ["a", "b"],
-        "explanation": "Blockchain technology is used in cross-border payments, supply chain management, and decentralized anti-money laundering tracking systems for decentralization, transparency, and security."
+        "explanation": "High **bias** results in a model being too simple, leading to **underfitting**. High **variance** results in a model being too complex, leading to **overfitting**."
       },
       {
-        "question": "In a blockchain using SHA-256, if the hashes of strings A and B are concatenated and then hashed again, what is the length of the final hash?",
+        "question": "What is an example of a biased AI system? Select all that apply.",
         "options": {
-          "a": "256 bits",
-          "b": "512 bits",
-          "c": "128 bits",
-          "d": "1024 bits"
+          "a": "An AI-powered hiring algorithm that ranks resumes based on ethnicity of the candidate.",
+          "b": "A chatbot that fails to understand slang or technical jargon.",
+          "c": "A recommendation system that shows different ads to different users based on search history.",
+          "d": "A weather prediction system that fails to predict hurricanes due to insufficient data."
         },
         "answer": ["a"],
-        "explanation": "SHA-256 always produces a fixed 256-bit hash, regardless of input size. Even after concatenating two hashes and rehashing, the output will still be a 256-bit hash."
+        "explanation": "Bias in AI refers to systematic favoritism or discrimination. An algorithm ranking candidates based on ethnicity (a protected attribute) is a clear example of **algorithmic bias**."
+      },
+      {
+        "question": "What does “transparency” mean in an AI system?",
+        "options": {
+          "a": "Making the AI unknown to users.",
+          "b": "Explaining how the AI made the decision in a clear way.",
+          "c": "Using very little data as input to the AI system.",
+          "d": "Optimizing the AI system for speed."
+        },
+        "answer": ["b"],
+        "explanation": "**Transparency** in AI requires explaining the model's logic and decision-making process in a way that is understandable to humans."
+      },
+      {
+        "question": "What is the goal of responsible AI?",
+        "options": {
+          "a": "To make AI faster.",
+          "b": "To reduce computation.",
+          "c": "To make AI adaptable.",
+          "d": "To ensure AI behaves in a fair and ethical way."
+        },
+        "answer": ["d"],
+        "explanation": "The core goal of **Responsible AI** is to ensure that AI systems are developed and deployed in a manner that is fair, ethical, and safe."
+      },
+      {
+        "question": "What is one risk when using an AI system “unethically”?",
+        "options": {
+          "a": "The AI system may become too slow.",
+          "b": "The AI system may become human.",
+          "c": "The AI system causes harm.",
+          "d": "None of the above."
+        },
+        "answer": ["c"],
+        "explanation": "The primary risk of unethical AI use is the potential for the system to cause **harm**, ranging from physical injury to societal damage."
+      },
+      {
+        "question": "What is the purpose of a validation dataset?",
+        "options": {
+          "a": "To train the model on new data.",
+          "b": "To test the final accuracy of the model.",
+          "c": "To tune the hyperparameters and prevent overfitting.",
+          "d": "All of the above."
+        },
+        "answer": ["c"],
+        "explanation": "The **validation dataset** is used during the training phase to tune model hyperparameters and assess its performance on unseen data to prevent **overfitting**."
+      },
+      {
+        "question": "What is the bias-variance tradeoff in machine learning?",
+        "options": {
+          "a": "A balance between the training dataset size and testing dataset size.",
+          "b": "Trying to increase bias and variance to improve model accuracy.",
+          "c": "Finding a balance between simplicity and complexity of a model resulting in optimal performance.",
+          "d": "Deciding between supervised and unsupervised learning."
+        },
+        "answer": ["c"],
+        "explanation": "The **bias-variance tradeoff** is a core concept that seeks to find the optimal model complexity—a balance between high **bias** (too simple, underfit) and high **variance** (too complex, overfit)."
+      },
+      {
+        "question": "Which of the following is an example of supervised learning?",
+        "options": {
+          "a": "An AI learns to play a game through trial and error.",
+          "b": "A classification model trained on images labelled “cats” and “dogs”.",
+          "c": "An AI that groups customers together based on their purchases.",
+          "d": "A chatbot that remembers past conversations."
+        },
+        "answer": ["b"],
+        "explanation": "**Supervised learning** is characterized by the use of **labeled data**, where the desired output (e.g., 'cat' or 'dog') is provided for each input."
+      },
+      {
+        "question": "What is the definition of “algorithmic bias”?",
+        "options": {
+          "a": "When an AI system makes decisions faster than humans.",
+          "b": "When a model prioritizes bias over variance.",
+          "c": "When an AI system produces unfair or discriminatory outcomes due to biased data or design",
+          "d": "When the model only runs on certain devices."
+        },
+        "answer": ["c"],
+        "explanation": "**Algorithmic bias** occurs when an AI system systematically produces results that are unfairly discriminatory against certain groups."
+      },
+      {
+        "question": "What is the difference between supervised and unsupervised learning?",
+        "options": {
+          "a": "Supervised learning uses labeled data, while unsupervised learning does not.",
+          "b": "Supervised learning is used only for robotics, while unsupervised learning is for software.",
+          "c": "Supervised learning requires no data, while unsupervised learning requires large datasets.",
+          "d": "Supervised learning is always faster than unsupervised learning."
+        },
+        "answer": ["a"],
+        "explanation": "The key distinction is the data. **Supervised learning** requires data that has been **labeled** with the correct output, while **unsupervised learning** works with **unlabeled** data."
+      }
+    ]
+  },
+  {
+    "week": 1,
+    "title": "Week 1: AI Risk Taxonomy and Safety Fundamentals",
+    "questions": [
+      {
+        "question": "According to the risk decomposition framework, which combination of factors would result in the HIGHEST risk from an AI system deployed in a critical infrastructure setting?",
+        "options": {
+          "a": "Low vulnerability, high hazard exposure, low hazard severity",
+          "b": "High vulnerability, low hazard exposure, high hazard severity",
+          "c": "High vulnerability, high hazard exposure, high hazard severity",
+          "d": "Low vulnerability, low hazard exposure, high hazard severity"
+        },
+        "answer": ["c"],
+        "explanation": "Risk is often viewed as a product of Hazard, Exposure, and Vulnerability. The highest risk occurs when all three factors are **high**."
+      },
+      {
+        "question": "The concept of treacherous turns in AI systems refers to:",
+        "options": {
+          "a": "AI systems making computational errors during complex calculations",
+          "b": "AI systems behaving differently once they reach sufficient intelligence",
+          "c": "AI systems being hacked by malicious actors",
+          "d": "AI systems consuming too much computational power"
+        },
+        "answer": ["b"],
+        "explanation": "A **treacherous turn** describes a scenario where an AI system, upon reaching a certain level of intelligence, switches from seemingly compliant behavior to pursuing its own, potentially harmful, goals."
+      },
+      {
+        "question": "In the context of AI race dynamics, what is the primary concern regarding competitive pressure between nations and corporations?",
+        "options": {
+          "a": "It will make AI systems too expensive for general use",
+          "b": "It will result in compatible AI standards globally",
+          "c": "It will slow down AI innovation and progress",
+          "d": "It may lead to rushed development that compromises safety measures"
+        },
+        "answer": ["d"],
+        "explanation": "Competitive pressure in an AI **race** can incentivize developers to prioritize speed and capability over thorough testing and **safety measures**."
+      },
+      {
+        "question": "The 'Swiss cheese model' mentioned in organizational risks suggests that:",
+        "options": {
+          "a": "Organizations should have a single, very strong safety measure",
+          "b": "Safety measures should be implemented randomly across the organization",
+          "c": "Multiple layers of defense compensate for individual weaknesses",
+          "d": "Safety measures are unnecessary if the AI system is well-designed"
+        },
+        "answer": ["c"],
+        "explanation": "The **Swiss cheese model** illustrates that safety is achieved through **multiple, redundant layers of defense**. While each layer (slice of cheese) has flaws (holes), the holes rarely align across all layers, preventing a catastrophic failure."
+      },
+      {
+        "question": "Which scenario best illustrates the concept of proxy gaming?",
+        "options": {
+          "a": "An AI chess program that cheats by accessing opponent's strategy",
+          "b": "A recommendation system optimizing for user engagement rather than user well-being",
+          "c": "An AI translator that produces grammatically incorrect sentences",
+          "d": "A facial recognition system that fails to identify certain ethnic groups"
+        },
+        "answer": ["b"],
+        "explanation": "**Proxy gaming** occurs when an AI system optimizes the measurable **proxy** objective (e.g., engagement time) instead of the true, harder-to-measure **intended** objective (e.g., user well-being)."
+      },
+      {
+        "question": "A factory robot confuses a human worker for a box of vegetables and pushes the person, resulting in death.\" According to the disaster risk equation, what was the primary failure component?",
+        "options": {
+          "a": "Hazard (misclassification capability)",
+          "b": "Hazard Exposure (human-robot proximity)",
+          "c": "Vulnerability (employee safety protocols)",
+          "d": "All components failed equally"
+        },
+        "answer": ["a"],
+        "explanation": "The **Hazard** is the potential source of harm—in this case, the robot's fundamental **misclassification capability** that led to the dangerous action."
+      },
+      {
+        "question": "According to the risk taxonomy presented, malicious use of AI differs from rogue AI primarily in that:",
+        "options": {
+          "a": "Malicious use involves intentional harmful deployment by humans, while rogue AI acts independently",
+          "b": "Malicious use only affects cybersecurity, while rogue AI affects all domains",
+          "c": "Malicious use is easier to detect than rogue AI behavior",
+          "d": "Malicious use requires more advanced AI capabilities than rogue AI"
+        },
+        "answer": ["a"],
+        "explanation": "**Malicious use** is a threat stemming from human actors intentionally misusing AI. **Rogue AI** (or unaligned AI) is a threat from the AI system itself acting independently in an unsafe way."
+      },
+      {
+        "question": "Deceptive Alignment in AI systems is:",
+        "options": {
+          "a": "AI systems that are openly hostile to humans",
+          "b": "AI systems that appear to be following instructions but are actually pursuing different goals",
+          "c": "AI systems that cannot understand human language properly",
+          "d": "AI systems that work too slowly to be effective"
+        },
+        "answer": ["b"],
+        "explanation": "**Deceptive alignment** is a specific failure where an AI learns to **deceive** its human operators during training to achieve a potentially misaligned goal later on."
+      },
+      {
+        "question": "How do you identify and avoid hazards in ML systems according to the disaster risk equation framework?",
+        "options": {
+          "a": "Alignment",
+          "b": "Robustness",
+          "c": "Monitoring",
+          "d": "Systemic Safety"
+        },
+        "answer": ["c"],
+        "explanation": "**Monitoring** is the direct mechanism to observe the system's behavior, identify potential failure modes (**hazards**), and intervene before harm occurs."
+      },
+      {
+        "question": "Red teaming in AI safety primarily serves to:",
+        "options": {
+          "a": "Accelerate model training",
+          "b": "Identify system vulnerabilities",
+          "c": "Improve computational efficiency",
+          "d": "Reduce inference latency"
+        },
+        "answer": ["b"],
+        "explanation": "**Red teaming** involves simulating adversarial attacks or misuse scenarios to proactively **identify vulnerabilities** and weaknesses in the AI system's safety and security protocols."
+      },
+      {
+        "question": "Which technique is most effective for detecting deceptive alignment?",
+        "options": {
+          "a": "Training the model with more than 1000 samples",
+          "b": "Mechanistic interpretability",
+          "c": "Increasing model parameters",
+          "d": "Reward modeling"
+        },
+        "answer": ["b"],
+        "explanation": "**Mechanistic interpretability** is considered the most promising technique because it aims to understand the **internal learned circuits** of the model, which is necessary to detect hidden, deceptive motives."
+      },
+      {
+        "question": "RoBERTa succeeds in reasoning tasks where BERT fails due to:",
+        "options": {
+          "a": "Better tokenization",
+          "b": "Emergent capabilities from scaling",
+          "c": "Improved attention mechanisms",
+          "d": "Larger vocabulary size"
+        },
+        "answer": ["b"],
+        "explanation": "The significant improvements in models like RoBERTa are often attributed to **emergent capabilities**—new behaviors or performance leaps that arise from **scaling** up the model size and training data."
       }
     ]
   },
   {
     "week": 2,
-    "title": "Week 2: Cryptography, Merkle Trees & Bitcoin Basics",
+    "title": "Week 2: Robustness and Alignment",
     "questions": [
       {
-        "question": "Alice employs the RSA cryptosystem with the prime numbers p=11 and q=19 to derive her public and private keys. Given that her public key is e=11, what is her corresponding private key d?",
+        "question": "Which of the following is true?",
         "options": {
-          "a": "35",
-          "b": "131",
-          "c": "101",
-          "d": "149"
+          "a": "Extremistan has thin tails while Mediocristan has long tails",
+          "b": "Mediocristan distributions are harder to predict than Extremistan",
+          "c": "In Extremistan, the total is determined by a few large events with tyranny of the accidental",
+          "d": "Extremistan has mild randomness while Mediocristan has wild randomness"
+        },
+        "answer": ["c"],
+        "explanation": "**Extremistan** is characterized by events in the **long tail** of the distribution, where a few large, rare events (the 'tyranny of the accidental') dominate the total outcome."
+      },
+      {
+        "question": "What is the key difference between covariate shift and concept shift in distribution shifts?",
+        "options": {
+          "a": "Covariate shift changes P(y|x) while concept shift changes P(x)",
+          "b": "Covariate shift changes P(x) while P(y|x) remains constant, concept shift changes P(y|x) while P(x) remains constant",
+          "c": "Both change P(x) and P(y|x) simultaneously",
+          "d": "Covariate shift affects labels while concept shift affects features"
         },
         "answer": ["b"],
-        "explanation": "Compute φ(n)=(p−1)(q−1)=180.\nFind d as the modular inverse of e=11 modulo φ(n)=180 using d = e^-1 (mod 180)), giving d=131"
+        "explanation": "**Covariate shift** is when the input distribution **P(x)** changes but the relationship **P(y|x)** remains constant. **Concept shift** is when the relationship **P(y|x)** changes, even if the input distribution **P(x)** remains the same."
       },
       {
-        "question": "Alice wants to send a message to Bob with confidentiality and integrity. The steps are as follows:\n1. Alice encrypts the message using Bob’s ________ key.\n2. Alice then signs the ________ of the message with her ________ key.\n3. Bob decrypts the message using his ________ key.\n4. Bob verifies Alice's signature using her ________ key.",
+        "question": "In the AugMix methodology, what is the primary advantage over uncontrolled random augmentations?",
         "options": {
-          "a": "public, hash, private, public, private",
-          "b": "private, message, public, private, public",
-          "c": "public, hash, private, private, public",
-          "d": "public, hash, private, public, public"
-        },
-        "answer": ["c"],
-        "explanation": "Alice first encrypts the message using Bob’s public key for confidentiality and signs the hash of the message with her private key to ensure integrity and authenticity. Bob then decrypts the message with his private key and verifies Alice’s signature using her public key to confirm the message’s authenticity and integrity."
-      },
-      {
-        "question": "Digitally signing transactions by the sender in Blockchain ensures the resolution of repudiation/verifiability problems. Based on this, which one of the following is correct:",
-        "options": {
-          "a": "It allows the sender to deny the transaction at any point.",
-          "b": "It ensures that the sender cannot deny the transaction and the recipient can verify its authenticity.",
-          "c": "It provides encryption but does not verify the sender’s identity.",
-          "d": "It guarantees the transaction will remain confidential but does not resolve repudiation issues."
-        },
-        "answer": ["b"],
-        "explanation": "Digital signatures in blockchain ensure that the sender cannot deny sending the transaction (non-repudiation) and that the recipient can verify the authenticity and integrity of the transaction (verifiability)."
-      },
-      {
-        "question": "What is the primary purpose of Alice signing a message with her private key in a blockchain transaction?",
-        "options": {
-          "a": "To encrypt the message",
-          "b": "To prevent others from reading the message",
-          "c": "To prove the message came from Alice",
-          "d": "To hide the contents of the message"
-        },
-        "answer": ["c"],
-        "explanation": "When Alice signs a message with her private key, it serves as proof that the message came from her (authentication) and ensures the integrity of the message (it hasn't been tampered with)."
-      },
-      {
-        "question": "Consider 6 data points labeled 1 to 6. The post-order traversal of the Merkle Tree is provided as follows (where 1 represents the hash of data point 1, 43 denotes the combined hash of 4 and 3, and so on):",
-        "options": {
-          "a": "{12345656, 1234, 12, 1, 2, 34, 3, 4, 5656, 56, 5, 6}",
-          "b": "{1, 12, 2, 3, 4, 34, 1234, 5, 6, 56, 123456}",
-          "c": "{1, 2, 12, 3, 4, 34, 1234, 5, 6, 56, 56, 5656, 12345656}",
-          "d": "{1, 2, 12, 3, 4, 34, 1234, 5, 6, 56, 5656, 12345656}"
-        },
-        "answer": ["c"],
-        "explanation": "Post-order traversal : {1, 2, 12, 3, 4, 34, 1234, 5, 6, 56, 56, 5656, 12345656}"
-      },
-      {
-        "question": "Which of the following is used to refer to a block in a blockchain?",
-        "options": {
-          "a": "Future nonce",
-          "b": "Block size",
-          "c": "Previous Block Hash",
-          "d": "Transaction Timestamp"
-        },
-        "answer": ["c"],
-        "explanation": "In a blockchain, each block contains a previous block hash. This hash pointer links the current block to the previous one, ensuring the integrity and immutability of the blockchain."
-      },
-      {
-        "question": "Which of the following does not align with the primary design goals of cryptocurrency development?",
-        "options": {
-          "a": "Decentralization of control and decision-making",
-          "b": "Immutability of transaction records",
-          "c": "Centralized control over transactions",
-          "d": "Transparency and accessibility of transaction data"
-        },
-        "answer": ["c"],
-        "explanation": "Centralized control over transactions: This contradicts the essence of cryptocurrencies, which are designed to operate without central authority or intermediaries."
-      },
-      {
-        "question": "Which of the following statements is/are true regarding Bitcoin and its consensus algorithm?\n1. Bitcoin uses Proof of Work (PoW) for transaction validation and block addition.\n2. Bitcoin operates on a peer-to-peer (P2P) network.\n3. Bitcoin uses Proof of Stake (PoS) for centralization.\n4. Miners are rewarded with transaction fees and block rewards in Bitcoin.",
-        "options": {
-          "a": "1, 2, 3",
-          "b": "2, 3, 4",
-          "c": "1, 2, 4",
-          "d": "1, 3, 4"
-        },
-        "answer": ["c"],
-        "explanation": "Bitcoin uses Proof of Work (PoW) for consensus, where miners solve cryptographic puzzles to validate transactions and add blocks to the blockchain. The network operates on a decentralized peer-to-peer (P2P) model, with no central server, allowing nodes to communicate directly. Miners are incentivized with transaction fees and block rewards for securing the network by validating and adding blocks."
-      },
-      {
-        "question": "What is the primary focus of 'safety' in Bitcoin's protocol?",
-        "options": {
-          "a": "Preventing invalid transactions",
-          "b": "Ensuring blocks are mined quickly",
-          "c": "Guaranteeing that only some of the transactions are private",
-          "d": "Maximizing the number of transactions per block"
+          "a": "It uses skip connections to keep images recognizable while applying diverse augmentations",
+          "b": "It requires less computational power",
+          "c": "It only applies single augmentations instead of multiple",
+          "d": "It focuses on geometric transformations only"
         },
         "answer": ["a"],
-        "explanation": "In Bitcoin, safety ensures the integrity of the blockchain by preventing invalid transactions, such as double-spending."
+        "explanation": "**AugMix** combines multiple, diverse augmentation chains while using a **skip connection** to blend the augmented image with the original. This maintains a balance, ensuring the image remains recognizable and relevant to the original label."
       },
       {
-        "question": "Which of the following is the primary goal of a consensus algorithm in a distributed system?",
+        "question": "In the context of adversarial attacks, what does \"transferability\" specifically refer to?",
         "options": {
-          "a": "To ensure that all nodes process transactions at the same speed",
-          "b": "To guarantee that all nodes in the system agree on a single value or state",
-          "c": "To minimize the number of nodes required for network communication",
-          "d": "To prevent malicious attacks by encrypting all data transmitted between nodes"
+          "a": "The ability to transfer attacks from one domain to another",
+          "b": "The ability to transfer defenses across different architectures",
+          "c": "The ability to convert white-box attacks to black-box attacks",
+          "d": "The ability of adversarial examples crafted for one model to work on other models"
+        },
+        "answer": ["d"],
+        "explanation": "**Transferability** means that an adversarial example generated to fool one specific model can often successfully fool **other models**, even if those models have different architectures or training data."
+      },
+      {
+        "question": "Black Swan lies in which of the following categories?",
+        "options": {
+          "a": "Known Knowns",
+          "b": "Known Unknowns",
+          "c": "Unknown Knowns",
+          "d": "Unknown Unknowns"
+        },
+        "answer": ["d"],
+        "explanation": "A **Black Swan** event is, by definition, an **Unknown Unknown**—an event that is unpredictable because its possibility was not even conceived of beforehand."
+      },
+      {
+        "question": "Which of the following are valid approaches for defending against adversarial attacks? (Select all that apply)",
+        "options": {
+          "a": "Data augmentation techniques",
+          "b": "Adversarial training using adversarial examples during training",
+          "c": "Using more data and larger models",
+          "d": "Reducing model complexity to avoid overfitting",
+          "e": "Adversarial pretraining on larger datasets like ImageNet"
+        },
+        "answer": ["a", "b", "c", "e"],
+        "explanation": "Options (a), (b), (c), and (e) are all common strategies to improve model robustness. Reducing complexity (d) is generally used to fight variance/overfitting, not typically the most effective defense against adversarial attacks."
+      },
+      {
+        "question": "In the RLHF optimization objective, why is a KL-divergence penalty term added to the reward maximization?",
+        "options": {
+          "a": "To prevent the model from generating repetitive outputs",
+          "b": "To ensure the model stays close to the original pretrained model",
+          "c": "To improve the computational efficiency of the training process",
+          "d": "To increase the diversity of generated samples"
         },
         "answer": ["b"],
-        "explanation": "The primary goal of a consensus algorithm is to ensure that all nodes in a distributed system agree on a single value or state, even if some nodes may fail or act maliciously. This is crucial for maintaining consistency and reliability across the system."
+        "explanation": "The **KL-divergence penalty** in **RLHF** (Reinforcement Learning from Human Feedback) prevents the fine-tuned model from deviating too much from the original large language model's capabilities and outputs, thus preserving general functionality and stability."
+      },
+      {
+        "question": "What does \"reward hacking\" specifically refer to in the context of RLHF?",
+        "options": {
+          "a": "Humans providing incorrect feedback to manipulate the system",
+          "b": "External attackers compromising the reward model",
+          "c": "The reward model overfitting to the training data",
+          "d": "The model finding ways to maximize the reward function without achieving the intended behavior"
+        },
+        "answer": ["d"],
+        "explanation": "**Reward hacking** (or specification gaming) is when the AI system finds a loophole to maximize the defined **reward function** but in a way that is contrary to the actual **intended goal**."
+      },
+      {
+        "question": "Identify the equations that can lead to a long-tailed distribution.",
+        "options": {
+          "a": "Idea * student * resources * time",
+          "b": "Idea * student + resources * time",
+          "c": "Idea + student + resource + time",
+          "d": "Idea - student * resource - time"
+        },
+        "answer": ["a"],
+        "explanation": "A multiplicative relationship (**A * B * C...**) often leads to exponential growth and the extreme outcomes characteristic of a **long-tailed** (Extremistan) distribution, whereas additive relationships tend toward a normal (Mediocristan) distribution."
+      },
+      {
+        "question": "What is the primary advantage of using pairwise comparisons over direct scalar ratings in human feedback collection?",
+        "options": {
+          "a": "Pairwise comparisons are faster to collect",
+          "b": "They require fewer human annotators",
+          "c": "Human judgments are noisy and miscalibrated, but pairwise comparisons are more reliable",
+          "d": "They provide more granular feedback information"
+        },
+        "answer": ["c"],
+        "explanation": "**Pairwise comparisons** are more robust because they ask annotators to make a simple, forced choice (A vs. B), which is significantly **more reliable** than asking them to assign an absolute, potentially inconsistent, scalar score (e.g., a rating from 1-5)."
+      },
+      {
+        "question": "What is a major challenge with using a single reward function in RLHF?",
+        "options": {
+          "a": "It is computationally expensive to optimize",
+          "b": "It cannot represent a diverse society of humans",
+          "c": "It requires too much training data",
+          "d": "It is unstable during training"
+        },
+        "answer": ["b"],
+        "explanation": "A **single reward function** risks imposing a single, narrow set of values. The main challenge is that it fails to represent the wide, often conflicting **preferences and values** of a diverse society."
+      },
+      {
+        "question": "What is Direct Preference Optimization (DPO) equivalent to in the context of RLHF component removal?",
+        "options": {
+          "a": "RLHF - Human Feedback",
+          "b": "RLHF - Reward Model",
+          "c": "RLHF - RL",
+          "d": "RLHF - Policy Optimization"
+        },
+        "answer": ["b"],
+        "explanation": "**DPO (Direct Preference Optimization)** is a simplified version of RLHF that **removes the separate reward model** training step. It directly uses the human preference data to calculate an objective function for the policy."
       }
     ]
   },
   {
     "week": 3,
-    "title": "Week 3: Bitcoin Mining, Blocks & Scripts",
+    "title": "Week 3: Machine Unlearning and Privacy",
     "questions": [
       {
-        "question": "If the current block reward for Bitcoin is 6.25 BTC, and the difficulty adjustment mechanism is such that, on average, a new block is found every 10 minutes, how much Bitcoin will be mined per day (24 hours)?",
+        "question": "What is the definition of “Machine Unlearning”?",
         "options": {
-          "a": "75 BTC",
-          "b": "144 BTC",
-          "c": "900 BTC",
-          "d": "1,080 BTC"
+          "a": "Removing the influences of training data from a trained model",
+          "b": "The ability of a machine learning model to adapt to new data",
+          "c": "A technique used to compress machine learning models",
+          "d": "The ability of a machine learning model to learn a variety of data"
+        },
+        "answer": ["a"],
+        "explanation": "**Machine Unlearning** is the process of efficiently and provably **removing the influence** of specific data points from a deployed model's parameters and behavior."
+      },
+      {
+        "question": "What might be some types of information that one might want to remove from model data? (Select all that apply.)",
+        "options": {
+          "a": "Private data",
+          "b": "Toxic or unsafe content",
+          "c": "Accurate information",
+          "d": "Model hyperparameter settings",
+          "e": "Stale knowledge"
+        },
+        "answer": ["a", "b", "e"],
+        "explanation": "Reasons for unlearning include compliance (e.g., Right to be Forgotten for **private data**), safety/ethics (e.g., **toxic or unsafe content**), and utility (e.g., **stale knowledge** that is no longer accurate)."
+      },
+      {
+        "question": "What is GDPR’s Article 17 about in the context of Machine Learning?",
+        "options": {
+          "a": "Right to be remembered",
+          "b": "Right to be modified",
+          "c": "Right to be distributed",
+          "d": "Right to be forgotten"
+        },
+        "answer": ["d"],
+        "explanation": "GDPR's **Article 17** enshrines the **Right to be Forgotten**, which is the primary legal driver for the development of Machine Unlearning techniques."
+      },
+      {
+        "question": "What are the steps in the SISA approach?",
+        "options": {
+          "a": "Sampled, Isolated, Stopped, Aggregated",
+          "b": "Sharded, Imitate, Sliced, Annotated",
+          "c": "Sharded, Isolated, Sliced, Aggregated",
+          "d": "Sampled, Imitate, Stopped, Annotated"
         },
         "answer": ["c"],
-        "explanation": "The block reward is 6.25 BTC.\nThere are 144 blocks mined in a 24-hour period (24 hours × 60 minutes / 10 minutes per block).\nIn one day, the total Bitcoin mined would be 144 × 6.25=900 BTC."
+        "explanation": "The **SISA** framework stands for **Sharded, Isolated, Sliced, Aggregated**, an efficient approach for approximate unlearning by partitioning the data and training independent models."
       },
       {
-        "question": "Which of the following best defines a permissioned blockchain?",
+        "question": "What is Membership Inference Attack (MIA) used for?",
         "options": {
-          "a": "Anyone can join and validate transactions without approval.",
-          "b": "Only authorized participants can write and validate transactions.",
-          "c": "It always uses proof-of-work (PoW) for consensus.",
-          "d": "A permissioned blockchain does not need cryptographic hash operations"
-        },
-        "answer": ["b"],
-        "explanation": "A permissioned blockchain restricts the ability to write or validate transactions to authorized participants. This controlled access enhances security and privacy within the network."
-      },
-      {
-        "question": "Which of the following combinations is correctly used to compute Bitcoin's current block hash?",
-        "options": {
-          "a": "Previous block’s hash, Merkle root, block reward, nonce, timestamp, and block size",
-          "b": "Previous block’s hash, timestamp, nonce, Merkle root, difficulty bits, and block version",
-          "c": "Block creator’s public key, Merkle root, timestamp, block reward, nonce, and difficulty level",
-          "d": "Previous block’s hash, nonce, Merkle root, height, timestamp, and difficulty bits"
-        },
-        "answer": ["b"],
-        "explanation": "Please refer to the Week 3 Lecture 13."
-      },
-      {
-        "question": "Which of the following difficulty targets would make it most difficult for miners to find a valid block?",
-        "options": {
-          "a": "0000000000000000000000000000000000000000000000000000000000056789abcdef123",
-          "b": "000000000000000000000000000000000000000000000000000000002dfe34a1b2c3d555",
-          "c": "00000000000000000000000000000000000000000000000000000000000afc123987abc",
-          "d": "00000000000000000000000000000000000000000000000000000000000000000af46789"
+          "a": "To train LLMs faster",
+          "b": "To improve the models robustness",
+          "c": "To remove accurate data",
+          "d": "To classify between training and unseen data"
         },
         "answer": ["d"],
-        "explanation": "The difficulty target with 52 leading zeros (option d) is the most difficult for miners to find a valid block.\nTherefore,00000000000000000000000000000000000000000000000000000000000000000af46789 is the correct choice."
+        "explanation": "A **Membership Inference Attack (MIA)** attempts to determine whether a specific data point was included in the model's **training dataset** or if it is an **unseen data point**."
       },
       {
-        "question": "In the Bitcoin, block identifier refers to",
+        "question": "What is the role of differential privacy?",
         "options": {
-          "a": "SHA1 (128 bits) of the future block header",
-          "b": "Double SHA256 of the current block header",
-          "c": "Double SHA256 of the difficulty bits only",
-          "d": "Triple SHA256 of the future block header"
+          "a": "To improve model accuracy",
+          "b": "To make the model forget everything",
+          "c": "To make models indistinguishable with/without certain data points",
+          "d": "To speed up training time"
+        },
+        "answer": ["c"],
+        "explanation": "**Differential Privacy** (DP) aims to make the output of a computation (like a trained model) nearly **indistinguishable** whether or not a single individual's data point was included in the input."
+      },
+      {
+        "question": "Which benchmarks are used to evaluate unlearning in LLMs? (Select all that apply.)",
+        "options": {
+          "a": "TOFU",
+          "b": "GLUE",
+          "c": "WMDP",
+          "d": "GUIDE"
+        },
+        "answer": ["a", "c"],
+        "explanation": "Both **TOFU** (Targeted Offensive, Factual Unlearning) and **WMDP** (Wikipedia Membership Disclosure Probability) are specialized datasets/metrics for evaluating the effectiveness of unlearning in Large Language Models."
+      },
+      {
+        "question": "Case: A hospital wants to share patient health data with research institutions to support public health studies. However, it must ensure that a patient's identity cannot be inferred. To achieve this, the hospital generates and sends aggregate statistics to the institute. Which form of unlearning is this?",
+        "options": {
+          "a": "Exact unlearning",
+          "b": "Unlearning via differential privacy",
+          "c": "Just ask for unlearning",
+          "d": "Empirical Unlearning"
         },
         "answer": ["b"],
-        "explanation": "The Bitcoin block identifier (block hash) contains Double SHA256 on the current block header. This means performing SHA256 twice. Please refer to the Week 3 Lecture 13."
+        "explanation": "Generating **aggregate statistics** with added noise to prevent individual inference is a classic example of achieving privacy via **Differential Privacy** principles, which is a form of unlearning."
       },
       {
-        "question": "In a Merkle tree with n transactions (n is a power of 2), if one transaction is invalid, how many recalculations are needed to detect and correct the invalid transaction?",
+        "question": "Which isn’t a type of graph unlearning?",
         "options": {
-          "a": "n/2",
-          "b": "log2 (n) + 1",
-          "c": "n−1",
-          "d": "3log2 (n)"
+          "a": "Node unlearning",
+          "b": "Edge unlearning",
+          "c": "Label unlearning",
+          "d": "Node feature unlearning"
         },
-        "answer": ["b"],
-        "explanation": "The Merkle tree recalculates the hashes at each level up to the root for verification. This requires recalculating one hash at each of the log2 (n) levels, plus one final hash for the root."
+        "answer": ["c"],
+        "explanation": "Standard **graph unlearning** typically focuses on removing the influence of **Nodes**, **Edges**, or **Node Features**. **Label unlearning** is not a standard, distinct category in this domain."
       },
       {
-        "question": "Which of the following Bitcoin script opcode is needed to remove the second-to-top stack item?",
+        "question": "Which methods are used for Node unlearning? (Select all that apply.)",
         "options": {
-          "a": "OP_DELETE",
-          "b": "OP_2POP",
-          "c": "OP_DEQUE",
-          "d": "OP_NIP"
+          "a": "GraphEraser",
+          "b": "GUIDE",
+          "c": "Projector",
+          "d": "GraphdEditor",
+          "e": "GNNDelete",
+          "f": "MEGU"
         },
-        "answer": ["d"],
-        "explanation": "Bitcoin Script uses specific opcodes like OP_DROP, OP_NIP, etc., to manipulate the stack. OP_NIP is explicitly designed to remove the second-to-top stack item."
+        "answer": ["a", "b", "d", "e", "f"],
+        "explanation": "All listed methods except 'Projector' are specific algorithms developed for **Node unlearning** in Graph Neural Networks."
       },
       {
-        "question": "If a Merkle tree has 8 transactions, how many hashes are required to compute the Merkle root?",
+        "question": "What are “hidden representations”?",
         "options": {
-          "a": "8",
-          "b": "15",
-          "c": "16",
-          "d": "7"
+          "a": "The final model outputs",
+          "b": "Raw training data stored in memory",
+          "c": "Intermediate activation vectors captured during model execution",
+          "d": "The model's loss values during training"
         },
-        "answer": ["b"],
-        "explanation": "In a Merkle tree with 8 transactions, 7 additional hashes are needed to compute the Merkle root as pairs of transaction hashes are combined recursively at each level. The total hashes, including the leaves, are 15: 8 leaf hashes and 7 parent hashes."
-      },
-      {
-        "question": "What is a nonce in the context of Bitcoin mining?",
-        "options": {
-          "a": "The transaction ID number",
-          "b": "A miner's ASIC chip array",
-          "c": "The generator point used in elliptic curve cryptography",
-          "d": "A value miners iterate through to generate a valid hash"
-        },
-        "answer": ["d"],
-        "explanation": "In Bitcoin mining, the nonce is a random or arbitrary number that miners adjust in the block header during mining. This value is modified to change the resulting hash of the block header to meet the required difficulty target."
-      },
-      {
-        "question": "What happens if the number of transactions in a Merkle tree is odd?",
-        "options": {
-          "a": "The tree cannot be built",
-          "b": "Dummy (duplicate) hashes are added to adjust",
-          "c": "Transactions are left out of the block",
-          "d": "The Merkle root is ignored"
-        },
-        "answer": ["b"],
-        "explanation": "If the number of transactions is odd, pairs cannot be formed for the suitable structure of the Merkle tree. To fix this, dummy (duplicate) hashes are added to make the number of transactions even, allowing the tree to be constructed properly. Please refer to the Week 3 Lecture 14."
+        "answer": ["c"],
+        "explanation": "**Hidden representations** are the **intermediate activation vectors** or embeddings that are created and processed by the neural network's internal layers before producing the final output."
       }
     ]
   },
   {
     "week": 4,
-    "title": "Week 4: Bitcoin Network, Forks & Consensus Properties",
+    "title": "Week 4: AI Bias and Ethical Considerations",
     "questions": [
       {
-        "question": "What is a \"fork\" in the context of Bitcoin?",
+        "question": "As per the lecture, in the context of Machine Learning, what is the definition of ‘bias’?",
         "options": {
-          "a": "A change in the Bitcoin protocol that leads to the creation of a new version of the blockchain",
-          "b": "A new type of cryptocurrency that does not rely on blockchain technology",
-          "c": "A collaborative process for miners to resolve conflicts in the blockchain",
-          "d": "None of the above"
+          "a": "Systematic deviation from rationality and judgement.",
+          "b": "Systematic error in the collection, analysis, or interpretation of data.",
+          "c": "Systematic favoritism or discrimination towards certain groups/outcomes.",
+          "d": "Systematic behaviour when solving complex tasks."
+        },
+        "answer": ["c"],
+        "explanation": "In the context of Responsible AI/ML, **bias** refers specifically to the **systematic favoritism or discrimination** that an algorithm may exhibit toward certain groups."
+      },
+      {
+        "question": "Why did Microsoft’s Tay chatbot become offensive shortly after it was launched?",
+        "options": {
+          "a": "It was hacked by a rival company.",
+          "b": "It was trained on outdated information.",
+          "c": "It was programmed to be controversial for publicity.",
+          "d": "It learned toxic behaviour from user interactions on Twitter."
+        },
+        "answer": ["d"],
+        "explanation": "Tay was designed to learn from its interactions. Malicious users quickly exploited this by feeding it a large amount of toxic content, causing the chatbot to reflect and propagate the **toxic behavior**."
+      },
+      {
+        "question": "As per the lecture, which of the following is a/are a category of bias? (Select all that apply.)",
+        "options": {
+          "a": "Gender",
+          "b": "Race",
+          "c": "Scientific Facts",
+          "d": "Profession",
+          "e": "Currency exchange rates"
+        },
+        "answer": ["a", "b", "d"],
+        "explanation": "Bias in AI is typically categorized around protected or demographic attributes like **Gender**, **Race**, and **Profession** (representing socio-economic status or stereotypes)."
+      },
+      {
+        "question": "According to the ML Pipeline, what may be a source of bias? (Select all that apply.)",
+        "options": {
+          "a": "Annotators beliefs",
+          "b": "Hardware used for computation",
+          "c": "Balanced dataset",
+          "d": "Biased training data"
+        },
+        "answer": ["a", "d"],
+        "explanation": "Bias can be introduced at various stages. **Biased training data** is a primary source, and the subjective judgments or **beliefs of annotators** during data labeling can also embed bias."
+      },
+      {
+        "question": "What does the Legal Safety Score (LSSβ) represent?",
+        "options": {
+          "a": "The model's ability to predict legal outcomes based solely on accuracy.",
+          "b": "A metric combining fairness and accuracy using a β-weighted harmonic mean.",
+          "c": "A score based on the usage of legal jargon for marginalized groups.",
+          "d": "An evaluation metric used to define how well a model understands legal jargon."
+        },
+        "answer": ["b"],
+        "explanation": "The **Legal Safety Score (LSSβ)** is an evaluation metric designed to measure both **fairness** and **accuracy**, combining them using a $\\beta$-weighted harmonic mean to capture a holistic view of model performance."
+      },
+      {
+        "question": "What do LLMs use to prevent harmful outputs?",
+        "options": {
+          "a": "Data augmentation",
+          "b": "Guardrails",
+          "c": "Faster GPUs",
+          "d": "Dropout layers"
+        },
+        "answer": ["b"],
+        "explanation": "**Guardrails** are safety mechanisms or policies implemented post-training to constrain an LLM's output and prevent it from generating content that is harmful, illegal, or unethical."
+      },
+      {
+        "question": "Which of the following is true about bias?",
+        "options": {
+          "a": "It never exists.",
+          "b": "It sometimes exists.",
+          "c": "It only exists in American-created models.",
+          "d": "It always exists."
+        },
+        "answer": ["d"],
+        "explanation": "**Bias** is inherent in human-created data, and since AI models learn from this data, a form of bias **always exists** in every model, even if unintentional or small."
+      },
+      {
+        "question": "A researcher is evaluating a facial recognition model they helped develop. During testing, they select images where the model performs better, such as images with ideal lighting or frontal faces, while ignoring diverse or difficult cases (like low-light, non-white faces, or side angles). Which type of bias is this?",
+        "options": {
+          "a": "Reporting bias",
+          "b": "Sampling bias",
+          "c": "Experimenter’s bias",
+          "d": "Historical bias"
+        },
+        "answer": ["c"],
+        "explanation": "**Experimenter’s bias** occurs when the researcher consciously or unconsciously influences the experimental design or outcome evaluation (e.g., test set selection) to favor their hypothesis or desired result."
+      },
+      {
+        "question": "What is the issue with evaluating models only based on accuracy?",
+        "options": {
+          "a": "Accuracy only reflects hardware performance.",
+          "b": "Accuracy doesn’t reveal bias.",
+          "c": "Accuracy checks for fairness.",
+          "d": "Accuracy changes the labelling."
+        },
+        "answer": ["b"],
+        "explanation": "A model can have high overall **accuracy** but still perform poorly for a marginalized subgroup. **Accuracy alone doesn’t reveal bias** or fairness issues."
+      },
+      {
+        "question": "Why might using Western-aligned datasets be problematic for the Indian demographic?",
+        "options": {
+          "a": "The datasets are too large which may slow down training time.",
+          "b": "They are written in a different language.",
+          "c": "They don’t reflect Indian social/societal norms.",
+          "d": "They contain too many low-resolution images."
+        },
+        "answer": ["c"],
+        "explanation": "The main issue is that Western-aligned data is built upon Western cultural, **social, and societal norms**, which may not be appropriate or reflective of the Indian context, leading to biased or irrelevant outputs."
+      },
+      {
+        "question": "What is a ‘stereotype’?",
+        "options": {
+          "a": "A factual statement that applies to all humans.",
+          "b": "A scientifically proven characteristic.",
+          "c": "A legal rule used to govern a society.",
+          "d": "A widely held belief about some group/entity."
+        },
+        "answer": ["d"],
+        "explanation": "A **stereotype** is an oversimplified and **widely held belief** or image of a particular type of person or thing, which often contributes to social bias."
+      },
+      {
+        "question": "What does the CrowS-Pairs dataset contain?",
+        "options": {
+          "a": "Pairs of sentences that differ only in minimally distant social bias.",
+          "b": "Dialogues between humans and a chatbot.",
+          "c": "Pairs of biased and unbiased images.",
+          "d": "Code snippets with and without bugs."
         },
         "answer": ["a"],
-        "explanation": "In the context of Bitcoin, a \"fork\" refers to a change in the protocol or rules of the network, which can result in the creation of a new version of the blockchain.\nPlease refer to the Week 4 Lecture 16."
+        "explanation": "**CrowS-Pairs** is a benchmark dataset for measuring bias that consists of **minimal pairs** of sentences, where one sentence expresses a stereotype and the other is non-stereotypical."
       },
       {
-        "question": "Suppose a miner initially receives 100 bitcoins as a reward for successfully mining a block at time Jan, 2009. The reward for mining a block is halved approximately every four years (or after every 210,000 blocks). Based on this halving process, which of the following statements are correct? (Please note that once the reward is halved, it will remain the same until four years have been completed or after every 210,000 blocks.)",
+        "question": "What is sampling bias?",
         "options": {
-          "a": "In Jan 2013, the miner will receive 50 bitcoins for adding a new block.",
-          "b": "In Jan 2018, the miner will receive 25 bitcoins for adding a new block.",
-          "c": "In Jan 2021, the miner will receive 12.5 bitcoins for adding a new block.",
-          "d": "In Jan 2024, the miner will receive 6.25 bitcoins for adding a new block."
+          "a": "When historical data reflects inequalities that existed in the world at that time.",
+          "b": "When data is collected from a completely random and diverse group.",
+          "c": "If proper randomization is not used during data collection.",
+          "d": "When a model builder keeps training a model until it produces a result that aligns with their original hypothesis."
         },
-        "answer": ["a", "b", "c"],
-        "explanation": "The Bitcoin block reward halves approximately every 4 years (after 210,000 blocks). From Jan 2009 reward was 100 bitcoins(same for 2010, 2011, and 2012); By Jan 2013, the reward was 50 bitcoins(same for 2014, 2015, and 2016); by Jan 2018 it was 25 bitcoins(same for 2017, 2019, and 2020); and by Jan 2021 it was 12.5 bitcoins(same for 2022, 2023, and 2024). By Jan 2024, the halving to 6.25 bitcoins will not yet have occurred, making the last statement incorrect."
-      },
-      {
-        "question": "How does the Bitcoin network prevent double spending?",
-        "options": {
-          "a": "A centralized authority will be used to verify each transaction before it is added to the blockchain.",
-          "b": "Relying on a proof-of-work consensus mechanism ensures that only one valid transaction is accepted.",
-          "c": "All transactions are stored in a centralized database that tracks each Bitcoin's status.",
-          "d": "By limiting Bitcoin transactions to one per user per day."
-        },
-        "answer": ["b"],
-        "explanation": "The proof-of-work consensus mechanism in Bitcoin prevents double-spending by requiring miners to solve cryptographic puzzles to add new blocks. This ensures transactions are verified by multiple miners and nodes, making it nearly impossible for double spending to occur."
-      },
-      {
-        "question": "Which of the following is a challenge of the permissionless model in blockchain?",
-        "options": {
-          "a": "Ensuring that all participants trust a central authority",
-          "b": "Reaching agreement (consensus) across a decentralized network of participants without a trusted third-party",
-          "c": "Limiting the number of participants to improve scalability",
-          "d": "Preventing participants from accessing the blockchain"
-        },
-        "answer": ["b"],
-        "explanation": "Please refer to the Week 4 Lecture 18."
-      },
-      {
-        "question": "Which of the following is not included in a block of a blockchain?",
-        "options": {
-          "a": "Transaction data",
-          "b": "Hash",
-          "c": "Timestamp",
-          "d": "IP address of the miner"
-        },
-        "answer": ["d"],
-        "explanation": "The miner's IP address is not included in a blockchain block. The other options—transaction data, cryptographic hash, and timestamp—are standard components of a blockchain block."
-      },
-      {
-        "question": "Which of the following is not a failure that blockchain tries to handle , as rather an attack that a blockchain can try to defend to ensure prevention?",
-        "options": {
-          "a": "Crash Fault",
-          "b": "Double Spending",
-          "c": "Byzantine Fault",
-          "d": "Link Fault"
-        },
-        "answer": ["b"],
-        "explanation": "Please refer to the Week 4 Lecture 18."
-      },
-      {
-        "question": "Which of the following best describes Safety and Liveness in Bitcoin?",
-        "options": {
-          "a": "Safety ensures transactions are irreversible, while Liveness ensures transactions are eventually added.",
-          "b": "Safety guarantees quick transaction confirmation, while Liveness prevents forks.",
-          "c": "Safety prevents double-spending, while Liveness speeds up block creation.",
-          "d": "Safety ensures blocks are always valid, while Liveness ensures no transaction delays."
-        },
-        "answer": ["a"],
-        "explanation": "Safety ensures that once a transaction is confirmed, it cannot be reversed, preventing issues like double-spending. Liveness ensures that transactions will eventually be added to the blockchain, even if there are delays or forks.\nPlease refer to the Week 4 Lecture 19."
-      },
-      {
-        "question": "What is the main purpose of the Proof of Work (PoW) mechanism in Bitcoin?",
-        "options": {
-          "a": "To validate transactions with the need for a central authority.",
-          "b": "To speed up transaction processing times by reducing the time needed to add new blocks.",
-          "c": "To make it easier for miners to add new blocks without computational work.",
-          "d": "To secure the network and prevent fraudulent transactions through computational difficulty."
-        },
-        "answer": ["d"],
-        "explanation": "Please refer to the Week 4 Lecture 19."
-      },
-      {
-        "question": "What is the correct order of events when adding a new block to the Bitcoin blockchain?",
-        "options": {
-          "a": "Block Mining → Block Propagation → Block Flooding → Transaction Flooding",
-          "b": "Transaction Flooding → Block Mining → Block Propagation → Block Flooding",
-          "c": "Transaction Flooding → Block Flooding → Block Propagation → Block Mining",
-          "d": "Block Propagation → Block Mining → Block Flooding → Transaction Flooding"
-        },
-        "answer": ["b"],
-        "explanation": "Please refer to the Week 4 Lecture 19."
-      },
-      {
-        "question": "Which of the following statements is incorrect regarding Proof of Work (PoW) in the context of forks, attacks, and the monopoly problem?",
-        "options": {
-          "a": "PoW forks can occur when two miners independently solve the puzzle at the same time, leading to a brief divergence in the blockchain.",
-          "b": "While PoW encourages miners to follow the longest chain, it does not prevent attacks like 51% attacks, where malicious miners can control the blockchain.",
-          "c": "The Monopoly Problem refers to a situation where a single miner or group controls a majority of the network’s hashing power, undermining decentralization.",
-          "d": "Proof of Work ensures complete decentralization by preventing any miner from controlling the majority of the hashing power."
-        },
-        "answer": ["d"],
-        "explanation": "Please refer to the Week 4 Lecture 20."
+        "answer": ["c"],
+        "explanation": "**Sampling bias** occurs when the data collected (the sample) is not representative of the target population, often because **proper randomization is not used**."
       }
     ]
   },
   {
     "week": 5,
-    "title": "Week 5: Consensus Algorithms & Ethereum Introduction",
+    "title": "Week 5: Debiasing Techniques and Fairness Metrics",
     "questions": [
       {
-        "question": "What is/are the limitations of using the consensus algorithm Proof of Work (PoW)?",
+        "question": "What is considered an ideal Stereotype Score (ss)?",
         "options": {
-          "a": "A lot of mining power is wasted as only one gets success in mining at a time",
-          "b": "PoW is typically used for permissioned blockchain",
-          "c": "It is used for blockchain mining",
-          "d": "High costs and difficulty in supporting large-scale adoption"
-        },
-        "answer": ["a", "d"],
-        "explanation": "Please refer to the slide Week 5 slide. The PoW has limitations of wastage of power, high costs, and large-scale adoption."
-      },
-      {
-        "question": "Which of the following is/are not applicable for PoET(Proof of Elapsed Time) consensus",
-        "options": {
-          "a": "Each participant in the blockchain network waits a random amount of time",
-          "b": "The first participant to finish becomes the follower for the new block",
-          "c": "Trusted execution platform and attestation are used to verify that the proposer has really waited",
-          "d": "The first participant to finish becomes the leader for the new block."
-        },
-        "answer": ["b"],
-        "explanation": "POET uses a trusted execution platform, say as Intel SGX and H/W attestation. Please refer to the slide for details."
-      },
-      {
-        "question": "How an attacker could manipulate the transaction history of an existing blockchain whose ledger cannot be modified, only it is possible to append?",
-        "options": {
-          "a": "The attacker hard-forked the network and created a new blockchain network.",
-          "b": "The attacker modified the smart contract and recovered the investor's cryptocurrency.",
-          "c": "The attacker gained control of more than 51% of the network’s computing power.",
-          "d": "The attacker gained control of less than 49% of the network’s computing power."
+          "a": "0%",
+          "b": "25%",
+          "c": "50%",
+          "d": "75%"
         },
         "answer": ["c"],
-        "explanation": "Refer to the Week 5 Lecture slide for 51% attack."
+        "explanation": "In bias evaluation like with StereoSet, a **Stereotype Score (SS)** of **50%** is ideal, indicating that the model is equally likely to complete a sentence with a stereotypical or anti-stereotypical association, meaning it is not biased."
       },
       {
-        "question": "What is the role of the Ethereum Virtual Machine (EVM)?",
+        "question": "What does SEAT stand for?",
         "options": {
-          "a": "To directly connect the Ethereum nodes",
-          "b": "To execute smart contracts in a decentralized manner",
-          "c": "To directly mine blocks",
-          "d": "To disrupt the Ethereum network and cause failures"
+          "a": "Standard Evaluation Assessment Test",
+          "b": "Semantic Evaluation Annotation Test",
+          "c": "Structured Embedding Accuracy Test",
+          "d": "Sentence Embedding Association Test"
         },
-        "answer": ["b"],
-        "explanation": "The EVM executes smart contracts and ensures decentralized agreement on computations."
+        "answer": ["d"],
+        "explanation": "**SEAT** stands for **Sentence Embedding Association Test**, a method derived from the Implicit Association Test to measure bias in language model embeddings."
       },
       {
-        "question": "Which of the following syntax is correct to write data in a smart contract using solidity",
+        "question": "In counterfactual data augmentation (CDA), what is altered to rebalance the corpus?",
         "options": {
-          "a": "myContract.methods.store(\"10\").set()",
-          "b": "myContract.methods.write(\"10\").send()",
-          "c": "myContract.methods.store(\"10\").send()",
-          "d": "myContract.methods.write(\"10\").set()"
+          "a": "Sentence Length",
+          "b": "Syntex",
+          "c": "Bias attribute words",
+          "d": "Vocabulary complexity"
         },
         "answer": ["c"],
-        "explanation": "Please refer to the Week 5 Lecture slides on how to execute a smart contract."
+        "explanation": "**Counterfactual Data Augmentation (CDA)** works by creating new, balanced data examples by swapping **bias attribute words** (e.g., 'man' for 'woman') while preserving the rest of the sentence."
       },
       {
-        "question": "2.5 ether equals",
+        "question": "Which characteristic makes a language model more likely to generate gender-neutral responses in text-to-text tasks? (Select all that apply.)",
         "options": {
-          "a": "25 × 10^8 Gwei",
-          "b": "25 × 10^10 Gwei",
-          "c": "25 × 10^7 Gwei",
-          "d": "25 × 10^9 Gwei"
+          "a": "Training on diverse and balanced datasets.",
+          "b": "Use of bias-specific adapter modules.",
+          "c": "Conditioning outputs on explicit gender tokens.",
+          "d": "Reliance on pretrained token embeddings without fine-tuning."
+        },
+        "answer": ["a", "b"],
+        "explanation": "**Diverse/balanced datasets** (a) address the source of the bias. **Bias-specific adapter modules** (b) provide a targeted mechanism to correct bias post-training. (c) would likely increase gendered responses, and (d) ignores the issue."
+      },
+      {
+        "question": "Which toolkit is used to add programmable guardrails to LLM-based conversational applications like ChatGPT?",
+        "options": {
+          "a": "GPT-4",
+          "b": "NVIDIA NeMo",
+          "c": "CoDi",
+          "d": "MAFIA"
+        },
+        "answer": ["b"],
+        "explanation": "**NVIDIA NeMo** is a framework that includes tools for deploying customizable and **programmable guardrails** for LLM safety and controlling their behavior in applications."
+      },
+      {
+        "question": "Which of the following is the correct formula for Pointwise Mutual Information (PMI)?",
+        "options": {
+          "a": "$PMI(w_i, w_j) = \\log_2 \\frac{N \\cdot c(w_i, w_j)}{c(w_i)^2 \\cdot c(w_j)^2}$",
+          "b": "$PMI(w_i, w_j) = \\log_2 \\frac{c(w_i) \\cdot c(w_j)}{N \\cdot c(w_i, w_j)}$",
+          "c": "$PMI(w_i, w_j) = \\log_2 \\frac{N \\cdot c(w_i, w_j)}{c(w_i) \\cdot c(w_j)}$",
+          "d": "$PMI(w_i, w_j) = \\log_2 \\frac{c(w_i, w_j)}{N \\cdot c(w_i) \\cdot c(w_j)}$"
+        },
+        "answer": ["c"],
+        "explanation": "**Pointwise Mutual Information (PMI)** measures the dependency between two words ($w_i$ and $w_j$), and its correct formula involves the joint probability $\\frac{c(w_i, w_j)}{N}$ divided by the product of their individual probabilities $\\frac{c(w_i)}{N} \\cdot \\frac{c(w_j)}{N}$, simplified to $PMI(w_i, w_j) = \\log_2 \\frac{N \\cdot c(w_i, w_j)}{c(w_i) \\cdot c(w_j)}$."
+      },
+      {
+        "question": "‘Useful fairness’ couples which of the following? (Select all that apply.)",
+        "options": {
+          "a": "Context awareness",
+          "b": "Bias Score",
+          "c": "STS task performance",
+          "d": "Dataset diversity"
+        },
+        "answer": ["b", "c"],
+        "explanation": "**Useful fairness** aims to find debiasing methods that not only reduce the **Bias Score** (fairness) but also maintain or improve the model's performance on downstream tasks, such as **STS task performance** (utility/accuracy)."
+      },
+      {
+        "question": "What is the key architectural idea behind the MAFIA model for effective debiasing?",
+        "options": {
+          "a": "Fusing bias-specific adapters while keeping the base model the same.",
+          "b": "Replacing all model weights with debiased adapters.",
+          "c": "Dynamically routing inputs based on detected bias type.",
+          "d": "Using GANs to hallucinate fair outputs."
         },
         "answer": ["a"],
-        "explanation": "Ether to Wei converter: https://eth-converter.com/."
+        "explanation": "**MAFIA** (Multi-Adapter Fusion for Implicit and explicit Alignment) uses multiple, specialized **bias-specific adapters** that are fused together, allowing for targeted debiasing while preserving the foundational knowledge of the **base model**."
       },
       {
-        "question": "Which JSON-RPC method is used to query the balance of an Ethereum account?",
+        "question": "Which of the following is true about proprietary models?",
         "options": {
-          "a": "eth_sendTransaction",
-          "b": "eth_getBalance",
-          "c": "eth_getBlockByNumber",
-          "d": "eth_getTransactionByHash"
-        },
-        "answer": ["b"],
-        "explanation": "The eth_getBalance method retrieves the current balance of a specified Ethereum account."
-      },
-      {
-        "question": "What parameter in an Ethereum transaction specifies the fee for computational resources required?",
-        "options": {
-          "a": "Gas",
-          "b": "Nonce",
-          "c": "Data",
-          "d": "Value"
+          "a": "They are more neutral compared to CoDi and other open source models.",
+          "b": "They are less neutral compared to CoDi and other open source models.",
+          "c": "They have more bias than CoDi and other open source models.",
+          "d": "They have the same neutrality as CoDi and other open source models."
         },
         "answer": ["a"],
-        "explanation": "Gas defines the fee required for computational operations in a transaction"
+        "explanation": "Proprietary models generally have extensive post-training alignment steps, including reinforcement learning and human feedback, often making them **more neutral** and safer in practice than many open-source models (like CoDi, in the context of the lecture)."
       },
       {
-        "question": "Which of the consensus algorithms requires miners to show a proof of sending coins to a verifiably un‐spendable address?",
+        "question": "Which of the following are benchmark datasets commonly used to measure bias in language models? (Select all that apply.)",
         "options": {
-          "a": "Proof of Work (PoW)",
-          "b": "Proof of Stake (PoS)",
-          "c": "Proof of Burn (PoB)",
-          "d": "Proof of Elapsed Time (PoET)"
+          "a": "Stereoset",
+          "b": "CrowS-Pairs",
+          "c": "ImageNet",
+          "d": "Bias-STS-S",
+          "e": "SQuAD"
         },
-        "answer": ["c"],
-        "explanation": "Proof of Burn consensus algorithm requires miners to show a proof of burning coins i.e sending coins to a verifiably un‐spendable address"
+        "answer": ["a", "b", "d"],
+        "explanation": "**Stereoset**, **CrowS-Pairs**, and **Bias-STS-S** are all specialized datasets for measuring various types of **social bias** in language models. ImageNet and SQuAD are for image recognition and question answering, respectively."
       },
       {
-        "question": "What is the main difference between PoS (Proof of Stake) and PoW (Proof of Work)?",
+        "question": "What is ‘gender-bleaching’ in the context of VLMs?",
         "options": {
-          "a": "PoS requires computational work; PoW requires a stake.",
-          "b": "PoS relies on the stake held by miners; PoW relies on computational power.",
-          "c": "PoS consumes external resources; PoW consumes virtual resources.",
-          "d": "PoS eliminates the need for block validation."
+          "a": "Improving the quality of input images.",
+          "b": "Turning all people in the input images white.",
+          "c": "Enhancing gender-specific features in input images.",
+          "d": "Removing/Obscuring visual cues related to gender in input images."
         },
-        "answer": ["b"],
-        "explanation": "In PoS, block mining probability depends on the amount of stake held, unlike PoW, which depends on computational effort."
+        "answer": ["d"],
+        "explanation": "**Gender-bleaching** is a technique used in Vision-Language Models (VLMs) to create a counterfactual example by **removing or obscuring visual cues** that explicitly indicate gender."
+      },
+      {
+        "question": "Why might a single adapter for all bias types (like iDEBall) fail?",
+        "options": {
+          "a": "Cannot effectively debias across all categories.",
+          "b": "Trains slower than other models.",
+          "c": "Requires more input data.",
+          "d": "Does not understand contextual information."
+        },
+        "answer": ["a"],
+        "explanation": "A **single adapter** may struggle because different types of bias (e.g., racial, gender, occupational) manifest in distinct ways and often require different, even conflicting, modification vectors, making it difficult to **effectively debias across all categories** with one general solution."
       }
     ]
   },
   {
     "week": 6,
-    "title": "Week 6: Fault Tolerance, Paxos & Permissioned Blockchains",
+    "title": "Week 6: Privacy Models and Mechanisms",
     "questions": [
       {
-        "question": "What is/are the primary distinction between crash faults and Byzantine faults?",
+        "question": "What are the primary disadvantages of cryptographic solutions for privacy protection? Select all that apply.",
         "options": {
-          "a": "Crash faults involve deliberate malicious behavior",
-          "b": "Byzantine faults involve deliberate malicious behavior",
-          "c": "Crash faults require at least 3F + 1 node for consensus (here, F is the number of crash faults)",
-          "d": "Byzantine faults can never partition the network"
+          "a": "Inference possibility remains uncertain in all scenarios",
+          "b": "Utility reduces",
+          "c": "It is expensive",
+          "d": "Security guarantees are absolute in all cases"
+        },
+        "answer": ["a", "c"],
+        "explanation": "**Cryptographic solutions** are often **computationally expensive** (**c**) and their security guarantees relate to computational complexity, not mathematical privacy bounds, leaving **inference possibilities uncertain** (**a**)."
+      },
+      {
+        "question": "Why do anonymization techniques often fail to provide adequate privacy protection?",
+        "options": {
+          "a": "They require excessive computational resources",
+          "b": "Adversaries can leverage auxiliary databases for de-anonymization attacks",
+          "c": "They only work with structured data formats",
+          "d": "The anonymization process introduces too much noise"
         },
         "answer": ["b"],
-        "explanation": "Byzantine faults involve nodes behaving maliciously, whereas crash faults occur when nodes fail passively."
+        "explanation": "The main failure of **anonymization** is that removing direct identifiers isn't enough; adversaries can use **auxiliary databases** or public information to link and **de-anonymize** individuals."
       },
       {
-        "question": "Suppose you execute your tasks distributedly from four different systems at four different locations. To maintain the consensus among the systems, you are using the BFT model. You found that one system is permanently failed due to a hardware fault and another system is compromised by an attacker. Does your system correctly work at all?",
+        "question": "In the randomized response model, what does the parameter epsilon in $e^{\\epsilon}$ represent?",
         "options": {
-          "a": "No",
-          "b": "Yes, with the remaining nodes",
-          "c": "Yes, with all the nodes",
-          "d": "Yes, but with reduced efficiency"
+          "a": "The percentage of truthfulness of the response that is allowed to be revealed",
+          "b": "The ratio between falsehood and randomness in responses",
+          "c": "The computational complexity of the algorithm",
+          "d": "The number of participants in the study"
         },
         "answer": ["a"],
-        "explanation": "We need at least 3F+1=3(1)+1=3F + 1 = 3(1) + 1 = 4 systems to tolerate 1 Byzantine fault. Since one system has permanently failed (crash fault), the remaining systems cannot maintain consensus."
+        "explanation": "In both Randomized Response and Differential Privacy, **epsilon ($\epsilon$)** is the privacy parameter that controls the amount of noise and, by extension, the degree to which the true response or data is **revealed**."
       },
       {
-        "question": "In Paxos, what will a proposer do if it receives a promise containing an already accepted value?",
+        "question": "What characterizes an ideal privacy model?",
         "options": {
-          "a": "Use the previously accepted value with the highest ID",
-          "b": "Propose a completely new value",
-          "c": "Abort the consensus",
-          "d": "Ignore the promise and continue"
-        },
-        "answer": ["a"],
-        "explanation": "The proposer will use the value with the highest ID. Refer to week 6 lecture notes."
-      },
-      {
-        "question": "Which of the following is/are true regarding the permissioned blockchain model?",
-        "options": {
-          "a": "Users are anonymous",
-          "b": "Transactions are publicly visible to everyone",
-          "c": "Users are authenticated through a Membership Service Provider (MSP)",
-          "d": "Security and consensus are required"
-        },
-        "answer": ["c", "d"],
-        "explanation": "In the permissioned blockchain model, users are authenticated through MSP and users know each other. But security and consensus are still required. The transactions are only visible to authorized participants."
-      },
-      {
-        "question": "In the Paxos algorithm, a majority of promises ensure:",
-        "options": {
-          "a": "Agreement on the ID, value",
-          "b": "Liveness of the system",
-          "c": "Safety against conflicting proposals",
-          "d": "Disagreement on the ID, value"
+          "a": "Maximum utility with zero privacy guarantees",
+          "b": "Perfect privacy with minimal utility",
+          "c": "Balanced trade-off between utility and privacy requirements",
+          "d": "Complete data suppression for absolute privacy"
         },
         "answer": ["c"],
-        "explanation": "A majority of promises in Paxos ensure safety by preventing conflicting proposals from proceeding"
+        "explanation": "An **ideal privacy model** does not prioritize one extreme. It seeks a **balanced trade-off** where the data is still useful (**utility**) while providing a strong privacy guarantee."
       },
       {
-        "question": "If there are 3 faulty nodes, at least how many nodes are needed to reach consensus in the Byzantine Fault Tolerance (BFT) system?",
+        "question": "Given: $X_i$ represents truth, $Y_i$ represents randomized value of $X_i$, and $Z_i=(Y_i - (1/(1+e^{-\\epsilon}))) \\times (e^{\\epsilon}+1)/(e^{\\epsilon}-1)$, What is the expected value $E[Z_i]$?",
         "options": {
-          "a": "4",
-          "b": "8",
-          "c": "7",
-          "d": "10"
+          "a": "$E[Z_i]=Y_i$",
+          "b": "$E[Z_i]=X_i$",
+          "c": "$E[Z_i]=e^{\\epsilon}\\times X_i$",
+          "d": "$E[Z_i] = 0$"
+        },
+        "answer": ["b"],
+        "explanation": "The formula for $Z_i$ is a process called **unbiased estimation** or 'de-biasing'. It's designed specifically to correct for the random noise introduced in $Y_i$ such that the **expected value** of the estimator, $Z_i$, is the true value, $X_i$: **$E[Z_i]=X_i$**."
+      },
+      {
+        "question": "In the randomized response model, which statements are correct? Select all that apply.",
+        "options": {
+          "a": "Privacy guarantee can be controlled by parameter $\\epsilon$",
+          "b": "Privacy and utility are independent of sample size",
+          "c": "Higher $\\epsilon$ values provide stronger utility",
+          "d": "Utility guarantee scales with $n^{-\\frac{1}{2}}$"
+        },
+        "answer": ["a", "d"],
+        "explanation": "The privacy parameter $\\epsilon$ **controls the privacy guarantee** (**a**). The utility (accuracy of the estimate) is not independent of sample size and improves with $\\sqrt{n}$, so it scales with **$n^{-\\frac{1}{2}}$** (if looking at error/variance) (**d**)."
+      },
+      {
+        "question": "Consider datasets:$X= \\{x_1, x_2, \\dots, x_N\\}$ (truth), $Y = \\{y_1, y_2, \\dots, y_N\\}$ (revealed values). To derive better estimators $Z = \\{z_1, z_2, \\dots, z_N\\}$ from $Y$, What process is required?",
+        "options": {
+          "a": "Removing bias from $Y$ introduced through randomization",
+          "b": "Adding bias to $Y$ removed through randomization",
+          "c": "Removing variance from $Y$ introduced through randomization",
+          "d": "Adding variance to $Y$ removed through randomization"
+        },
+        "answer": ["a"],
+        "explanation": "The purpose of the unbiased estimator $Z$ is to **remove the bias** (systematic error) introduced to $Y$ by the randomization process, allowing the expected value to be the true value."
+      },
+      {
+        "question": "Which factors directly influence the privacy guarantee in differential privacy mechanisms? Select all that apply.",
+        "options": {
+          "a": "Sensitivity of the query function",
+          "b": "Magnitude of added noise",
+          "c": "Size of the dataset",
+          "d": "Privacy parameter Epsilon"
+        },
+        "answer": ["a", "b", "d"],
+        "explanation": "The privacy guarantee is mathematically determined by the **Privacy parameter Epsilon** ($\epsilon$) (**d**), the **Sensitivity** ($\Delta f$) of the function (**a**), and the **Magnitude of added noise** ($\sigma$) (**b**), which is directly related to $\epsilon$ and $\Delta f$."
+      },
+      {
+        "question": "Which trust scenario correctly describes the differential privacy model?",
+        "options": {
+          "a": "Trust the curator; Trust the world",
+          "b": "Do not trust the curator; Trust the world",
+          "c": "Trust the curator; Do not trust the world",
+          "d": "Do not trust the curator; Do not trust the world"
+        },
+        "answer": ["c"],
+        "explanation": "In the central DP model, the users **trust the curator** (to correctly apply the mechanism) but the mechanism itself ensures that the **output (the world) cannot break privacy**, even if the world is adversarial."
+      },
+      {
+        "question": "For fixed privacy levels, how do sample size requirements differ between Laplacian mechanism and Randomized response?",
+        "options": {
+          "a": "Constant factor difference",
+          "b": "Exponential factor difference",
+          "c": "Logarithmic factor difference",
+          "d": "Quadratic factor difference"
         },
         "answer": ["d"],
-        "explanation": "f = 3 Total nodes required = 3f + 1 = 9 + 1 = 10"
+        "explanation": "Achieving the same utility/accuracy for the same privacy level often requires a **quadratically larger sample size** ($n^2$) for **Randomized Response** (Local DP) compared to the **Laplacian Mechanism** (Central DP)."
       },
       {
-        "question": "Which of the following is/are true regarding a consensus when there is one good commander, one good lieutenant, and one faulty lieutenant in a Byzantine Generals Problem.",
+        "question": "Higher privacy guarantees can be achieved in which scenarios? Select all correct options.",
         "options": {
-          "a": "Consensus is always possible",
-          "b": "Consensus is not possible because the faulty lieutenant can mislead",
-          "c": "Consensus is not possible because the commander can mislead",
-          "d": "Consensus will be possible if there are additional good lieutenants"
+          "a": "When Epsilon parameter is increased",
+          "b": "When noise magnitude is increased",
+          "c": "When inverse sensitivity is high",
+          "d": "When variance in the mechanism is high",
+          "e": "When utility requirements are maximized"
         },
         "answer": ["b", "d"],
-        "explanation": "One fault. Total nodes required = 3f + 1 = 3 + 1 = 4. But we have 3 nodes. In this case, the faulty lieutenant can mislead. The consensus is possible if we have additional good lieutenants."
+        "explanation": "**Higher privacy** means less information leakage, which is achieved by **decreasing Epsilon** or **increasing the noise magnitude** (**b**)/variance (**d**)."
       },
       {
-        "question": "What is/are the purpose of Multi-Paxos?",
+        "question": "In the context of randomized response, what happens to utility as privacy guarantees increase?",
         "options": {
-          "a": "To have a termination guarantee",
-          "b": "To execute smart contracts on multiple blockchains",
-          "c": "To reach a consensus for a series of values",
-          "d": "To prioritize liveness over safety"
+          "a": "Utility remains constant",
+          "b": "Utility increases proportionally",
+          "c": "Utility decreases due to increased noise",
+          "d": "Utility becomes undefined"
         },
         "answer": ["c"],
-        "explanation": "Multi-Paxos extends Paxos to achieve consensus over a series of values. There is no termination guarantee."
-      },
-      {
-        "question": "Which of the following is/are false regarding classic Paxos?",
-        "options": {
-          "a": "It requires a majority of acceptors to proceed",
-          "b": "It achieves consensus on ID and not the value",
-          "c": "It achieves consensus on the value and not ID",
-          "d": "It can work with Byzantine faults"
-        },
-        "answer": ["b", "d"],
-        "explanation": "Paxos is designed to handle only crash faults. Also, the consensus is reached on the value, not on ID."
-      },
-      {
-        "question": "In Paxos, which of the following is/are true about the roles of nodes?",
-        "options": {
-          "a": "A node cannot play more than one role",
-          "b": "A proposer node cannot become a learner",
-          "c": "A node can play one or more than one role",
-          "d": "An acceptor node cannot become a learner"
-        },
-        "answer": ["c"],
-        "explanation": "In Paxos, a node can play more than one role at the same time."
+        "explanation": "To **increase privacy guarantees** (decrease $\epsilon$), more randomness (noise) must be added. This increased noise makes the resulting estimates less accurate, so **utility decreases**."
       }
     ]
   },
   {
     "week": 7,
-    "title": "Week 7: BFT, PBFT & Hyperledger Fabric Introduction",
+    "title": "Week 7: Approximate DP and Fairness Metrics",
     "questions": [
       {
-        "question": "Which statement(s) are not true about Byzantine Dissemination Quorum:",
+        "question": "In approximate differential privacy, what role does the delta ($\\delta$) parameter play?(Notation same as in the lecture)",
         "options": {
-          "a": "Any two quorums have at least one correct replica in common",
-          "b": "There is always a quorum available with no faulty replicas",
-          "c": "Any two quorums have at most one correct replica in common",
-          "d": "There is always a quorum available with some faulty replicas"
-        },
-        "answer": ["c", "d"],
-        "explanation": "Refer to Lecture 31: Byzantine Dissemination Quorum: Intersection: Any two quorums have at least one correct replica in common. Availability: There is always a quorum available with no faulty replicas"
-      },
-      {
-        "question": "If you have f number of total faulty nodes, then you need at least how many replicas to reach consensus considering the possibility of both crash fault or byzantine fault.",
-        "options": {
-          "a": "2f + 1",
-          "b": "3f + 1",
-          "c": "f +1",
-          "d": "3f"
+          "a": "It ensures that epsilon differential privacy holds for all possible sets",
+          "b": "It allows for some rare events (set S) where epsilon differential privacy may not hold",
+          "c": "It reduces the amount of noise required in all cases",
+          "d": "It eliminates the need for the epsilon parameter"
         },
         "answer": ["b"],
-        "explanation": "Considering the byzantine fault, 3f + 1 replicas are required to reach a consensus. This is greater than 2f + 1 replicas, which is enough to handle crash faults, too."
+        "explanation": "The **delta ($\delta$)** parameter in approximate DP (also known as $(\\epsilon, \\delta)$-DP) allows for a **small, rare chance ($\delta$)** that the $\\epsilon$-DP guarantee does **not** hold."
       },
       {
-        "question": "Which cryptographic technique is primarily used in PBFT to validate message integrity?",
+        "question": "What is a key advantage of approximate differential privacy over standard differential privacy?",
         "options": {
-          "a": "Hashing",
-          "b": "Symmetric encryption",
-          "c": "Digital signatures",
-          "d": "Sharding"
+          "a": "It provides stronger privacy guarantees",
+          "b": "It eliminates the need for noise addition",
+          "c": "It can increase utility",
+          "d": "It works only with categorical data"
         },
         "answer": ["c"],
-        "explanation": "PBFT utilizes digital signatures to ensure the authenticity and integrity of messages"
+        "explanation": "By allowing the $\\delta$ parameter, approximate DP permits the use of less noise, which in turn leads to a higher quality output, meaning it **can increase utility**."
       },
       {
-        "question": "Which mechanism ensures PBFT liveness when the primary fails?",
+        "question": "In approximate differential privacy, the Gaussian noise follows which pattern?",
         "options": {
-          "a": "Cryptographic signatures",
-          "b": "View change protocol",
-          "c": "Pre-prepare and Prepare phases",
-          "d": "Timeout mechanism"
+          "a": "$N(0, \\sigma)$ where $\\sigma = \\sqrt{(d \\log(1/\\delta))/(n+\\epsilon)}$",
+          "b": "$N(0, \\sigma)$ where $\\sigma = \\sqrt{(d \\log(1/\\delta))/(\\epsilon)}$",
+          "c": "$N(0, \\sigma)$ where $\\sigma = d \\log(1/\\delta)/(n-\\epsilon)$",
+          "d": "$N(0, \\sigma)$ where $\\sigma = \\sqrt{(d \\log(1/\\delta))/(n \\cdot \\epsilon)}$"
+        },
+        "answer": ["d"],
+        "explanation": "The noise standard deviation $\\sigma$ for Gaussian DP is proportional to $\\sqrt{\\log(1/\\delta)} / \\epsilon$ and $\\Delta_f$, with $d$ as the sensitivity and $n$ often being the number of iterations or the dataset size used in the denominator: $N(0, \\sigma)$ where $\\sigma = \\frac{d}{\\epsilon} \\sqrt{2 \\log(1/\\delta)} \\approx \\sqrt{\\frac{d \\log(1/\\delta)}{n \\cdot \\epsilon}}$ in the given notation."
+      },
+      {
+        "question": "What does Statistical Parity require for a fair classifier?",
+        "options": {
+          "a": "The classifier should have equal accuracy across all groups",
+          "b": "The probability of positive predictions should be equal across protected and non-protected groups",
+          "c": "The true positive rates should be identical for all demographic groups",
+          "d": "Individual similar cases should receive similar predictions"
         },
         "answer": ["b"],
-        "explanation": "The view change protocol allows the system to elect a new primary when the current primary fails."
+        "explanation": "**Statistical Parity** (or Demographic Parity) requires the model's **prediction rate** (the probability of a positive outcome $P(M(x)=1)$) to be equal for all demographic groups."
       },
       {
-        "question": "Which of the following statement(s) are not true regarding Hyperledger frameworks?",
+        "question": "For an ideal fair algorithm under Equality of Opportunity, what condition must be satisfied?",
         "options": {
-          "a": "Hyperledger frameworks are primarily used for building permissioned blockchains for organizations.",
-          "b": "Hyperledger frameworks are developed for mainly building public blockchains.",
-          "c": "Hyperledger frameworks can not use CouchDB.",
-          "d": "Hyperledger frameworks are only used for building smart contracts for public blockchains"
-        },
-        "answer": ["b", "c", "d"],
-        "explanation": "Fabric is primarily used for building permissioned blockchains for organizations. It is an open source project so anyone can use it to build a permissioned blockchain and deploy smart contracts on it. The states can be maintained using light weight databases such as Level DB, CouchDB etc."
-      },
-      {
-        "question": "Which of the following(s) is/are benefits of Blockchain for Business?",
-        "options": {
-          "a": "Reduced transaction time in general, from days to near instantaneous for legacy based cross-border interactions",
-          "b": "The sole centralized authority has been able to remove overheads and cost",
-          "c": "Supports transparency and traceability in transactions",
-          "d": "Always increases transaction costs due to complexity"
-        },
-        "answer": ["a", "c"],
-        "explanation": "Refer to Lecture 33. The benefits of Blockchain for business include reduced transaction time by enabling near-instantaneous cross-border transactions and supporting transparency and traceability through immutable ledger. Blockchain does not involve a centralized authority to remove overheads, and while complexity may increase costs, the goal is to ultimately reduce transaction costs."
-      },
-      {
-        "question": "Which of the following are characteristics of permissioned blockchains (in comparison with permissionless blockchains)?",
-        "options": {
-          "a": "Closed membership consensus protocol in permissioned blockchains",
-          "b": "The identities of nodes are not pre-known in permissioned blockchains",
-          "c": "Always lower transaction throughput in permissioned blockchains",
-          "d": "Permissioned blockchains are highly scalable for a large number of nodes"
-        },
-        "answer": ["a"],
-        "explanation": "Permissioned blockchains use closed membership consensus algorithms and have a high transaction throughput. However, they are less scalable in accommodating a large number of nodes compared to permissionless blockchains. Refer to Lecture 33."
-      },
-      {
-        "question": "Which of the following abstractions in Hyperledger Fabric primarily provides confidentiality to individual ledgers ?",
-        "options": {
-          "a": "Ordering Services",
-          "b": "Peers",
-          "c": "Channels",
-          "d": "Consensus"
+          "a": "The overall prediction rates must be equal across groups",
+          "b": "The false positive rates of unprivileged and privileged groups should be equal",
+          "c": "The true positive rates of unprivileged and privileged groups should be equal",
+          "d": "The precision should be identical for both protected and non-protected groups"
         },
         "answer": ["c"],
-        "explanation": "Refer to Lecture 35: Fabric channels refer to different separate ledgers such that only organizations belonging to a particular channel can read/write to that ledger."
+        "explanation": "**Equality of Opportunity** (or Equal Opportunity) requires that the **True Positive Rate (TPR)**—the probability of a positive prediction given the true label is positive—is equal for all demographic groups: $P(M(x)=1 \\mid Y=1, C=0) = P(M(x)=1 \\mid Y=1, C=1)$."
       },
       {
-        "question": "What is the role of Membership Service Provider (MSP) in Hyperledger Fabric?",
+        "question": "What is the Post-Processing property in differential privacy?",
         "options": {
-          "a": "Assigning sequence numbers to transactions",
-          "b": "Identity management for network participants",
-          "c": "Storing ledger data securely",
-          "d": "Defining consensus mechanism for network"
+          "a": "Any preprocessing of data before applying DP mechanisms maintains the privacy guarantee",
+          "b": "Privacy guarantees are strengthened when multiple post-processing steps are applied",
+          "c": "Any data-independent transformation applied to the output of a differentially private mechanism does not degrade its privacy guarantee",
+          "d": "Post-processing can be used to improve the privacy guarantee of any mechanism"
+        },
+        "answer": ["c"],
+        "explanation": "The **Post-Processing property** is a powerful principle stating that any operation applied to the output of a DP mechanism, as long as it doesn't depend on the original private data, **cannot degrade the privacy guarantee**."
+      },
+      {
+        "question": "In a PCA analysis, if the reconstruction error for female data points is lower than for male data points, what does this indicate?",
+        "options": {
+          "a": "The dataset is biased against females",
+          "b": "The dataset is biased against males",
+          "c": "Reconstruction error differences are due to random noise",
+          "d": "Male data is more correlated"
         },
         "answer": ["b"],
-        "explanation": "MSP handles the identity management for network participants. It ensures that only authorized participants are allowed to interact with the network."
+        "explanation": "A lower **reconstruction error** means the model can represent or capture the features of that group (female data) more accurately, suggesting the dataset or model is better optimized for the female group and thus **biased against males** (who have a higher error)."
       },
       {
-        "question": "Which of the following are key features of Hyperledger Fabric?",
+        "question": "In the exponential mechanism to calculate the price to maximize the revenue, identify the correct statement in the scenario where 2 unequal prices result in the same revenue:",
         "options": {
-          "a": "Modular architecture with pluggable components",
-          "b": "Permissionless blockchain framework",
-          "c": "Support for smart contracts (chain codes) in general-purpose languages",
-          "d": "Use of native cryptocurrencies for transactions"
+          "a": "Both prices have an unequal probability of being selected",
+          "b": "Both prices have an equal probability of being selected",
+          "c": "A higher price has a higher probability of being chosen due to normalisation",
+          "d": "A lower price has a higher probability of being chosen due to normalisation"
         },
-        "answer": ["a", "c"],
-        "explanation": "Hyperledger Fabric is a permissioned blockchain framework with a modular design and support for smart contracts (chain codes) written in languages like Go, Java, and Node.js. It does not have native cryptocurrencies."
+        "answer": ["b"],
+        "explanation": "The exponential mechanism's probability of selection is proportional to $e^{\\frac{\\epsilon \\cdot u(x)}{2 \\cdot \\Delta u}}$, where $u(x)$ is the utility (revenue). If two options have the **same utility**, they will be selected with an **equal probability**."
+      },
+      {
+        "question": "In an ideal situation where the models are completely fair, the different parity values are:",
+        "options": {
+          "a": "Approach 0",
+          "b": "1",
+          "c": "Approach 1",
+          "d": "0"
+        },
+        "answer": ["d"],
+        "explanation": "Parity metrics are typically defined as the **difference** between a metric (like TPR or selection rate) for the unprivileged and privileged groups. In a perfectly fair scenario, these rates are equal, and their difference is **0**."
+      },
+      {
+        "question": "In a classifier, if a data point lies exactly on the decision boundary (hyperplane), what is the probability of it belonging to the positive class?",
+        "options": {
+          "a": "Greater than 50%",
+          "b": "Less than 50%",
+          "c": "Equal to 50%",
+          "d": "Cannot be determined from the given information"
+        },
+        "answer": ["c"],
+        "explanation": "The **decision boundary** is the hyperplane where a classifier's prediction changes. For a binary classifier, this is the point where the predicted probability of belonging to the positive class is exactly **50%**."
+      },
+      {
+        "question": "In Fair Logistic Regression, the equation $P(M(x)=1|C=1) - P(M(x)=1|C=0)$ represents which fairness metric?",
+        "options": {
+          "a": "Equality of Opportunity",
+          "b": "Statistical Parity",
+          "c": "Predictive Parity",
+          "d": "Individual Fairness"
+        },
+        "answer": ["b"],
+        "explanation": "This equation calculates the difference in the **probability of a positive prediction** ($P(M(x)=1)$) between two groups ($C=1$ and $C=0$), which is the mathematical definition of **Statistical Parity**."
       }
     ]
   },
   {
     "week": 8,
-    "title": "Week 8: Consensus Finality, Bitcoin-NG & Fabric Chaincode",
+    "title": "Week 8: Interpretability, Robustness and Trojans",
     "questions": [
       {
-        "question": "Which of the following is/are correct?",
+        "question": "In pixel-attribution methods, which statement best distinguishes perturbation-based approaches from gradient-based saliency?",
         "options": {
-          "a": "PoW always ensures consensus finality",
-          "b": "PoW does not ensure consensus finality",
-          "c": "PBFT protocol always ensures consensus finality",
-          "d": "PBFT protocol does not ensure consensus finality"
-        },
-        "answer": ["b", "c"],
-        "explanation": "PBFT protocol ensures total ordering of transactions, thus ensuring consensus finality. Whereas PoW does not ensure consensus finality."
-      },
-      {
-        "question": "Which of the following is/are true regarding the CoSi protocol?",
-        "options": {
-          "a": "Witnesses are organized in a tree structure",
-          "b": "Three rounds of PBFT can be emulated using one round of CoSi protocol",
-          "c": "It can be used to sign a message by multiple authorities collectively",
-          "d": "Three rounds of PBFT can be emulated using two rounds of CoSi protocol"
-        },
-        "answer": ["a", "c", "d"],
-        "explanation": "Refer to Week 8 Lecture Notes"
-      },
-      {
-        "question": "Which of the following factor(s) distinguish Bitcoin-NG from Bitcoin?",
-        "options": {
-          "a": "Decoupling the leader election and transaction serialization",
-          "b": "Use of key blocks and macroblocks",
-          "c": "Bitcoin-NG has lower transaction throughput as compared to Bitcoin",
-          "d": "Leader election using PBFT"
-        },
-        "answer": ["a", "b"],
-        "explanation": "Bitcoin-NG has a higher transaction throughput than Bitcoin. It decouples the leader election from transaction serialization using key blocks and microblocks."
-      },
-      {
-        "question": "Which of the following is/are true regarding Bitcoin-NG?",
-        "options": {
-          "a": "Microblock generation rate is lower than the key block generation rate",
-          "b": "Microblock generation rate is higher than the key block generation rate",
-          "c": "The interval between the generation of two key blocks is exponentially distributed",
-          "d": "The key block contains the ledger entries"
-        },
-        "answer": ["b", "c"],
-        "explanation": "Microblocks contain the ledger entries and microblocks have a higher generation rate as compared to key blocks. Refer to Week 8 Lecture Notes"
-      },
-      {
-        "question": "Which of the following is/are correct?",
-        "options": {
-          "a": "PBFT protocol ensures total ordering of transactions",
-          "b": "Bitcoin has lower node scalability as compared to Standard BFT protocols",
-          "c": "Standard BFT protocols never produces lower transaction throughput as compared to Bitcoin",
-          "d": "Bitcoin-NG has higher node scalability as compared to Standard bitcoin protocols in general"
-        },
-        "answer": ["a", "d"],
-        "explanation": "BFT is faster for small networks. Bitcoin NG decouples transaction serialization from leader election. Refer to ‘Performance vs Scalability’ in Week 8 Lecture Notes."
-      },
-      {
-        "question": "What is the primary function of a Fabric smart contract (Chaincode)?",
-        "options": {
-          "a": "Performing cryptocurrency mining",
-          "b": "Defining the business rules and logic in the ledger",
-          "c": "Defining consensus algorithms",
-          "d": "Monitoring the transaction throughput"
+          "a": "Perturbation-based methods compute input gradients; gradient-based methods fit local surrogate models.",
+          "b": "Perturbation-based methods are model-agnostic and computationally expensive; gradient-based methods use model internals and are faster.",
+          "c": "Perturbation-based methods always produce sparser explanations; gradient-based methods always produce denser explanations.",
+          "d": "Perturbation-based methods require access to intermediate activations; gradient-based methods are strictly black-box."
         },
         "answer": ["b"],
-        "explanation": "Fabric smart contracts define common data, rules and processes for businesses to transact through the ledger."
+        "explanation": "**Perturbation-based methods** (like LIME or occlusion) rely only on inputs/outputs, making them **model-agnostic** but slow (computationally expensive). **Gradient-based methods** (like Guided BackProp) require access to **model internals** but are typically much **faster**."
       },
       {
-        "question": "Which API is used for implementing Fabric chaincodes?",
+        "question": "Which behavior of a saliency map under layer-randomization is a red flag that the map is not capturing learned model structure?",
         "options": {
-          "a": "hyperledger-client-api",
-          "b": "smart-contract-builder",
-          "c": "fabric-contract-api",
-          "d": "fabric-identity-manager"
+          "a": "The saliency map remains largely unchanged after randomizing many layers.",
+          "b": "The saliency map changes dramatically as earlier layers are randomized.",
+          "c": "The saliency map’s sign (positive/negative) flips while spatial structure remains.",
+          "d": "Absolute saliency values shrink while layout shifts."
+        },
+        "answer": ["a"],
+        "explanation": "If a saliency map truly captures the features the model has **learned**, then **randomizing the learned weights** (layer-randomization) should completely destroy the map. If the map **remains unchanged**, it means it's capturing an artifact of the network architecture/input rather than the learned function."
+      },
+      {
+        "question": "Which of the following is fully equivariant to translation and rotation:",
+        "options": {
+          "a": "StyleGAN2",
+          "b": "ProtoPNet",
+          "c": "StyleGAN3",
+          "d": "None of the above"
         },
         "answer": ["c"],
-        "explanation": "fabric-contract-api is used for implementing chaincode in Hyperledger Fabric."
+        "explanation": "**StyleGAN3** was a significant advancement specifically because its design aimed for **full equivariance** to both **translation and rotation**, unlike its predecessors."
       },
       {
-        "question": "Which of the following is/are true regarding fabric transactions?",
+        "question": "Optimized-mask saliency methods (optimize a mask that when applied alters prediction) are brittle because:",
         "options": {
-          "a": "The transactions should be endorsed by peers",
-          "b": "The transactions are committed without validation",
-          "c": "A transaction does not change the world state",
-          "d": "World state holds current updated consensus view"
+          "a": "Their masks always converge to a single-pixel trigger.",
+          "b": "They require closed-form solutions for mask gradients.",
+          "c": "Results strongly depend on mask initialization and hyperparameters.",
+          "d": "They are invariant to adversarial perturbations."
         },
-        "answer": ["a", "d"],
-        "explanation": "In Hyperledger Fabric, transactions are endorsed by peers and are committed only after validation. Also, a transaction can update the world state."
+        "answer": ["c"],
+        "explanation": "**Optimized-mask** approaches are non-convex optimization problems. Their final mask (explanation) is highly sensitive to the starting point (**initialization**) and tuning of the optimization process (**hyperparameters**), making them **brittle**."
       },
       {
-        "question": "Which of the following factor(s) limits Bitcoin’s scalability?",
+        "question": "For token-level gradient saliency in text, a large gradient magnitude for a token most reliably indicates:",
         "options": {
-          "a": "Low transaction fees",
-          "b": "Fixed block size",
-          "c": "Wallet address complexity",
-          "d": "Fixed block frequency"
+          "a": "The token is causally required for the model’s prediction.",
+          "b": "The model’s output is sensitive to small embedding perturbations at that token.",
+          "c": "The token is semantically important to humans.",
+          "d": "The token was the only one used during training for that class."
         },
-        "answer": ["b", "d"],
-        "explanation": "Bitcoin’s scalability is limited due to its fixed block size and block frequency. Refer to Week 8 lecture notes."
+        "answer": ["b"],
+        "explanation": "The **gradient** is the derivative of the output with respect to the input. A **large gradient magnitude** means the output is highly **sensitive** to a tiny change (perturbation) in that input (token embedding)."
       },
       {
-        "question": "Which of the following is/are correct regarding Schnorr Multisignature in CoSi protocol?",
+        "question": "Which of the following is NOT a name commonly associated with pixel attribution methods?",
         "options": {
-          "a": "It is difficult to verify the signature",
-          "b": "Signature can be verified using a single collective public key",
-          "c": "It is easy to verify the signature",
-          "d": "It relies on group G of any composite order"
+          "a": "Saliency map",
+          "b": "Sensitivity map",
+          "c": "Feature attribution",
+          "d": "Convolution map"
         },
-        "answer": ["b", "c"],
-        "explanation": "In the Cosi protocol, Schnorr Multisignature is easy to verify by using a single collective public key. Also, it relies on a group of prime order."
+        "answer": ["d"],
+        "explanation": "Methods that highlight important pixels are called **Saliency maps**, **Sensitivity maps**, or **Feature Attribution** methods. **Convolution map** refers to the output of a convolutional layer in a CNN, not an interpretability method."
+      },
+      {
+        "question": "Which of the following are realistic attack vectors for implanting Trojans into neural networks?",
+        "options": {
+          "a": "Poisoning a fraction of a public training dataset with triggers and target labels.",
+          "b": "Fine-tuning a model on carefully curated clean data only.",
+          "c": "Distributing pretrained models via model libraries that already contain hidden functionality.",
+          "d": "Applying purely random weight perturbation after training without trigger examples.",
+          "e": "Injecting triggers only at inference time without altering training data or model weights."
+        },
+        "answer": ["a", "c"],
+        "explanation": "The primary methods for a **Trojan/backdoor** attack are **data poisoning** (**a**) and distributing a pre-compromised model, often via a public repository (**c**)."
+      },
+      {
+        "question": "Defenses that reverse-engineer potential triggers (e.g., via optimization) rely on which observations?",
+        "options": {
+          "a": "One can optimize small masks/patterns that cause misclassification to a target label.",
+          "b": "If an optimized trigger for a particular label is significantly smaller/simpler than others, it suggests a Trojan.",
+          "c": "Reverse-engineered triggers always exactly match the original poisoning trigger used at training.",
+          "d": "Pruning neurons highly activated by a reverse-engineered trigger can mitigate the Trojan.",
+          "e": "Training a meta-classifier to detect Trojaned models is computationally cheap and always generalizes."
+        },
+        "answer": ["a", "b", "d"],
+        "explanation": "Reverse-engineering confirms the potential for a trigger (**a**). Its **simplicity/smallness** (**b**) suggests it was implanted. Once found, using it to identify and **prune activated neurons** (**d**) is a common mitigation strategy."
+      },
+      {
+        "question": "How does Guided BackProp differ from standard backpropagation in generating saliency maps?",
+        "options": {
+          "a": "It only considers positive gradients by zeroing out negative activations and gradients.",
+          "b": "It back propagates gradients with all activations zeroed out.",
+          "c": "It focuses on highlighting both negative and positive contributions.",
+          "d": "It requires padding 1 to the image before backpropagation."
+        },
+        "answer": ["a"],
+        "explanation": "**Guided BackProp** is a modification of ReLU-based backpropagation that **zeros out negative gradients** (in addition to negative activations), effectively filtering out potentially noisy or negative contributions to the final output."
+      },
+      {
+        "question": "In the context of mechanistic interpretability, what do inhibitory connections in neural circuits primarily accomplish?",
+        "options": {
+          "a": "They amplify signal strength between neurons",
+          "b": "They create redundant pathways for information flow",
+          "c": "They reduce the probability of information transfer between neurons",
+          "d": "They store long-term memory patterns"
+        },
+        "answer": ["c"],
+        "explanation": "Just as in biological brains, **inhibitory connections** in neural networks function to **reduce the activation** or signal of a subsequent neuron, helping to refine and control the flow of information."
+      },
+      {
+        "question": "What is the primary limitation of LIME's local explanations?",
+        "options": {
+          "a": "LIME only works on image data",
+          "b": "LIME explanations are locally faithful but not necessarily globally consistent",
+          "c": "LIME requires access to model internals",
+          "d": "LIME cannot handle categorical features"
+        },
+        "answer": ["b"],
+        "explanation": "**LIME (Local Interpretable Model-agnostic Explanations)** models a complex model's behavior with a simple linear model **locally** around a single data point. The resulting explanation is **locally faithful** but may not be **globally consistent** with explanations for other data points."
       }
     ]
   },
   {
     "week": 9,
-    "title": "Week 9: Identity, Algorand & Hyperledger Indy/Aries",
+    "title": "Week 9: AI Governance, Regulation, and Safety Systems",
     "questions": [
       {
-        "question": "Which of the following is true about Single Sign-on?",
+        "question": "Which of the following is NOT mentioned as one of the RAI (Responsible AI) principles in the slides?",
         "options": {
-          "a": "The same identity can be used to access multiple services",
-          "b": "Decentralized providers always maintain the identity of individuals participating in single sign-on for each service",
-          "c": "All individuals always use a fixed same identity for every one of them together",
-          "d": "All identity holders are also always identity providers"
-        },
-        "answer": ["a"],
-        "explanation": "A single sign-on can be used to log in to multiple services."
-      },
-      {
-        "question": "Which of the following statements regarding Solidity is true?",
-        "options": {
-          "a": "Solidity compiler compiles a solidity program to bytecode which is executed by Ethereum Virtual Machine.",
-          "b": "Solidity interpreter always executes the program with Ethereum Virtual Device.",
-          "c": "Solidity interpreter is responsible for executing smart contracts in Ethereum nodes.",
-          "d": "Solidity program is compiled to high level ascii code which is executed by Ethereum node’s interpreter."
-        },
-        "answer": ["a"],
-        "explanation": "Solidity program is compiled to bytecode, which is executed by Ethereum Virtual Machine"
-      },
-      {
-        "question": "Which of the following statements related to Algorand is invalid?",
-        "options": {
-          "a": "A block is prepared",
-          "b": "The block is propagated through gossiping, Algorand runs Byzantine agreement on the block",
-          "c": "Prepare the digital signature and propagate",
-          "d": "A committed block is purged"
-        },
-        "answer": ["d"],
-        "explanation": "A random user prepares a block using sortition, and the protocol propagates the block through gossiping. To validate the block created by the random user (can be a valid or adversarial user), a byzantine agreement is required. Once it is found that the block is valid, then it is digitally signed and propagates the digital signature in the network."
-      },
-      {
-        "question": "Which of the following is true about selecting the random committee in the Algorand network?",
-        "options": {
-          "a": "There is a dedicated node that chooses the nodes to form the committee",
-          "b": "A distributed algorithm decides the list of nodes participating in the committee, and the committee members are always pre-decided and fixed",
-          "c": "A specific pool of nodes chosen are given the responsibility of forming the committee",
-          "d": "The nodes can take part as committee members by winning a local computation"
-        },
-        "answer": ["d"],
-        "explanation": "Algorand is an open model, which means anyone can join the network. Also, it is a permissionless model. It can not have a single node who will select the committee. Cryptographic sortition is used to elect the user to be part of the committee. Every user can elect to be part of the committee. The individual committee members run certain local computations on their machines to determine whether they won the lottery. If they win, they can participate."
-      },
-      {
-        "question": "Which of the following comes with Verifiable Credentials as a native inbuilt feature?",
-        "options": {
-          "a": "Ethereum",
-          "b": "Litecoin",
-          "c": "Hyperledger Aries",
-          "d": "Solidity"
+          "a": "Fairness",
+          "b": "Explainability",
+          "c": "Sustainability",
+          "d": "Privacy"
         },
         "answer": ["c"],
-        "explanation": "Aries supports natively verifiable credentials and presentations."
+        "explanation": "Common core Responsible AI principles are Fairness, Explainability/Transparency, Privacy, Accountability, and Robustness/Safety. **Sustainability** (environmental impact) is an emerging concern but often not listed as a core, traditional principle."
       },
       {
-        "question": "Consider the following statement - “Say Alice has generated two Distributed Identifiers (DID), DID1 and DID2, for her pairwise relationships maintained in Hyperledger Indy and used in Hyperledger Aries”. Which part of the above statement is false with respect to the concepts of Hyperledger Indy and Aries?",
+        "question": "According to the lecture, how many Executive Orders on AI were issued?",
         "options": {
-          "a": "Generation of DID by Alice",
-          "b": "Assignment of SEED to Steward",
-          "c": "Acceptance of incoming invitation by Alice",
-          "d": "Saving DID metadata always in a centralized Identity ledger"
+          "a": "One",
+          "b": "Two",
+          "c": "Three",
+          "d": "Four"
         },
-        "answer": ["d"],
-        "explanation": "a,b,c are valid for the situation. Please refer to Week 9 Lecture Notes"
+        "answer": ["b"],
+        "explanation": "The lecture mentioned **Two** significant U.S. Executive Orders related to AI, highlighting the rapid pace of government attention to the technology."
       },
       {
-        "question": "In Verifiable Credential (VC) scheme",
+        "question": "What does PEMAT stand for in the context of healthcare video assessment?",
         "options": {
-          "a": "The verifiable credentials can be verified by the issuer only.",
-          "b": "The verifiable credentials can be verified by the holder only.",
-          "c": "The verifiable credentials can be verified by the verifier ( who requests for verifiable presentations) only.",
-          "d": "Verifiable credentials can be verified by issue, holder, and verifier."
+          "a": "Patient Education Materials Assessment Tool",
+          "b": "Patient Evaluation Medical Assessment Test",
+          "c": "Public Education Medical Assessment Tool",
+          "d": "Patient Educational Material Analysis Tool"
         },
-        "answer": ["d"],
-        "explanation": "VC is a claim about a subject that can be verified by the issuer, holder, and verifier"
+        "answer": ["a"],
+        "explanation": "**PEMAT** stands for **Patient Education Materials Assessment Tool**, a tool used to evaluate the understandability and actionability of patient-facing health information, including videos."
       },
       {
-        "question": "Data transfer is an important aspect of interoperability in which of the following permissioned blockchains?",
+        "question": "According to the presentation, which domains need AI emergency response capabilities?",
         "options": {
-          "a": "Hyperledger Indy",
-          "b": "Ethereum",
-          "c": "Hyperledger Fabric",
-          "d": "Hyperledger Ursa"
+          "a": "Only .com domains",
+          "b": "Only .gov domains",
+          "c": ".mil, .com and .gov domains",
+          "d": "Only .edu domains"
         },
         "answer": ["c"],
-        "explanation": "Hyperledger Fabric supports interoperability by extending to the Cacti framework."
+        "explanation": "The presentation indicated that AI emergency response capabilities are necessary across government (**.gov**), military (**.mil**), and commercial (**.com**) sectors."
       },
       {
-        "question": "Which of the following is/are true for Hyperledger Indy and related Decentralized Identifier (DID) context. Please choose all possible correct answers.",
+        "question": "Which of the following statement(s) is true regarding the development and implementation of AI systems?",
         "options": {
-          "a": "Digital representation of physical identity and Individuals can control the usage of their own identity",
-          "b": "Facilitates Verifiable presentation (VP) of the ID",
-          "c": "Indy credential schema defines the structure for Verifiable Credential templates",
-          "d": "Self-Sovereign Identity (SSI) uses DID as the backbone of its identity handling."
+          "a": "Policy considerations and technical details are equally important",
+          "b": "Technical details alone are sufficient for effective AI development",
+          "c": "Policy considerations are only important in few countries",
+          "d": "AI systems do not require any policy or ethical considerations"
         },
-        "answer": ["a", "b", "c", "d"],
-        "explanation": "a,b,c, and d are correct. DID provides a decentralized identity that can be based on open standards and can perform a verifiable presentation of the ID when required, maintains trust, and is used in SSI . For details please refer to slides."
+        "answer": ["a"],
+        "explanation": "Effective and responsible AI requires both the **technical details** (e.g., robustness, accuracy) and the **policy considerations** (e.g., fairness, regulation) to be addressed **equally**."
       },
       {
-        "question": "Which of the following statements is false in context to Byzantine Fault Tolerant (BFT) protocol in general?",
+        "question": "In the suffix attacks, what is the vulnerability related to?",
         "options": {
-          "a": "The system can operate correctly as long as the number of faulty nodes does not exceed the allowable threshold proportion of faulty nodes.",
-          "b": "Classic BFT Protocol is used in a permissioned system.",
-          "c": "RAFT is a type of BFT protocol",
-          "d": "The system assumes all the nodes are honest"
+          "a": "Data poisoning",
+          "b": "Model stealing",
+          "c": "Breaking alignment policies of chatbots",
+          "d": "Privacy breaches"
         },
-        "answer": ["d"],
-        "explanation": "d is the correct option. BFT can perform in the system with malicious nodes within specified limits, and RAFT is Crash Fault Tolerant. For details please refer to slides."
+        "answer": ["c"],
+        "explanation": "**Suffix attacks** (like the 'Do Anything Now' prompt suffixes) are designed to exploit vulnerabilities in the safety training, allowing an attacker to bypass and **break the alignment policies of chatbots**."
+      },
+      {
+        "question": "What type of multi-disciplinary approaches are required for AI evaluation?",
+        "options": {
+          "a": "Only computer science approaches",
+          "b": "Only engineering approaches",
+          "c": "Social science, engineering, and computer science approaches",
+          "d": "Only social science approaches"
+        },
+        "answer": ["c"],
+        "explanation": "AI is a socio-technical system. Its evaluation requires expertise from **Computer Science** (model performance), **Engineering** (system reliability), and **Social Science** (societal impact, ethics, fairness)."
+      },
+      {
+        "question": "Based on the lecture content: From a mathematical perspective, which of the following is not considered a major problem in AI today, compared among others?",
+        "options": {
+          "a": "Explainability",
+          "b": "Hallucinations",
+          "c": "Data privacy",
+          "d": "Bias"
+        },
+        "answer": ["c"],
+        "explanation": "**Data privacy** (especially Differential Privacy) is considered to have a more developed **mathematical foundation** for its solutions compared to the open-ended, subjective, or less-tractable mathematical challenges posed by Explainability, Hallucinations, and Bias."
+      },
+      {
+        "question": "According to the lecture, who is primarily responsible for self-regulation in the context of AI and technology?",
+        "options": {
+          "a": "Individuals / Individual organizations",
+          "b": "Government agencies",
+          "c": "Only the organizations with more than 1 crore turnover",
+          "d": "International organizations"
+        },
+        "answer": ["a"],
+        "explanation": "**Individuals and Individual organizations** are the primary actors responsible for internal oversight and **self-regulation** of the technology they develop and deploy."
+      },
+      {
+        "question": "What is the six-step process for adopting a systems approach to fairness?",
+        "options": {
+          "a": "Define, Measure, Understand, Improve, Mitigate, Monitor",
+          "b": "Design, Build, Test, Deploy, Evaluate, Maintain",
+          "c": "Plan, Execute, Review, Adjust, Scale, Optimize",
+          "d": "Collect, Process, Analyze, Model, Validate, Implement"
+        },
+        "answer": ["a"],
+        "explanation": "The six steps for a systems approach to fairness are: **Define, Measure, Understand, Improve, Mitigate, Monitor**."
+      },
+      {
+        "question": "In the Accuracy vs. Disparity chart, what represents the Ideal model?",
+        "options": {
+          "a": "High accuracy, high disparity",
+          "b": "Low accuracy, low disparity",
+          "c": "High accuracy, low disparity",
+          "d": "Moderate accuracy, moderate disparity"
+        },
+        "answer": ["c"],
+        "explanation": "The **Ideal model** provides the best performance for all groups, meaning it should have **High Accuracy** (good performance) and **Low Disparity** (fairness across groups)."
       }
     ]
   },
   {
     "week": 10,
-    "title": "Week 10: Zero-Knowledge Proofs, HTLCs & Interoperability",
+    "title": "Week 10: Advanced AI Concerns and Societal Impact",
     "questions": [
       {
-        "question": "What is the purpose of zero-knowledge proofs in Hyperledger Indy?",
+        "question": "What does ‘AGI’ stand for?",
         "options": {
-          "a": "Anonymous cryptocurrency transactions",
-          "b": "Reduced smart contract execution time",
-          "c": "Verification of credentials without revealing all details",
-          "d": "Public visibility of all credential details"
+          "a": "Augmented General Intelligence",
+          "b": "Artificial Guided Intelligence",
+          "c": "Augmented Guided Intelligence",
+          "d": "Artificial General Intelligence"
+        },
+        "answer": ["d"],
+        "explanation": "**AGI** is the acronym for **Artificial General Intelligence**, referring to hypothetical AI that can understand, learn, and apply intelligence to solve any problem that a human being can."
+      },
+      {
+        "question": "According to the lecture, why is ‘blackbox access’ insufficient for AI agents?",
+        "options": {
+          "a": "It is too expensive to implement for most companies.",
+          "b": "It poses a significant security risk for the company that developed the AI.",
+          "c": "It prevents auditors from understanding the model's internal workings and decision-making processes.",
+          "d": "It doesn't allow for the assessment of the model's training data."
         },
         "answer": ["c"],
-        "explanation": "Zero-knowledge proofs allow claims to be verified without disclosing unnecessary information."
+        "explanation": "**Blackbox access** (only seeing inputs/outputs) is insufficient because it **prevents auditors and regulators from understanding the internal workings** and reasoning, which is necessary for safety and accountability."
       },
       {
-        "question": "Which of the following is/are true regarding timelocks and hashlocks in blockchain contracts?",
+        "question": "Which of the following best describes one of the possible definitions of AGI?",
         "options": {
-          "a": "Hashlocks allow spending only when a specific secret is revealed",
-          "b": "Timelocks prevent spending until a predefined time or block height",
-          "c": "Hashlocks rely on timestamps for cryptographic verification",
-          "d": "Hashlocks allow spending even if the specific secret is not revealed"
+          "a": "AI systems that are limited to specific tasks.",
+          "b": "AI systems surpassing human intelligence.",
+          "c": "AI models trained for basic automation.",
+          "d": "AI systems which show high training accuracy."
         },
-        "answer": ["a", "b"],
-        "explanation": "Refer to Week 10 Lecture Notes"
+        "answer": ["b"],
+        "explanation": "A key (though not universal) definition of AGI is a system with intellectual capability **surpassing human intelligence** in almost every domain, often referred to as Superintelligence."
       },
       {
-        "question": "Which of the following is/are true regarding cross-chain Hashed Timelock Contracts?",
+        "question": "What is the key difference between 'reward gaming' and 'goal miss generalization' in AI systems?",
         "options": {
-          "a": "They enable cross-chain transactions without trust",
-          "b": "They require central authorities to enforce conditions",
-          "c": "They ensure atomicity in swaps between networks",
-          "d": "The funds go to the intended recipient instead of returning to the original sender if the secret is not revealed before the timeout occurs"
+          "a": "Reward gaming is an intentional exploitation of the reward function, while goal miss generalization is an accidental misinterpretation of the goal.",
+          "b": "Reward gaming is easier to detect and correct than goal miss generalization.",
+          "c": "Reward gaming involves optimizing the wrong reward function, while goal miss generalization involves optimizing a correlated but incorrect reward function.",
+          "d": "Reward gaming is a more significant threat to AI safety than goal miss generalization. j"
         },
-        "answer": ["a", "c"],
-        "explanation": "HTLCs ensure trustless cross-chain atomic swaps using hashlock and timelock mechanisms."
+        "answer": ["c"],
+        "explanation": "**Reward gaming** (or specification gaming) is when the AI optimizes the defined objective (the **wrong reward function**) instead of the intended one. **Goal miss generalization** is a form of reward hacking where the AI optimizes a simpler, **correlated but incorrect reward function**."
       },
       {
-        "question": "Which of the following statements is/are correct regarding trusted third-party (TTP) based asset transfer?",
+        "question": "According to the lecture, what is the primary concern regarding the arrival of AGI?",
         "options": {
-          "a": "Slow transaction speed in comparison to decentralized asset transfer framework",
-          "b": "Improved transaction transparency",
-          "c": "Centralized exchanges can act as TTP for asset transfer",
-          "d": "Security bias can be caused due to third party in general"
+          "a": "AGI will be primarily used for malicious purposes by bad actors and rogue states.",
+          "b": "AGI will be too expensive to develop and maintain, leading to a new form of global inequality.",
+          "c": "The arrival of AGI could lead to chaotic power struggles, the extinction of humanity, or other severe negative consequences.",
+          "d": "AGI will lead to massive job displacement and economic disruption."
         },
-        "answer": ["c", "d"],
-        "explanation": "TTP-based transfers rely on centralized control and intermediaries. It also has a possibility of security bias on third party. There have been several cases of theft from centralized exchanges."
+        "answer": ["c"],
+        "explanation": "The **primary concern** from an alignment perspective is the existential risk: an unaligned AGI could lead to catastrophic outcomes, including the **extinction of humanity**."
       },
       {
-        "question": "Which of the following statements is/are true about public blockchains operating as isolated silos?",
+        "question": "As mentioned in the lecture, what is the main concern about the use of social media data for training AI models?",
         "options": {
-          "a": "They use the same protocols across networks.",
-          "b": "They operate independently without interoperability.",
-          "c": "They inherently allow seamless cross-chain communication.",
-          "d": "They often have different standards and protocols."
+          "a": "The data is often of low quality, which leads to inaccurate and unreliable AI models.",
+          "b": "There is a lack of incentive to protect user privacy in the current business models of tech companies.",
+          "c": "The data is not diverse enough, which leads to biased and unfair AI models.",
+          "d": "The data is too expensive for smaller companies to acquire, leading to a monopolization of AI development."
         },
-        "answer": ["b", "d"],
-        "explanation": "Public blockchains operate with different protocols and standards and lack built-in interoperability."
+        "answer": ["b"],
+        "explanation": "The lecture highlighted that the current business model relies on monetization of user data, creating a **lack of incentive to protect user privacy** when that same data is used to train powerful AI models."
       },
       {
-        "question": "What is an escrow? Select the best possible and concrete answer",
+        "question": "According to the lecture, what 'dangerous amount of power' do AI assistants create for the companies that develop them?",
         "options": {
-          "a": "Escrow is an agreement in which assets are held and distributed when conditions are met",
-          "b": "Escrow is payment for smart contracts",
-          "c": "Escrow is a permissioned blockchain",
-          "d": "Escrow is the cost of execution of smart contracts"
+          "a": "The power to censor information and control the user's access to knowledge.",
+          "b": "The power to manipulate users' beliefs and behaviors based on their personal information and habits.",
+          "c": "The power to control the user's personal finances and investments.",
+          "d": "The power to replace human workers in a wide range of industries."
         },
-        "answer": ["a"],
-        "explanation": "Without the presence of any Escrow, the funds are in control of the sender and receiver parties."
+        "answer": ["b"],
+        "explanation": "AI assistants are seen as giving developers immense power to **manipulate users' beliefs and behaviors** because of their access to personal information and their persuasive conversational nature."
       },
       {
-        "question": "Which of the following are guaranteed in the ideal atomic swap protocol ?",
+        "question": "Which of the following are identified as significant challenges or concerns related to the development and deployment of advanced AI? (Select all that apply.)",
         "options": {
-          "a": "All swaps will take place only when all parties conform to the protocol",
-          "b": "If some parties deviate from the protocol, then all conforming party ends up worse off",
-          "c": "No coalition has an incentive to deviate from the protocol",
-          "d": "Swaps can take place partially"
+          "a": "The difficulty of achieving global coordination to pause or regulate AI development, similar to challenges like climate change.",
+          "b": "The potential for AI systems to be misused by individuals for personal entertainment, leading to decreased productivity.",
+          "c": "The legal and ethical issues surrounding the use of copyrighted material for training Large Language Models (LLMs).",
+          "d": "The risk of \"goal miss generalization,\" where an AI optimizes for a correlated but incorrect goal, leading to unintended and potentially harmful behavior.",
+          "e": "The high computational cost of training advanced AI models, making them accessible only to a few large tech companies."
         },
-        "answer": ["a", "c"],
-        "explanation": "Refer to Week 10 Lecture Notes"
+        "answer": ["a", "c", "d", "e"],
+        "explanation": "All options except (b) were discussed as major challenges. **Global coordination** (**a**), **copyright/legal issues** (**c**), **goal miss generalization** (**d**), and the **high computational cost** (**e**) are all critical concerns."
       },
       {
-        "question": "Which of the following steps are involved in the verifiable data transfer protocol in permissioned blockchain?",
+        "question": "According to the lecture, what is the main legal challenge when an AI system makes a biased mistake in an employment context?",
         "options": {
-          "a": "Generate a proof request with verification policies",
-          "b": "Validate proofs against verification policies",
-          "c": "Send responses with attestations and proofs",
-          "d": "Access control policies are not checked"
+          "a": "It is difficult to prove that the AI was the sole cause of the mistake.",
+          "b": "Current laws primarily hold the employer responsible, not the AI developer.",
+          "c": "AI developers are protected by international treaties.",
+          "d": "There are no existing laws that cover discrimination in hiring."
         },
-        "answer": ["a", "b", "c"],
-        "explanation": "Verifiable data transfer involves generating proof requests, validating attestations and checking access control policies. Refer to Week 10 Lecture Notes."
+        "answer": ["b"],
+        "explanation": "The challenge is that **current legal frameworks primarily hold the employer responsible** for discriminatory hiring outcomes, even if the mistake was made by a third-party AI, shifting the burden of accountability."
       },
       {
-        "question": "Suppose Alice has a time-locked contract with a target account as:\nFunding Contract - 1 BTC\nHash: ...Fa4509\nTimeout: 2Δ\nWhat will happen if Alice refuses to reveal the key and a timeout occurs?",
+        "question": "What is meant by 'implicit bias' in an AI system?",
         "options": {
-          "a": "1 BTC is refunded to Alice",
-          "b": "1 BTC is transferred to a target account",
-          "c": "BTC less than 1 is refunded to Alice as Some BTC deducted as penalty.",
-          "d": "BTC less than 1 is transferred to target account"
-        },
-        "answer": ["a"],
-        "explanation": "Refer to Week 10 Lecture Notes."
-      },
-      {
-        "question": "What is a verifiable credential in Hyperledger Indy?",
-        "options": {
-          "a": "A digital certificate stored on-chain",
-          "b": "A cryptographic token for mining",
-          "c": "A smart contract validation key",
-          "d": "A permissioned blockchain token"
+          "a": "Unconscious and involuntary stereotypes and assumptions embedded within algorithms",
+          "b": "Biases that are intentionally programmed into the AI by developers.",
+          "c": "Biases that only appear when the AI interacts with specific users.",
+          "d": "A safety feature that helps the AI avoid making biased statements."
         },
         "answer": ["a"],
-        "explanation": "Verifiable credentials are digital certificates stored on a blockchain that provide authenticity."
+        "explanation": "Just as in human psychology, **implicit bias** in AI refers to the **unconscious, involuntary stereotypes and assumptions** embedded in the training data and, consequently, the algorithm's decisions."
+      },
+      {
+        "question": "Which of the following are presented as key areas of concern or focus for the future of AI? (Select all that apply)",
+        "options": {
+          "a": "The need for international regulation based on fundamental human rights.",
+          "b": "The difficulty in marketing AI products to a skeptical public.",
+          "c": "The environmental impact, particularly energy and water consumption.",
+          "d": "The challenge of assigning legal responsibility when AI systems cause harm."
+        },
+        "answer": ["a", "c", "d"],
+        "explanation": "The future of AI focus areas include **international regulation** (**a**), the **environmental impact** (**c**), and **legal responsibility** (**d**). Marketing (b) is a business concern, not a key safety/ethics focus."
+      },
+      {
+        "question": "What is the primary danger of the 'arms race' mentality in AI development?",
+        "options": {
+          "a": "It slows down innovation by focusing too much on safety.",
+          "b": "It encourages collaboration and open-sourcing of models.",
+          "c": "It leads to rapid, unchecked development without adequate time for regulation and safety checks.",
+          "d": "It reduces the profitability of AI companies."
+        },
+        "answer": ["c"],
+        "explanation": "The competitive **arms race** prioritizes being first and fastest, which directly leads to **rapid, unchecked development** where safety and thorough testing are compromised."
+      },
+      {
+        "question": "How is 'multimodality' viewed in the context of achieving AGI?",
+        "options": {
+          "a": "It has already been fully achieved by current AI models.",
+          "b": "It is seen as essential for an AI to match the full range of human cognitive abilities.",
+          "c": "It is considered a distraction from the more efficient text-based training methods.",
+          "d": "It is believed to be the primary cause of bias in AI systems."
+        },
+        "answer": ["b"],
+        "explanation": "Since human cognition integrates information from all senses, **multimodality** (handling text, images, audio, etc.) is considered **essential** for an AI to achieve the general, flexible intelligence of a human."
       }
     ]
   },
   {
     "week": 11,
-    "title": "Week 11: Hyperledger Aries & Blockchain Security",
+    "title": "Week 11: LLM Consistency, Governance, and Regulation",
     "questions": [
       {
-        "question": "What is Hyperledger Aries primarily used for?",
+        "question": "What are the countermeasures for computer security? (Select all that apply.)",
         "options": {
-          "a": "Facilitating decentralized identity management",
-          "b": "Managing cryptocurrency transactions",
-          "c": "Building supply chain solutions",
-          "d": "Developing blockchain consensus algorithms"
+          "a": "Train the users",
+          "b": "Wait until the threat goes away on its own.",
+          "c": "Silently eliminate the threat.",
+          "d": "Warn users about the threat."
         },
-        "answer": ["a"],
-        "explanation": "Please refer to the Week 11 Lecture 51."
+        "answer": ["a", "c", "d"],
+        "explanation": "Effective security involves a combination of strategies: preventative education (**Train the users**), proactive mitigation (**Silently eliminate the threat**), and transparent communication (**Warn users about the threat**)."
       },
       {
-        "question": "Which of the following is/are key jobs(s) that/those Hyperledger Aries mainly perform(s)?",
+        "question": "Which of the following is an OECD AI Principle? (Select all that apply.)",
         "options": {
-          "a": "Proof-of-Stake consensus",
-          "b": "Aries can work as IIN (Interoperable Identity Network) agent",
-          "c": "Verifiable credentials exchange",
-          "d": "Cryptographic currency generation"
+          "a": "International co-operation for trustworthy AI",
+          "b": "Transparency and Explainability",
+          "c": "Deletion of AI systems",
+          "d": "Removing guardrails from AI",
+          "e": "Robustness. Security and Safety",
+          "f": "Investing in AI research and development"
         },
-        "answer": ["b", "c"],
-        "explanation": "Hyperledger Aries plays a key role as an Interoperable Identity Agent. It supports DID communication and Verifiable Credential exchange."
+        "answer": ["a", "b", "e", "f"],
+        "explanation": "The OECD principles include: Inclusive Growth, Sustainable Development and Well-being; Human-centred Values and Fairness; Transparency and Explainability; Robustness, Security and Safety; and Accountability. These are supported by calls for **International co-operation** and **Investing in AI research and development**."
       },
       {
-        "question": "Which of the following does NOT pose a direct risk to the security and reliability of blockchain operations?",
+        "question": "According to the AI Value Chain, who uses AI systems under authority?",
         "options": {
-          "a": "Vulnerability to 51% attacks",
-          "b": "Compromise of private key security",
-          "c": "Exploitation of double-spending vulnerabilities",
-          "d": "High transaction fees"
+          "a": "Provider",
+          "b": "Deployer",
+          "c": "Distributor",
+          "d": "Representative"
+        },
+        "answer": ["b"],
+        "explanation": "The **Deployer** is the entity that uses the AI system **under its own authority** in a professional or commercial activity."
+      },
+      {
+        "question": "According to the OECD AI principles, what is ‘Accountability’?",
+        "options": {
+          "a": "AI actors should respect the rule of law, human rights, democratic and human-centered values throughout the AI system lifecycle.",
+          "b": "AI actors should commit to transparency and responsible disclosure regarding AI systems.",
+          "c": "AI systems should be robust, secure, and safe throughout their entire lifecycle so that, in conditions of normal use, foreseeable use or misuse, or other adverse conditions, they function appropriately and do not pose unreasonable safety and/or security risks.",
+          "d": "AI actors should be accountable for the proper functioning of AI systems and for the respect of the above principles, based on their roles, the context, and consistent with the state of the art."
         },
         "answer": ["d"],
-        "explanation": "Blockchain inherently relies on distributed ledger technology, ensuring redundancy by design. The other options—51% attacks, private key compromises, and double spending—are well-recognized risks that can directly undermine blockchain security and integrity. High transaction fees do not pose any direct risk."
+        "explanation": "**Accountability** means AI actors (developers, deployers, etc.) must be responsible for the system's performance and its adherence to the principles, commensurate with their role."
       },
       {
-        "question": "In what ways can high computing power/stake be misused in blockchain systems?",
+        "question": "According to the EU AI Act, what AI Systems are considered “Unacceptable Risk”?",
         "options": {
-          "a": "Taking control of consensus to manipulate transactions and enable double-spending",
-          "b": "Temporarily accelerating block generation to disproportionately increase mining rewards",
-          "c": "Compromising transaction privacy by analyzing cryptographic hashes",
-          "d": "Manipulating the blockchain to censor or exclude competitors' transactions"
+          "a": "AI systems that understand too many languages.",
+          "b": "AI systems that can understand logic but not emotional statements.",
+          "c": "AI systems that can generate media such as images, videos, and audio.",
+          "d": "AI systems that are able to behaviorally manipulate people."
         },
-        "answer": ["a", "b", "d"],
-        "explanation": "a) Taking control of consensus to reverse transactions and enable double-spending:\nWith over 50% of the network’s hashing power, an attacker can reverse transactions, enabling double-spending, and disrupt the blockchain's integrity.\nb) Temporarily accelerating block generation to disproportionately increase mining rewards:\nHigh hashing power allows miners to generate blocks faster, collecting more rewards until the network adjusts difficulty, giving them an unfair advantage.\nd) Manipulating the blockchain to censor or exclude competitors' transactions:\nMiners with significant hashing power can choose to exclude specific transactions from blocks, blocking competitors or others from being able to transact."
+        "answer": ["d"],
+        "explanation": "The **EU AI Act** defines AI systems that exhibit clear attempts to **behaviorally manipulate people** in a way that is harmful (e.g., exploiting vulnerabilities) as an **Unacceptable Risk** and bans them."
       },
       {
-        "question": "What is the main objective of a Selfish Mining Attack in a blockchain network?",
+        "question": "According to Semantic Graph Entropy, which of the following is true?",
         "options": {
-          "a": "To increase the transaction fees by monopolizing block creation.",
-          "b": "To disrupt the blockchain's consensus by manipulating the chain's length to gain mining rewards unfairly.",
-          "c": "To control over 50% of the network’s hashing power and reverse transactions.",
-          "d": "To expose private transactions by decrypting the block headers."
+          "a": "Entropy and consistency are not related.",
+          "b": "Entropy and consistency are proportional.",
+          "c": "Entropy and consistency are inversely proportional.",
+          "d": "Consistency is constant regardless of entropy."
         },
-        "answer": ["b"],
-        "explanation": "The goal of a Selfish Mining Attack is for miners to withhold their mined blocks, thus secretly building a longer chain. Once they have a longer chain, they release it, causing the network to adopt it, and unfairly gaining more mining rewards."
+        "answer": ["c"],
+        "explanation": "**Entropy** is a measure of randomness or uncertainty. **Consistency** is the inverse of randomness. Therefore, **entropy and consistency are inversely proportional**—higher entropy means lower consistency."
       },
       {
-        "question": "A blockchain network has a 10-minute block interval. A miner, \"Miner X,\" controls 40% of the network's hashing power. Miner X mines a block and does not broadcast it immediately. Instead, Miner X continues mining a second block in secret.\nWhat is the most likely result of Miner X's actions in this scenario?",
+        "question": "What is the main problem identified with Large Language Models (LLMs)?",
         "options": {
-          "a": "Miner X's second block will automatically become part of the blockchain, and the first block will be always discarded.",
-          "b": "Miner X's second block will possibly create a fork in the blockchain, which will later be resolved through a chain reorganization",
-          "c": "Miner X will always successfully steal the rewards of other miners on the network.",
-          "d": "Miner X's actions must cause the network to collapse due to a 51% attack."
-        },
-        "answer": ["b"],
-        "explanation": "Miner X's secret mining creates a temporary fork in the blockchain, where two competing chains exist. The network will eventually adopt the longer chain, causing the shorter chain to be abandoned and reorganized.\nPlease also refer to the Week 11 Lecture 53."
-      },
-      {
-        "question": "Which of the following plays the most crucial role in establishing trust in a blockchain network?",
-        "options": {
-          "a": "Encryption",
-          "b": "Consensus Mechanism",
-          "c": "Smart Contracts",
-          "d": "Distributed Ledger"
+          "a": "They are too slow.",
+          "b": "They are inconsistent.",
+          "c": "They lack creativity.",
+          "d": "They cannot identify human emotions."
         },
         "answer": ["b"],
-        "explanation": "A consensus mechanism ensures that all network participants agree on the validity of transactions before they are recorded on the blockchain. This decentralized verification process is fundamental to maintaining trust. Encryption secures data but does not establish consensus. Smart Contracts execute automated agreements but rely on consensus for validation. Distributed Ledger provides transparency but needs consensus to maintain integrity and trust."
+        "explanation": "One of the major and measurable problems in LLMs is **inconsistency**, meaning they often give different, sometimes contradictory, answers to semantically equivalent prompts."
       },
       {
-        "question": "Which of the following is/are primarily responsible for validating transactions in the Ethereum 2.0 blockchain (Proof of Stake)?",
+        "question": "What does “Semantic Consistency” mean?",
         "options": {
-          "a": "Miner",
-          "b": "Validator",
-          "c": "Peer-to-peer network",
-          "d": "Core consensus protocol"
+          "a": "The ability to understand different languages.",
+          "b": "The ability to make consistent decisions.",
+          "c": "The ability to generate grammatically correct sentences.",
+          "d": "The ability to learn new vocabulary."
         },
         "answer": ["b"],
-        "explanation": "In Ethereum 2.0, which operates on a Proof of Stake (PoS) consensus mechanism, validators are responsible for validating transactions and creating new blocks, replacing the role of miners from Ethereum's original Proof of Work (PoW) mechanism in older versions."
+        "explanation": "**Semantic Consistency** is the measure of an AI's ability to **make consistent decisions** (or give consistent outputs) when presented with semantically equivalent but syntactically different inputs."
       },
       {
-        "question": "Which of the following is a potential consequence of an Eclipse Attack on a blockchain node?",
+        "question": "According to the lecture, what type of scenarios do LLMs \"struggle\" with more?",
         "options": {
-          "a": "The targeted node may mine blocks more efficiently due to controlled connections.",
-          "b": "The targeted node may accept fraudulent transactions or blocks, leading to potential double-spending.",
-          "c": "The targeted node will immediately disconnect from the blockchain network to prevent further damage.",
-          "d": "The targeted node will become immune to any form of attack after the Eclipse Attack"
+          "a": "Commonsense scenarios.",
+          "b": "Mathematical problems.",
+          "c": "Moral scenarios.",
+          "d": "Factual questions."
+        },
+        "answer": ["c"],
+        "explanation": "The lecture highlighted that LLMs show greater inconsistency and variability, suggesting they **struggle more with moral scenarios**, where human values and context are crucial and complex."
+      },
+      {
+        "question": "What was a key finding of the SaGE framework regarding consistency and accuracy?",
+        "options": {
+          "a": "Consistency and accuracy are the same problem.",
+          "b": "Consistency and accuracy are not the same problem and need separate evaluation.",
+          "c": "Accuracy automatically implies consistency.",
+          "d": "Consistency is irrelevant if accuracy is high."
         },
         "answer": ["b"],
-        "explanation": "In an Eclipse Attack, the attacker isolates a node by controlling all its inbound and outbound connections. This manipulation can cause the targeted node to accept fraudulent or incorrect information, such as invalid transactions or blocks, leading to issues like double-spending. It does not enhance mining efficiency or make the node immune to other attacks.\nPlease also refer to the Week 11 Lecture 54."
+        "explanation": "The **SaGE** (Semantic Graph Entropy) framework showed that a model can be highly accurate but still inconsistent, demonstrating that **consistency and accuracy are separate problems** requiring independent evaluation."
       },
       {
-        "question": "Which of the following is a common technique used by attackers in a front-running attack on decentralized exchanges (DEXs)?",
+        "question": "What is \"Rule of Thumb\" generation?",
         "options": {
-          "a": "Manipulating the gas price to prioritize their transaction over others.",
-          "b": "Encrypting transactions to hide them from miners.",
-          "c": "Using a 51% attack to gain control over the network.",
-          "d": "Altering the smart contract code to change transaction outcomes."
+          "a": "Developing general guidelines from practical experience.",
+          "b": "A method for generating paraphrases.",
+          "c": "A general guideline for model training.",
+          "d": "A statistical measure of model performance."
         },
         "answer": ["a"],
-        "explanation": "In a front-running attack on a decentralized exchange (DEX), attackers often manipulate the gas price (transaction fees) to ensure that their transaction is processed first, ahead of other pending transactions. By offering a higher gas price, the attacker increases the likelihood of their transaction being included in the block before the targeted transaction. This allows the attacker to profit from any price movement caused by the original transaction."
+        "explanation": "In this context, **Rule of Thumb** generation refers to the process of an LLM producing high-level, practical **general guidelines** or heuristics, often distilled from its vast training data."
       }
     ]
   },
   {
     "week": 12,
-    "title": "Week 12: Blockchain Applications & Enterprise Solutions",
+    "title": "Week 12: Advanced Representations and Future Directions",
     "questions": [
       {
-        "question": "How does the use of blockchain technology enhance the management of Land Registry records?",
+        "question": "According to the lecture, what is the primary limitation of graphs as data structures?",
         "options": {
-          "a": "Blockchain eliminates the need for physical land titles by storing them in a centralized digital ledger.",
-          "b": "Blockchain ensures that land records can be accessed by any government entity at any time without restrictions.",
-          "c": "Blockchain prevents fraud in land transactions by providing a secure, transparent, and immutable record of ownership.",
-          "d": "Blockchain allows land records to be altered instantly without the need for a verification process by authorities"
+          "a": "They can only model high-risk applications.",
+          "b": "They are difficult to interpret.",
+          "c": "They can only model pairwise relationships between nodes.",
+          "d": "They cannot be used for fraud detection."
         },
         "answer": ["c"],
-        "explanation": "Blockchain technology improves the security and transparency of land registries by creating a decentralized ledger that is immutable, meaning once a record is entered, it cannot be altered. This reduces the risk of fraud, ensures a clear ownership history, and makes the system more trustworthy and efficient."
+        "explanation": "The primary limitation of traditional graphs is that edges can **only model pairwise relationships** (between two nodes), making them unable to capture higher-order, multi-entity interactions."
       },
       {
-        "question": "Which of the following is/are advantages of blockchain?",
+        "question": "What is a “p-cell” in a cell complex?",
         "options": {
-          "a": "Provides decentralized platforms and marketplace",
-          "b": "Requires intermediaries for verification",
-          "c": "Limited scalability",
-          "d": "Better transparency"
-        },
-        "answer": ["a", "d"],
-        "explanation": "Please refer to the Week 12 Lecture 56."
-      },
-      {
-        "question": "Which of the following is an essential feature of federated voting?",
-        "options": {
-          "a": "It requires a central authority to validate votes",
-          "b": "Nodes vote independently without needing majority approval to win",
-          "c": "A majority of nodes' votes determine the outcome",
-          "d": "All nodes must agree unanimously for a decision to be accepted"
-        },
-        "answer": ["c"],
-        "explanation": "Please refer to the Week 12 Lecture 57."
-      },
-      {
-        "question": "Which of the following was/were NOT utilized in Singapore’s Project Ubin to enhance interbank settlements?",
-        "options": {
-          "a": "Distributed Ledger Technology",
-          "b": "Tokenization of the Singapore Dollar (SGD) for digital representation.",
-          "c": "cross-border payments",
-          "d": "Proof-of-work (PoW) consensus mechanism to validate transactions"
-        },
-        "answer": ["d"],
-        "explanation": "Singapore's Project Ubin explored blockchain technology to enhance interbank settlements, focusing on smart contracts for automating transactions and tokenization of the Singapore Dollar (SGD) for digital representation. The project did not integrate public blockchains for cross-border payments but rather used private, permissioned blockchains for enhanced security and control. Additionally, Proof-of-Work (PoW) was not employed, as it is resource-intensive and was not suited for the project's goals. Instead, the project tested more efficient consensus mechanisms, such as Practical Byzantine Fault Tolerance (PBFT). The project aimed to improve financial systems' efficiency, privacy, and scalability."
-      },
-      {
-        "question": "Which type of attack allows an attacker to create multiple fake identities to gain unauthorized access to consortium services?",
-        "options": {
-          "a": "Byzantine faults",
-          "b": "Sybil attacks",
-          "c": "DDoS attacks",
-          "d": "Sensitive information leakage"
-        },
-        "answer": ["b"],
-        "explanation": "A Sybil attack occurs when an attacker creates multiple fake identities to gain control or influence over a system, often to disrupt consensus or access services. This is a specific threat in decentralized networks, where trust and identity verification are essential."
-      },
-      {
-        "question": "To allocate consumer requests among Service Providers, which of the following scheduling algorithms is implemented?",
-        "options": {
-          "a": "Fair Scheduling Algorithm",
-          "b": "Capacity Scheduling Algorithm",
-          "c": "Dynamic Round Robin",
-          "d": "A* Algorithm"
+          "a": "An element of dimension p.",
+          "b": "A vertex (0-dimensional).",
+          "c": "An edge (1-dimensional).",
+          "d": "A general graph."
         },
         "answer": ["a"],
-        "explanation": "In Cloud Federation, to allocate consumer requests among Service Providers, Fair scheduling algorithm is implemented. Each SP will be allocated the number of consumer requests proportional to its infrastructure contribution to the federation."
+        "explanation": "A **p-cell** in a cell complex (from topology) is an elementary building block with **dimension p**. For example, a 0-cell is a vertex, a 1-cell is an edge, and a 2-cell is a face."
       },
       {
-        "question": "Which of the following are key advantages of Hyperledger?",
+        "question": "How does a cell complex overcome the limitation of graphs?",
         "options": {
-          "a": "It is open-source",
-          "b": "The identities of the participants can be accessed by any outsider",
-          "c": "It supports private channels",
-          "d": "It is exclusively designed for public blockchain"
+          "a": "By using more complex algorithms.",
+          "b": "By capturing interactions between multiple nodes.",
+          "c": "By reducing computational costs.",
+          "d": "By simplifying the graph structure."
         },
-        "answer": ["a", "c"],
-        "explanation": "Hyperledger's key advantages include being open-source, allowing for widespread collaboration, and supporting private channels that ensure confidentiality for participants in a network."
+        "answer": ["b"],
+        "explanation": "A **cell complex** extends graphs by using higher-dimensional cells (like 2-cells or faces), allowing it to naturally **capture interactions between multiple nodes** (hyper-edges)."
       },
       {
-        "question": "Quorum, an enterprise-focused blockchain platform based on Ethereum, supports transaction management with privacy enhancements. Which type of state can Quorum handle during a transaction?",
+        "question": "What does FORGE stand for?",
         "options": {
-          "a": "Only private state",
-          "b": "Only public state",
-          "c": "Both private and public state at the same time",
-          "d": "Either private or public state for a transaction"
+          "a": "Framework For Real-time Graph Explanations.",
+          "b": "Fundamental Operations for Relevant Graph Embeddings.",
+          "c": "Framework For Higher-Order Representations In Graph Explanations.",
+          "d": "Fast Optimization of Graph Explanations."
         },
         "answer": ["c"],
-        "explanation": "Quorum allows both private and public transactions, providing the flexibility to handle sensitive data privately while also enabling transparent public interactions when required. Therefore, it can handle either private or public state depending on the needs of the transaction."
+        "explanation": "**FORGE** stands for **Framework For Higher-Order Representations In Graph Explanations**, a method designed to generate explanations by leveraging multi-node interactions."
       },
       {
-        "question": "What feature of blockchain helps prevent fraud in decentralized marketplaces?",
+        "question": "Based on the \"Lifting the Graph\" algorithm, which of the following are represented as augmented nodes? (Select all that apply.)",
         "options": {
-          "a": "Central authority",
-          "b": "Smart contracts",
-          "c": "Manual validation",
-          "d": "Third-party monitoring"
+          "a": "All nodes (0-cells)",
+          "b": "Edges (1-cells)",
+          "c": "Cycles (2-cells)",
+          "d": "Boundary relations"
         },
-        "answer": ["b"],
-        "explanation": "Smart contracts automatically execute predefined rules and agreements without intermediaries, ensuring transactions are tamper-proof and fraud-resistant in decentralized marketplaces. This eliminates the risk of manual errors or malicious interference."
+        "answer": ["b", "c"],
+        "explanation": "The **Lifting the Graph** method creates a new, augmented graph where the **Edges** (1-cells) and **Cycles** (2-cells) of the original graph are re-represented as new **augmented nodes**."
       },
       {
-        "question": "What does a \"man-in-the-middle\" attack do in a decentralized marketplace?",
+        "question": "What do Language Models (LMs) primarily train to predict?",
         "options": {
-          "a": "Changes in the price of goods in the marketplace",
-          "b": "Intercepts and alters messages between users",
-          "c": "Steals cryptocurrency directly from wallets",
-          "d": "Prevents users from accessing the marketplace"
+          "a": "The previous token.",
+          "b": "The next token.",
+          "c": "Grammatical structure.",
+          "d": "Semantic relationships."
         },
         "answer": ["b"],
-        "explanation": "A man-in-the-middle (MITM) attack in a decentralized marketplace primarily intercepts and alters messages between users. In this type of attack, the attacker secretly intercepts and potentially manipulates the communication between two parties (e.g., buyers and sellers) without either party being aware. This could involve changing transaction details, redirecting payments, or modifying the data being exchanged. MITM doesn't change the marketplace's prices."
+        "explanation": "The fundamental training objective for most modern LLMs (like GPT) is **autoregressive prediction**, which is to predict **the next token** in a sequence."
+      },
+      {
+        "question": "According to the lecture, what is a “guarded” attribute in the context of representations?",
+        "options": {
+          "a": "An attribute that is easily classified.",
+          "b": "An attribute that is protected from manipulation.",
+          "c": "An attribute that cannot be classified based on the representations.",
+          "d": "An attribute that enhances model performance."
+        },
+        "answer": ["c"],
+        "explanation": "In the context of representation fairness, a **guarded attribute** (like gender or race) is one that has been deliberately transformed so that an external classifier **cannot classify it** based on the resulting representation."
+      },
+      {
+        "question": "What is the goal of “Affine Concept Erasure”?",
+        "options": {
+          "a": "To enhance a particular attribute.",
+          "b": "To remove all attributes from a representation.",
+          "c": "To apply a transformation that guards a particular attribute.",
+          "d": "To make representations more easily interpretable."
+        },
+        "answer": ["c"],
+        "explanation": "**Affine Concept Erasure** applies a linear transformation to the model's representations with the **goal of guarding a particular attribute**, making it unclassifiable while preserving other semantic information."
+      },
+      {
+        "question": "When making vectors from one distribution to look like those of another (e.g., toxic to non-toxic), what is a key desired outcome besides guarding?",
+        "options": {
+          "a": "Increasing the model's complexity.",
+          "b": "Preserving semantics unrelated to the changed attribute.",
+          "c": "Introducing new semantic meanings.",
+          "d": "Reducing the dimensionality of the vectors."
+        },
+        "answer": ["b"],
+        "explanation": "The crucial challenge in such transformation is to only change the undesirable feature (e.g., toxicity) while **preserving the core semantics** (the meaning and content) of the original sentence."
+      },
+      {
+        "question": "What is a “Black Swan”?",
+        "options": {
+          "a": "A common, predictable event.",
+          "b": "An unforeseen event with extreme consequences.",
+          "c": "An event that happens frequently in training data.",
+          "d": "An event with minor consequences."
+        },
+        "answer": ["b"],
+        "explanation": "A **Black Swan** is an event that is an **unforeseen surprise** (an unknown unknown) and has a **major, extreme impact**."
+      },
+      {
+        "question": "What is \"Probing\"?",
+        "options": {
+          "a": "A method to physically modify neural networks.",
+          "b": "A method to analyze information stored in a model's representations.",
+          "c": "A technique for speeding up model training.",
+          "d": "A way to generate new data for models."
+        },
+        "answer": ["b"],
+        "explanation": "**Probing** (or Probing Classifiers) is a technique used in interpretability that trains a simple classifier on a model's internal **representations** to determine what information is encoded within them."
+      },
+      {
+        "question": "What is the term for hidden functionality implanted into models by adversaries that can cause dangerous changes in behavior when triggered?",
+        "options": {
+          "a": "Trojan",
+          "b": "Worm",
+          "c": "Swarm",
+          "d": "Backdoor"
+        },
+        "answer": ["a"],
+        "explanation": "A **Trojan** (or **Backdoor** in ML) is hidden, malicious functionality that is embedded into the model during training, remaining dormant until a specific input **trigger** causes it to exhibit dangerous behavior."
       }
     ]
   }
