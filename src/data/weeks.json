@@ -868,7 +868,7 @@
           "d": "The number of participants in the study"
         },
         "answer": ["a"],
-        "explanation": "In both Randomized Response and Differential Privacy, **epsilon ($\epsilon$)** is the privacy parameter that controls the amount of noise and, by extension, the degree to which the true response or data is **revealed**."
+        "explanation": "In both Randomized Response and Differential Privacy, **epsilon ($\\epsilon$)** is the privacy parameter that controls the amount of noise and, by extension, the degree to which the true response or data is **revealed**."
       },
       {
         "question": "What characterizes an ideal privacy model?",
@@ -923,7 +923,7 @@
           "d": "Privacy parameter Epsilon"
         },
         "answer": ["a", "b", "d"],
-        "explanation": "The privacy guarantee is mathematically determined by the **Privacy parameter Epsilon** ($\epsilon$) (**d**), the **Sensitivity** ($\Delta f$) of the function (**a**), and the **Magnitude of added noise** ($\sigma$) (**b**), which is directly related to $\epsilon$ and $\Delta f$."
+        "explanation": "The privacy guarantee is mathematically determined by the **Privacy parameter Epsilon** ($\\epsilon$) (**d**), the **Sensitivity** ($\\Delta f$) of the function (**a**), and the **Magnitude of added noise** ($\\sigma$) (**b**), which is directly related to $\\epsilon$ and $\\Delta f$."
       },
       {
         "question": "Which trust scenario correctly describes the differential privacy model?",
@@ -968,7 +968,7 @@
           "d": "Utility becomes undefined"
         },
         "answer": ["c"],
-        "explanation": "To **increase privacy guarantees** (decrease $\epsilon$), more randomness (noise) must be added. This increased noise makes the resulting estimates less accurate, so **utility decreases**."
+        "explanation": "To **increase privacy guarantees** (decrease $\\epsilon$), more randomness (noise) must be added. This increased noise makes the resulting estimates less accurate, so **utility decreases**."
       }
     ]
   },
@@ -985,7 +985,7 @@
           "d": "It eliminates the need for the epsilon parameter"
         },
         "answer": ["b"],
-        "explanation": "The **delta ($\delta$)** parameter in approximate DP (also known as $(\\epsilon, \\delta)$-DP) allows for a **small, rare chance ($\delta$)** that the $\\epsilon$-DP guarantee does **not** hold."
+        "explanation": "The **delta ($\\delta$)** parameter in approximate DP (also known as $(\\epsilon, \\delta)$-DP) allows for a **small, rare chance ($\\delta$)** that the $\\epsilon$-DP guarantee does **not** hold."
       },
       {
         "question": "What is a key advantage of approximate differential privacy over standard differential privacy?",
