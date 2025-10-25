@@ -24,9 +24,9 @@ const Header: React.FC = () => {
             </svg>
           </div>
           <div>
-            <h1 className="text-2xl font-bold tracking-tight">Blockchain NPTEL Quiz</h1>
+            <h1 className="text-2xl font-bold tracking-tight">responsible ai NPTEL Quiz</h1>
             <p className="text-sm text-blue-100">
-              Test your knowledge of blockchain technology
+              Test your knowledge of resposnisble ai technology
             </p>
           </div>
         </div>
